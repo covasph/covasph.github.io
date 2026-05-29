@@ -704,6 +704,127 @@
       "volume_colecao": 65,
       "tags": ["não-ficção", "história", "exploração"],
       "isbn": null
-    }    
+    },
+    {
+      "titulo": "Ursito Tito - O Mecânico",
+      "autor": "Benji Davies",
+      "editora": "Planeta Júnior",
+      "colecao": true,
+      "nome_colecao": "Ursito Tito",
+      "volume_colecao": null,
+      "tags": ["infantil", "profissões", "livro cartonado"],
+      "isbn": "9789897774393",
+      "sinopse": "Hoje o Ursito Tito vai ser mecânico e precisa da sua ajuda para consertar os carros. Com abas para levantar."
+    },
+    {
+      "titulo": "Ursito Tito - Piloto de Corrida",
+      "autor": "Benji Davies",
+      "editora": "Planeta Júnior",
+      "colecao": true,
+      "nome_colecao": "Ursito Tito",
+      "volume_colecao": null,
+      "tags": ["infantil", "desporto", "livro cartonado"],
+      "isbn": "9789897773358",
+      "sinopse": "Hoje há uma grande corrida e o Ursito Tito é o piloto. Consegues ajudá-lo a vencer?"
+    },
+    {
+      "titulo": "Ursito Tito - Um Dia no Jardim",
+      "autor": "Benji Davies",
+      "editora": "Planeta Júnior",
+      "colecao": true,
+      "nome_colecao": "Ursito Tito",
+      "volume_colecao": null,
+      "tags": ["infantil", "natureza", "livro cartonado"],
+      "isbn": "9789897774973",
+      "sinopse": "Hoje o Ursito Tito veio ajudar numa grande construção. Vem construir com ele!"
+    },
+    {
+      "titulo": "Ursito Tito - Hoje Há Pizza",
+      "autor": "Benji Davies",
+      "editora": "Planeta Júnior",
+      "colecao": true,
+      "nome_colecao": "Ursito Tito",
+      "volume_colecao": null,
+      "tags": ["infantil", "culinária", "livro cartonado"],
+      "isbn": "9789897775895",
+      "sinopse": "Hoje é dia de fazer pizza. Vai ficar mesmo deliciosa e todos vão querer provar."
+    },
+    {
+      "titulo": "Ursito Tito - No Parque dos Dinossauros",
+      "autor": "Benji Davies",
+      "editora": "Planeta Júnior",
+      "colecao": true,
+      "nome_colecao": "Ursito Tito",
+      "volume_colecao": null,
+      "tags": ["infantil", "dinossauros", "livro cartonado"],
+      "isbn": "9789897774195",
+      "sinopse": "O Ursito Tito foi visitar o parque dos dinossauros e vê-los de perto."
+    },
+    {
+      "titulo": "Ursito Tito - No Parque de Diversões",
+      "autor": "Benji Davies",
+      "editora": "Planeta Júnior",
+      "colecao": true,
+      "nome_colecao": "Ursito Tito",
+      "volume_colecao": null,
+      "tags": ["infantil", "aventura", "livro cartonado"],
+      "isbn": "9789897774959",
+      "sinopse": "Hoje o Ursito Tito vai passar o dia no parque de diversões com os amigos."
+    },
+    {
+      "titulo": "Ursito Tito - Brincar no Parque",
+      "autor": "Benji Davies",
+      "editora": "Planeta Júnior",
+      "colecao": true,
+      "nome_colecao": "Ursito Tito",
+      "volume_colecao": null,
+      "tags": ["infantil", "brincadeiras", "livro cartonado"],
+      "isbn": "9789897774317",
+      "sinopse": "O Ursito Tito foi ao parque brincar com os amigos no balancé, no escorrega e na caixa de areia."
+    },
+    {
+      "titulo": "Ursito Tito - Um Dia no Castelo",
+      "autor": "Benji Davies",
+      "editora": "Planeta Júnior",
+      "colecao": true,
+      "nome_colecao": "Ursito Tito",
+      "volume_colecao": null,
+      "tags": ["infantil", "castelos", "livro cartonado"],
+      "isbn": "9789897774966",
+      "sinopse": "Hoje o Ursito Tito vai visitar um castelo com os amigos. Será um dia cheio de aventuras no parque de diversões, no castelo, com abas para levantar."
+    },
+    {
+      "titulo": "Ursito Tito - Vamos Construir",
+      "autor": "Benji Davies",
+      "editora": "Planeta Júnior",
+      "colecao": true,
+      "nome_colecao": "Ursito Tito",
+      "volume_colecao": null,
+      "tags": ["infantil", "construção", "livro cartonado"],
+      "isbn": "9789897774973",
+      "sinopse": "Hoje o Ursito Tito veio ajudar numa grande construção. Vem construir com ele!"
+    },
+    {
+      "titulo": "Ursito Tito - Vamos ao Espaço",
+      "autor": "Benji Davies",
+      "editora": "Planeta Júnior",
+      "colecao": true,
+      "nome_colecao": "Ursito Tito",
+      "volume_colecao": null,
+      "tags": ["infantil", "espaço", "livro cartonado"],
+      "isbn": "9789897774362",
+      "sinopse": "O Ursito Tito vai ser astronauta e viajar pelo espaço. A que planeta irá?"
+    },
+    {
+      "titulo": "Ursito Tito - Aventura Pirata",
+      "autor": "Benji Davies",
+      "editora": "Planeta Júnior",
+      "colecao": true,
+      "nome_colecao": "Ursito Tito",
+      "volume_colecao": null,
+      "tags": ["infantil", "piratas", "livro cartonado"],
+      "isbn": "9789897774324",
+      "sinopse": "Hoje o Ursito Tito tornou-se num pirata e encontrou um mapa para uma caça ao tesouro."
+    }
   ]
 }
