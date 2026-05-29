@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Antioch · Biblioteca Elsa, Vasco e Hugo</title>
     <style>
+        /* ========== RESET & BASE ========== */
         * {
             margin: 0;
             padding: 0;
@@ -12,9 +13,9 @@
         }
 
         body {
-            background: linear-gradient(145deg, #f5f0e7 0%, #e8dfd3 100%);
+            background: linear-gradient(135deg, #eef2f7 0%, #e0e8f0 100%);
             font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-            color: #2c241a;
+            color: #1a2c3c;
             padding: 2rem 1rem;
             min-height: 100vh;
         }
@@ -24,7 +25,7 @@
             margin: 0 auto;
         }
 
-        /* Cabeçalho com novo título e botão de estatísticas */
+        /* ========== HEADER ========== */
         .header {
             text-align: center;
             margin-bottom: 2rem;
@@ -34,20 +35,20 @@
         .header h1 {
             font-size: 3rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #3e2a1f, #1f1a14, #6b4c2c);
+            background: linear-gradient(135deg, #1f4e6e, #0e3a52, #2c6c8f);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
             letter-spacing: -0.5px;
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.03);
         }
 
         .subtitle {
             font-size: 1.2rem;
             font-weight: 500;
-            color: #7a6242;
+            color: #3e6b8c;
             margin-top: 0.2rem;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
             font-style: italic;
         }
 
@@ -57,192 +58,48 @@
             margin-top: 0.8rem;
         }
 
+        /* Botão estatísticas – ícone com cor azul suave e visível */
         .stats-button {
-            background: #2f2a24;
+            background: #2c5a7a;
             border: none;
             padding: 0.7rem 1.8rem;
             border-radius: 60px;
             font-weight: 600;
             font-size: 0.9rem;
-            color: #fef3e4;
+            color: #f0f7fc;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.25s ease;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-            backdrop-filter: blur(2px);
+            box-shadow: 0 4px 10px rgba(28, 65, 92, 0.2);
+        }
+
+        .stats-button i, .stats-button .emoji-icon {
+            font-size: 1.1rem;
+            filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+            color: #c9e9ff;
         }
 
         .stats-button:hover {
-            background: #4e3924;
+            background: #1e4a6b;
             transform: scale(1.02);
-            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 18px rgba(28, 65, 92, 0.3);
         }
 
-        .stats-button i {
-            font-size: 1.1rem;
+        .stats-button:hover .emoji-icon {
+            color: #ffffff;
         }
 
-        /* Modal de estatísticas */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.75);
-            backdrop-filter: blur(5px);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.2s ease;
-        }
-
-        .modal-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal-container {
-            background: #fffcf5;
-            width: 90%;
-            max-width: 750px;
-            max-height: 85vh;
-            border-radius: 2rem;
-            overflow: hidden;
-            box-shadow: 0 30px 40px rgba(0,0,0,0.3);
-            display: flex;
-            flex-direction: column;
-            animation: modalFadeIn 0.2s ease-out;
-        }
-
-        @keyframes modalFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .modal-header {
-            padding: 1.5rem 1.8rem;
-            background: #e7ddd0;
-            border-bottom: 1px solid #dacdbb;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .modal-header h2 {
-            font-size: 1.6rem;
-            color: #2f241b;
-            font-weight: 700;
-        }
-
-        .close-modal {
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: #6c513a;
-            transition: 0.1s;
-            line-height: 1;
-        }
-
-        .close-modal:hover {
-            color: #2c1c0e;
-            transform: scale(1.05);
-        }
-
-        .modal-body {
-            padding: 1.5rem 1.8rem;
-            overflow-y: auto;
-            flex: 1;
-        }
-
-        .stats-section {
-            margin-bottom: 2rem;
-        }
-
-        .stats-section h3 {
-            font-size: 1.3rem;
-            border-left: 6px solid #b9875c;
-            padding-left: 0.8rem;
-            margin-bottom: 1rem;
-            color: #4a3624;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 0.9rem;
-            background: #fef9f2;
-            padding: 1rem;
-            border-radius: 1.2rem;
-        }
-
-        .stat-item {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px dashed #e2d4c4;
-            padding: 0.5rem 0;
-            font-size: 0.9rem;
-        }
-
-        .stat-label {
-            font-weight: 600;
-            color: #694e33;
-        }
-
-        .stat-number {
-            font-weight: 700;
-            background: #ede0d1;
-            padding: 0.1rem 0.7rem;
-            border-radius: 30px;
-            color: #38271a;
-        }
-
-        .tag-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-            margin-top: 0.5rem;
-        }
-
-        .tag-stat {
-            background: #e9ddcf;
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .colecao-stats, .total-resumo {
-            background: #f7f0e6;
-            border-radius: 1rem;
-            padding: 0.8rem;
-        }
-
-        hr {
-            margin: 1rem 0;
-            border-color: #ebdfd1;
-        }
-
-        /* Barra de pesquisa + filtros */
+        /* ========== BARRA DE PESQUISA ========== */
         .search-section {
-            background: #fffdf9;
+            background: #ffffffdd;
+            backdrop-filter: blur(2px);
             border-radius: 2rem;
             padding: 1.2rem 1.5rem;
             margin-bottom: 2rem;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f0e3d4;
+            box-shadow: 0 6px 14px rgba(0, 20, 40, 0.08);
+            border: 1px solid #cbdde9;
         }
 
         .search-wrapper {
@@ -261,17 +118,18 @@
         .search-box input {
             width: 100%;
             padding: 0.9rem 1.2rem;
-            border: 1px solid #e2cfb5;
+            border: 1px solid #bdd4e2;
             border-radius: 3rem;
             font-size: 1rem;
-            background: white;
+            background: #ffffff;
             transition: all 0.2s;
             outline: none;
+            color: #1a3b4f;
         }
 
         .search-box input:focus {
-            border-color: #b98f64;
-            box-shadow: 0 0 0 3px rgba(185, 143, 100, 0.2);
+            border-color: #3e8ab3;
+            box-shadow: 0 0 0 3px rgba(62, 138, 179, 0.2);
         }
 
         .filter-group {
@@ -285,33 +143,38 @@
             flex: 1;
             padding: 0.9rem 1rem;
             border-radius: 3rem;
-            border: 1px solid #e2cfb5;
+            border: 1px solid #bdd4e2;
             background: white;
             font-size: 0.9rem;
+            color: #1f4b65;
             cursor: pointer;
+            font-weight: 500;
         }
 
         .clear-btn {
-            background: #ede3d7;
+            background: #e3edf5;
             border: none;
             padding: 0 1.4rem;
             border-radius: 3rem;
             font-weight: 600;
+            color: #2c607e;
             cursor: pointer;
             transition: 0.2s;
         }
 
         .clear-btn:hover {
-            background: #ddcfbf;
+            background: #ccdee9;
+            color: #14455f;
         }
 
         .result-count {
             margin: 0.8rem 0 1rem 0.5rem;
             font-size: 0.85rem;
             font-weight: 500;
-            color: #7c6246;
+            color: #437693;
         }
 
+        /* ========== GRADE DE LIVROS ========== */
         .books-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -323,8 +186,8 @@
             border-radius: 1.5rem;
             overflow: hidden;
             transition: transform 0.2s ease, box-shadow 0.2s;
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
-            border: 1px solid #f0e2d2;
+            box-shadow: 0 6px 14px rgba(33, 58, 78, 0.06);
+            border: 1px solid #d6e2ec;
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -332,7 +195,8 @@
 
         .book-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 30px -12px rgba(28, 75, 105, 0.2);
+            border-color: #adc8dd;
         }
 
         .card-content {
@@ -345,14 +209,17 @@
             font-weight: 700;
             line-height: 1.3;
             margin-bottom: 0.5rem;
-            color: #2c241a;
+            color: #1f405b;
         }
 
         .book-author {
             font-size: 0.9rem;
             font-weight: 600;
-            color: #b1624b;
+            color: #2f6c8a;
             margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
 
         .book-meta {
@@ -361,18 +228,19 @@
             gap: 0.5rem;
             font-size: 0.75rem;
             margin: 0.7rem 0;
-            color: #6b5a48;
+            color: #5f7e96;
         }
 
         .editora-badge, .colecao-tag, .volume-info {
-            background: #f3eee8;
+            background: #eaf1f7;
             padding: 0.2rem 0.6rem;
             border-radius: 30px;
+            font-weight: 500;
         }
 
         .colecao-tag {
-            background: #e3d9cf;
-            font-weight: 500;
+            background: #d9e6f0;
+            color: #1f5777;
         }
 
         .tag-list {
@@ -383,19 +251,20 @@
         }
 
         .tag {
-            background: #f1e7de;
+            background: #eef3f8;
             padding: 0.2rem 0.65rem;
             border-radius: 20px;
             font-size: 0.7rem;
             font-weight: 500;
+            color: #2c6482;
         }
 
         .sinopse {
             font-size: 0.8rem;
-            color: #4e3e2c;
+            color: #2e546e;
             line-height: 1.4;
             margin-top: 0.7rem;
-            border-top: 1px dashed #ecdbba;
+            border-top: 1px dashed #cbdde9;
             padding-top: 0.7rem;
             display: -webkit-box;
             -webkit-line-clamp: 3;
@@ -406,18 +275,174 @@
         .isbn {
             font-size: 0.65rem;
             font-family: monospace;
-            color: #9a8a76;
+            color: #7b98ae;
             margin-top: 0.5rem;
         }
 
         .no-results {
             text-align: center;
             padding: 3rem;
-            background: #fffcf7;
+            background: #f9fdfe;
             border-radius: 2rem;
-            color: #8e775c;
+            color: #5682a0;
+            font-weight: 500;
         }
 
+        /* ========== MODAL ESTATÍSTICAS (AZUL SUAVE) ========== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(18, 45, 65, 0.8);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-container {
+            background: #fefefe;
+            width: 90%;
+            max-width: 780px;
+            max-height: 85vh;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 30px 40px rgba(0, 20, 40, 0.3);
+            display: flex;
+            flex-direction: column;
+            animation: modalFadeIn 0.2s ease-out;
+            border: 1px solid #c6deef;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-header {
+            padding: 1.5rem 1.8rem;
+            background: #e5f0f7;
+            border-bottom: 1px solid #c9deec;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            font-size: 1.6rem;
+            color: #1b4f6e;
+            font-weight: 700;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #4c7b9b;
+            transition: 0.1s;
+            line-height: 1;
+        }
+
+        .close-modal:hover {
+            color: #1c5779;
+            transform: scale(1.05);
+        }
+
+        .modal-body {
+            padding: 1.5rem 1.8rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .stats-section {
+            margin-bottom: 2rem;
+        }
+
+        .stats-section h3 {
+            font-size: 1.3rem;
+            border-left: 6px solid #5f9bc2;
+            padding-left: 0.8rem;
+            margin-bottom: 1rem;
+            color: #1e5779;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 0.9rem;
+            background: #f6fafd;
+            padding: 1rem;
+            border-radius: 1.2rem;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #cde0ec;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: #2c6282;
+        }
+
+        .stat-number {
+            font-weight: 700;
+            background: #e3eff8;
+            padding: 0.1rem 0.7rem;
+            border-radius: 30px;
+            color: #175072;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.5rem;
+        }
+
+        .tag-stat {
+            background: #e6f0f7;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #226282;
+        }
+
+        .colecao-stats {
+            background: #f1f7fc;
+            border-radius: 1rem;
+            padding: 0.8rem 1rem;
+            color: #1e5b7c;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border-color: #cde0ec;
+        }
+
+        /* ========== RESPONSIVO ========== */
         @media (max-width: 640px) {
             body {
                 padding: 1rem 0.8rem;
@@ -440,6 +465,10 @@
             }
             .books-grid {
                 grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -447,7 +476,8 @@
             text-align: center;
             margin-top: 3rem;
             font-size: 0.7rem;
-            color: #b7a488;
+            color: #7c9bb3;
+            padding: 1rem;
         }
     </style>
 </head>
@@ -458,7 +488,9 @@
         <h1>🏛️ Antioch</h1>
         <div class="subtitle">Biblioteca Elsa, Vasco e Hugo</div>
         <div class="stats-btn-wrapper">
-            <button id="openStatsModal" class="stats-button">📊 Estatísticas da Biblioteca</button>
+            <button id="openStatsModal" class="stats-button">
+                <span class="emoji-icon">📊</span> Estatísticas da Biblioteca
+            </button>
         </div>
     </div>
 
@@ -481,12 +513,12 @@
     </div>
 
     <div id="booksContainer" class="books-grid">
-        <div class="no-results" style="display: none;">📖 A carregar a biblioteca...</div>
+        <div class="no-results" style="display: none;">📖 A carregar biblioteca pessoal...</div>
     </div>
-    <footer>✨ Antioch · livros, palavras e histórias partilhadas</footer>
+    <footer>✨ Antioch · tons azuis, livros e histórias para recordar</footer>
 </div>
 
-<!-- Modal de estatísticas -->
+<!-- Modal Estatísticas -->
 <div id="statsModal" class="modal-overlay">
     <div class="modal-container">
         <div class="modal-header">
@@ -501,12 +533,12 @@
 
 <script>
     // ========================
-    // Base de dados
+    //  Base de dados e funcionamento da biblioteca
     // ========================
     let bibliotecaData = { livros: [] };
     let livrosFiltrados = [];
     
-    // DOM elements
+    // Elementos DOM
     const searchInput = document.getElementById('searchInput');
     const authorFilter = document.getElementById('authorFilter');
     const collectionFilter = document.getElementById('collectionFilter');
@@ -520,13 +552,12 @@
     const closeModalBtn = document.getElementById('closeModalBtn');
     const statsModalBody = document.getElementById('statsModalBody');
     
-    // Auxiliares
+    // Utilitário nome da coleção
     function getColecaoNome(livro) {
         if (livro.colecao === true && livro.nome_colecao) return livro.nome_colecao;
         return null;
     }
     
-    // Atualizar selects e estatísticas iniciais
     let autoresUnicos = new Set();
     let colecoesUnicas = new Set();
     
@@ -558,7 +589,7 @@
         });
     }
     
-    // Filtros
+    // Filtros combinados
     function aplicarFiltros() {
         const termo = searchInput.value.trim().toLowerCase();
         const autorSelecionado = authorFilter.value;
@@ -636,23 +667,19 @@
         }).join('');
     }
     
-    // ============= FUNÇÃO DE ESTATÍSTICAS AVANÇADA =============
+    // ========= GERAR ESTATÍSTICAS COMPLETAS =========
     function gerarEstatisticas() {
         const livros = bibliotecaData.livros;
-        if (!livros.length) return "<div style='text-align:center'>Nenhum livro na base</div>";
+        if (!livros.length) return "<div style='text-align:center'>Nenhum livro carregado na biblioteca.</div>";
         
-        // Contagem por autor
         const autorCount = new Map();
-        // Contagem por categoria (tags)
         const tagCount = new Map();
-        // Contagem por coleção
         const colecaoCount = new Map();
         let totalLivros = livros.length;
         
         livros.forEach(livro => {
             const autor = livro.autor || "Autor desconhecido";
             autorCount.set(autor, (autorCount.get(autor) || 0) + 1);
-            
             if (livro.tags && Array.isArray(livro.tags)) {
                 livro.tags.forEach(tag => {
                     const tagLower = tag.toLowerCase();
@@ -660,23 +687,15 @@
                 });
             }
             const colecao = getColecaoNome(livro);
-            if (colecao) {
-                colecaoCount.set(colecao, (colecaoCount.get(colecao) || 0) + 1);
-            }
+            if (colecao) colecaoCount.set(colecao, (colecaoCount.get(colecao) || 0) + 1);
         });
         
-        // Ordenar autores por mais livros
         const sortedAutores = Array.from(autorCount.entries()).sort((a,b) => b[1] - a[1]);
         const sortedTags = Array.from(tagCount.entries()).sort((a,b) => b[1] - a[1]);
         const sortedColecoes = Array.from(colecaoCount.entries()).sort((a,b) => b[1] - a[1]);
-        
-        // Livros sem coleção
         const livrosSemColecao = livros.filter(l => !getColecaoNome(l)).length;
-        
-        // Estatísticas de volumes: total de livros pertencentes a coleções
         const livrosEmColecao = livros.filter(l => l.colecao === true && l.nome_colecao).length;
         
-        // Montar HTML
         let html = `
             <div class="stats-section">
                 <h3>📚 Resumo Geral</h3>
@@ -688,9 +707,8 @@
                     <div class="stat-item"><span class="stat-label">Livros avulsos</span><span class="stat-number">${livrosSemColecao}</span></div>
                 </div>
             </div>
-            
             <div class="stats-section">
-                <h3>✍️ Livros por autor (top 10)</h3>
+                <h3>✍️ Livros por autor (top 12)</h3>
                 <div class="stats-grid">
                     ${sortedAutores.slice(0,12).map(([autor, qtd]) => `
                         <div class="stat-item"><span class="stat-label">${escapeHtml(autor)}</span><span class="stat-number">${qtd} livro${qtd !== 1 ? 's' : ''}</span></div>
@@ -698,7 +716,6 @@
                     ${sortedAutores.length === 0 ? '<div>Nenhum autor registado</div>' : ''}
                 </div>
             </div>
-            
             <div class="stats-section">
                 <h3>🏷️ Categorias / Tags mais usadas</h3>
                 <div class="tag-cloud">
@@ -706,7 +723,6 @@
                     ${sortedTags.length === 0 ? '<span>Sem tags definidas</span>' : ''}
                 </div>
             </div>
-            
             <div class="stats-section">
                 <h3>📖 Coleções (total de volumes)</h3>
                 <div class="stats-grid">
@@ -716,7 +732,6 @@
                     ${sortedColecoes.length === 0 ? '<div>Nenhuma coleção registada</div>' : ''}
                 </div>
             </div>
-            
             <div class="stats-section">
                 <h3>🔖 Curiosidades</h3>
                 <div class="colecao-stats">
@@ -733,19 +748,18 @@
         statsModalBody.innerHTML = gerarEstatisticas();
     }
     
-    // Modal controls
+    // Modal handlers
     function openModal() {
         atualizarModalEstatisticas();
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
-    
     function closeModal() {
         modal.classList.remove('active');
         document.body.style.overflow = '';
     }
     
-    // Carregar dados do JSON
+    // Carregar ficheiro JSON externo (book_db.json)
     async function carregarDados() {
         try {
             const response = await fetch('book_db.json');
@@ -758,7 +772,7 @@
             }
         } catch (error) {
             console.error("Erro ao carregar book_db.json:", error);
-            booksContainer.innerHTML = `<div class="no-results">⚠️ Erro ao carregar base de dados. Verifique se o ficheiro <strong>book_db.json</strong> está acessível.</div>`;
+            booksContainer.innerHTML = `<div class="no-results">⚠️ Erro ao carregar base de dados. Certifique-se que o ficheiro <strong>book_db.json</strong> está acessível.</div>`;
             bibliotecaData = { livros: [] };
         } finally {
             atualizarFiltrosOptions();
