@@ -1,0 +1,709 @@
+{
+  "livros": [
+    {
+      "titulo": "A Cidade dos Ossos",
+      "autor": "Cassandra Clare",
+      "editora": "Planeta",
+      "colecao": true,
+      "nome_colecao": "Caçadores de Sombras",
+      "volume_colecao": 1,
+      "tags": ["fantasia", "aventura", "romance", "young adult"],
+      "isbn": "9789897772542",
+      "sinopse": "O livro onde Clary descobre os Caçadores de Sombras. Onde Clary conhece Jace Wayland o melhor Caçador de Sombras da sua geração. Onde descobre o segredo de um grupo de jovens guerreiros consagrados a libertar a terra de demónios. O livro… onde tudo começou. A nova edição inclui os Ficheiros Confidenciais da Clave (o órgão máximo dos Caçadores de Sombras) sobre cada uma das personagens."
+    },
+    {
+      "titulo": "A Cidade das Cinzas",
+      "autor": "Cassandra Clare",
+      "editora": "Planeta",
+      "colecao": true,
+      "nome_colecao": "Caçadores de Sombras",
+      "volume_colecao": 2,
+      "tags": ["fantasia", "aventura", "romance", "young adult"],
+      "isbn": "9789897772559",
+      "sinopse": "Poderá o amor atraiçoar tudo? No segundo livro da série continuamos a descobrir os domínios sombrios do submundo de Nova Iorque, onde amar não é seguro e o poder a mais mortal das tentações. Clary Fray só desejava que a sua vida voltasse ao normal. Mas o que é normal quando se é um Caçador de Sombras, com a mãe em coma mágico e de repente se começa a ver lobisomens, vampiros e fadas?"
+    },
+    {
+      "titulo": "A Cidade de Vidro",
+      "autor": "Cassandra Clare",
+      "editora": "Planeta",
+      "colecao": true,
+      "nome_colecao": "Caçadores de Sombras",
+      "volume_colecao": 3,
+      "tags": ["fantasia", "aventura", "romance", "young adult"],
+      "isbn": "9789897772566",
+      "sinopse": "Para salvar a vida da mãe, Clary viaja para A Cidade de Vidro, o lar ancestral dos Caçadores de Sombras... não se importa com o facto de quebrar a Lei que pode significar a morte. Felizmente Clary encontra um aliado no misterioso Sebastian, que nutre uma estranha atracção por ela."
+    },
+    {
+      "titulo": "A Cidade dos Anjos Caídos",
+      "autor": "Cassandra Clare",
+      "editora": "Planeta",
+      "colecao": true,
+      "nome_colecao": "Caçadores de Sombras",
+      "volume_colecao": 4,
+      "tags": ["fantasia", "aventura", "romance", "young adult"],
+      "isbn": "9789897772849",
+      "sinopse": "A Guerra Mortal acabou, e Clary Fray voltou para Nova Iorque. Treina afincadamente para se tornar uma Caçadora de Sombras e usar o seu poder único. Caçadores de Sombras e Habitantes do Mundo-à-Parte estão por fim em paz. Mas tudo tem um preço."
+    },
+    {
+      "titulo": "A Cidade das Almas Perdidas",
+      "autor": "Cassandra Clare",
+      "editora": "Planeta",
+      "colecao": true,
+      "nome_colecao": "Caçadores de Sombras",
+      "volume_colecao": 5,
+      "tags": ["fantasia", "aventura", "romance", "young adult"],
+      "isbn": "9789897772856",
+      "sinopse": "A Caçadora de Sombras Clary Fray e o seu grupo de amigos vêem-se envolvidos num terrível conflito que pode determinar o destino de todos os Caçadores de Sombras e habitantes do Mundo-à-Parte. O Anjo das Trevas planeia o Apocalipse e, enquanto o seu poder aumenta, nem mesmo o amor de Jace poderá salvar Clary."
+    },
+    {
+      "titulo": "Viagem ao Centro da Terra",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 3,
+      "tags": ["ficção científica", "aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Volta ao Mundo em 80 Dias",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 1,
+      "tags": ["ficção científica", "aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Vinte Mil Léguas Submarinas",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 2,
+      "tags": ["ficção científica", "aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Miguel Strogoff",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 4,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Cinco Semanas num Balão",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 5,
+      "tags": ["ficção científica", "aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Filhos do Capitão Grant (I): Na América do Sul",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 6,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Ilha Misteriosa (I): Os Náufragos do Ar",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 7,
+      "tags": ["aventura", "clássico", "sobrevivência"],
+      "isbn": null
+    },
+    {
+      "titulo": "Escola de Robinsons",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 8,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Da Terra à Lua",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 9,
+      "tags": ["ficção científica", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Viagem à Volta da Lua",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 10,
+      "tags": ["ficção científica", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Filhos do Capitão Grant (II): Na Austrália",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 11,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Ilha Misteriosa (II): O Abandonado",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 12,
+      "tags": ["aventura", "clássico", "sobrevivência"],
+      "isbn": null
+    },
+    {
+      "titulo": "Um Capitão de Quinze Anos",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 13,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Filhos do Capitão Grant (III): No Oceano Pacífico",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 14,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "O País das Peles",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 15,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Aventuras de Três Russos e Três Ingleses no Sul da África",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 16,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Ilha Misteriosa (III): O Segredo da Ilha",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 17,
+      "tags": ["aventura", "clássico", "sobrevivência"],
+      "isbn": null
+    },
+    {
+      "titulo": "As Tribulações de um Chinês na China",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 18,
+      "tags": ["aventura", "clássico", "humor"],
+      "isbn": null
+    },
+    {
+      "titulo": "Héctor Servadac",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 19,
+      "tags": ["ficção científica", "aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "O Chancellor",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 20,
+      "tags": ["aventura", "clássico", "náufragos"],
+      "isbn": null
+    },
+    {
+      "titulo": "Aventuras do Capitão Hatteras: Os Ingleses no Polo Norte",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 21,
+      "tags": ["aventura", "clássico", "exploração"],
+      "isbn": null
+    },
+    {
+      "titulo": "Aventuras do Capitão Hatteras: O Deserto de Gelo",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 22,
+      "tags": ["aventura", "clássico", "exploração"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Quinhentos Milhões da Begum",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 23,
+      "tags": ["ficção científica", "distopia", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Uma Cidade Flutuante",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 24,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Dois Anos de Férias I e II",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 25,
+      "tags": ["aventura", "clássico", "sobrevivência"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Casa a Vapor",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 26,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Matias Sandorf I",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 27,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Matias Sandorf II",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 28,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Jangada",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 29,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Norte Contra Sul",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 30,
+      "tags": ["aventura", "histórico", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Mistress Branican",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 31,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Perante a Bandeira",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 32,
+      "tags": ["ficção científica", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "César Cascabel",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 33,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "O Raio Verde",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 34,
+      "tags": ["romance", "aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Família sem Nome",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 35,
+      "tags": ["histórico", "aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Keraban, o Cabeça Dura",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 36,
+      "tags": ["aventura", "humor", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Estrela do Sul",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 37,
+      "tags": ["ficção científica", "aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "As Índias Negras",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 38,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Robur, o Conquistador",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 39,
+      "tags": ["ficção científica", "aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Clovis Dardentor",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 40,
+      "tags": ["aventura", "humor", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Segunda Pátria",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 41,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Claudio Bombarnac",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 42,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Irmãos Kip",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 43,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Bolsas de Viagem",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 44,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Esfinge dos Gelos",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 45,
+      "tags": ["aventura", "clássico", "exploração"],
+      "isbn": null
+    },
+    {
+      "titulo": "O Testamento de um Excêntrico",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 46,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Ilha de Hélice",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 47,
+      "tags": ["ficção científica", "aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "O Arquipélago em Chamas",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 48,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "As Maravilhosas Aventuras de Antifer",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 49,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Aventuras de um Rapaz Irlandês",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 50,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "O Soberbo Orinoco",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 51,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "As Emocionantes Aventuras da Missão Barsac",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 52,
+      "tags": ["ficção científica", "aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Um Bilhete de Lotaria",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 53,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "O Castelo dos Cárpatos",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 54,
+      "tags": ["fantasia", "gótico", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Um Drama na Livónia",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 55,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Náufragos do Jonathan",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 56,
+      "tags": ["aventura", "clássico", "sobrevivência"],
+      "isbn": null
+    },
+    {
+      "titulo": "O Caminho de França",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 57,
+      "tags": ["aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Agência Thompson e Cia",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 58,
+      "tags": ["aventura", "humor", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Aldeia Aérea",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 59,
+      "tags": ["ficção científica", "aventura", "clássico"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Grandes Viajantes do Século XIX I",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 60,
+      "tags": ["não-ficção", "história", "exploração"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Grandes Viajantes do Século XIX II",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 61,
+      "tags": ["não-ficção", "história", "exploração"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Grandes Navegadores do Século XVIII I",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 62,
+      "tags": ["não-ficção", "história", "exploração"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Grandes Navegadores do Século XVIII II",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 63,
+      "tags": ["não-ficção", "história", "exploração"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Grandes Exploradores do Século XIX I",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 64,
+      "tags": ["não-ficção", "história", "exploração"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Grandes Exploradores do Século XIX II",
+      "autor": "Júlio Verne",
+      "editora": "RBA Coleccionables",
+      "colecao": true,
+      "nome_colecao": "Biblioteca Júlio Verne",
+      "volume_colecao": 65,
+      "tags": ["não-ficção", "história", "exploração"],
+      "isbn": null
+    }    
+  ]
+}
