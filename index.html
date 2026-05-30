@@ -54,7 +54,7 @@
             gap: 0.5rem;
         }
 
-        .stats-button, .view-toggle {
+        .stats-button {
             background: #2c5a7a;
             border: none;
             padding: 0.7rem 1.5rem;
@@ -69,13 +69,9 @@
             gap: 8px;
         }
 
-        .view-toggle {
-            background: #5a6e7a;
-        }
-
-        .view-toggle.active {
-            background: #1f4e6e;
-            box-shadow: 0 0 0 2px #fff, 0 0 0 4px #1f4e6e;
+        .stats-button:hover {
+            background: #1e4a6b;
+            transform: scale(1.02);
         }
 
         .search-section {
@@ -153,136 +149,6 @@
             color: #437693;
         }
 
-        /* ========== VISÃO EM LISTA (AGRUPADA) ========== */
-        .author-group {
-            margin-bottom: 2rem;
-            background: #ffffffcc;
-            border-radius: 1.2rem;
-            padding: 1rem;
-            border: 1px solid #d6e2ec;
-        }
-
-        .author-header {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #1f405b;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #cbdde9;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-        }
-
-        .author-count {
-            font-size: 0.8rem;
-            background: #e3edf5;
-            padding: 0.2rem 0.8rem;
-            border-radius: 30px;
-            font-weight: normal;
-            color: #2c5a7a;
-        }
-
-        .colecao-group {
-            margin-bottom: 1.2rem;
-            margin-left: 1rem;
-            border-left: 3px solid #bdd4e2;
-            padding-left: 1rem;
-        }
-
-        .colecao-header {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #2f6c8a;
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-        }
-
-        .colecao-progress {
-            font-size: 0.75rem;
-            background: #d9e6f0;
-            padding: 0.2rem 0.6rem;
-            border-radius: 20px;
-            font-weight: normal;
-        }
-
-        .missing-volumes {
-            font-size: 0.7rem;
-            color: #c97e2a;
-            background: #fff3e0;
-            padding: 0.2rem 0.6rem;
-            border-radius: 20px;
-        }
-
-        .livros-solteiros {
-            margin-left: 1rem;
-        }
-
-        .livro-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            background: #ffffff;
-            border-radius: 0.8rem;
-            padding: 0.8rem;
-            margin-bottom: 0.5rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            border: 1px solid #e0e8f0;
-        }
-
-        .livro-item:hover {
-            transform: translateX(5px);
-            background: #f8fbfe;
-            border-color: #adc8dd;
-        }
-
-        .livro-volume {
-            min-width: 60px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #5f8aac;
-            background: #eef3f8;
-            padding: 0.2rem 0.5rem;
-            border-radius: 20px;
-            text-align: center;
-        }
-
-        .livro-info {
-            flex: 1;
-        }
-
-        .livro-titulo {
-            font-weight: 700;
-            color: #1f405b;
-            margin-bottom: 0.2rem;
-        }
-
-        .livro-meta {
-            font-size: 0.7rem;
-            color: #7b98ae;
-        }
-
-        .livro-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.3rem;
-            margin-top: 0.3rem;
-        }
-
-        .livro-tag {
-            background: #eef3f8;
-            padding: 0.1rem 0.4rem;
-            border-radius: 12px;
-            font-size: 0.6rem;
-            color: #2c6482;
-        }
-
-        /* ========== VISÃO EM GRADE ========== */
         .books-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -297,6 +163,7 @@
             box-shadow: 0 2px 8px rgba(33, 58, 78, 0.08);
             border: 1px solid #d6e2ec;
             cursor: pointer;
+            position: relative;
         }
 
         .book-card:hover {
@@ -320,14 +187,40 @@
             margin-bottom: 0.5rem;
         }
 
-        .book-volume-badge {
+        .book-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .colecao-badge {
+            display: inline-block;
+            background: #d9e6f0;
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            color: #1f5777;
+        }
+
+        .volume-badge {
             display: inline-block;
             background: #eef3f8;
-            padding: 0.1rem 0.5rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            color: #2c6482;
+        }
+
+        .missing-warning {
+            display: inline-block;
+            background: #fff3e0;
+            color: #c97e2a;
+            padding: 0.2rem 0.6rem;
             border-radius: 15px;
             font-size: 0.65rem;
-            margin-bottom: 0.3rem;
-            color: #2c6482;
+            font-weight: 600;
         }
 
         .tag-list {
@@ -346,16 +239,6 @@
             color: #2c6482;
         }
 
-        .colecao-badge {
-            display: inline-block;
-            background: #d9e6f0;
-            padding: 0.15rem 0.5rem;
-            border-radius: 15px;
-            font-size: 0.65rem;
-            margin-top: 0.4rem;
-            color: #1f5777;
-        }
-
         .no-results, .error-message {
             text-align: center;
             padding: 3rem;
@@ -364,7 +247,7 @@
             color: #5682a0;
         }
 
-        /* Modal (mesmo de antes) */
+        /* Modal */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -600,15 +483,14 @@
             .detail-label {
                 min-width: 80px;
             }
-            .author-header {
-                font-size: 1.2rem;
+            .books-grid {
+                grid-template-columns: 1fr;
             }
-            .colecao-header {
-                font-size: 1rem;
+            .stats-btn-wrapper {
+                justify-content: center;
             }
-            .livro-volume {
-                min-width: 50px;
-                font-size: 0.7rem;
+            .search-wrapper, .filter-group {
+                flex-direction: column;
             }
         }
 
@@ -628,7 +510,6 @@
         <div class="subtitle">Biblioteca Elsa, Vasco e Hugo</div>
         <div class="stats-btn-wrapper">
             <button id="openStatsModal" class="stats-button">📊 Estatísticas</button>
-            <button id="toggleViewBtn" class="view-toggle">📋 Vista por Autor</button>
         </div>
     </div>
 
@@ -676,8 +557,6 @@
 <script>
     let bibliotecaData = { livros: [] };
     let livrosFiltrados = [];
-    let viewMode = 'grid'; // 'grid' ou 'list'
-    let coverCache = new Map();
 
     // Elementos
     const searchInput = document.getElementById('searchInput');
@@ -686,7 +565,6 @@
     const clearBtn = document.getElementById('clearFilters');
     const booksContainer = document.getElementById('booksContainer');
     const resultCountSpan = document.getElementById('resultCount');
-    const toggleViewBtn = document.getElementById('toggleViewBtn');
     
     // Modals
     const detailModal = document.getElementById('detailModal');
@@ -696,6 +574,9 @@
     const closeDetailModal = document.getElementById('closeDetailModal');
     const closeStatsModal = document.getElementById('closeStatsModal');
     const openStatsBtn = document.getElementById('openStatsModal');
+
+    // Cache para estatísticas de coleções (volumes em falta)
+    let colecoesInfo = new Map();
 
     function escapeHtml(str) {
         if (!str) return '';
@@ -735,19 +616,85 @@
         return null;
     }
 
-    // ========== RENDERIZAÇÃO EM GRADE (CARD VIEW) ==========
-    function renderizarGrid(livrosArray) {
+    // ========== CALCULAR ESTATÍSTICAS DE COLEÇÕES ==========
+    function calcularInfoColecoes() {
+        colecoesInfo.clear();
+        
+        // Primeiro, agrupar livros por coleção
+        const colecaoMap = new Map();
+        
+        for (let i = 0; i < bibliotecaData.livros.length; i++) {
+            const livro = bibliotecaData.livros[i];
+            const colecaoNome = getColecaoNome(livro);
+            if (colecaoNome && livro.volume_colecao && livro.volume_colecao > 0) {
+                if (!colecaoMap.has(colecaoNome)) {
+                    colecaoMap.set(colecaoNome, []);
+                }
+                colecaoMap.get(colecaoNome).push(livro.volume_colecao);
+            }
+        }
+        
+        // Para cada coleção, determinar volumes existentes e estimar total
+        for (let [colecaoNome, volumes] of colecaoMap.entries()) {
+            volumes.sort((a, b) => a - b);
+            const maxVolume = Math.max(...volumes);
+            const volumesExistentes = new Set(volumes);
+            const volumesFaltantes = [];
+            
+            for (let v = 1; v <= maxVolume; v++) {
+                if (!volumesExistentes.has(v)) {
+                    volumesFaltantes.push(v);
+                }
+            }
+            
+            colecoesInfo.set(colecaoNome, {
+                total: maxVolume,
+                existentes: volumes.length,
+                faltantes: volumesFaltantes,
+                progresso: volumes.length + '/' + maxVolume
+            });
+        }
+    }
+
+    // ========== RENDERIZAR CARDS ==========
+    function renderizarLivros(livrosArray) {
         if (!livrosArray || livrosArray.length === 0) {
             booksContainer.innerHTML = '<div class="no-results">📭 Nenhum livro encontrado.</div>';
             return;
         }
         
-        let html = '<div class="books-grid">';
+        let html = '';
         for (let i = 0; i < livrosArray.length; i++) {
             const livro = livrosArray[i];
             const titulo = livro.titulo || "Título desconhecido";
             const autorString = getAutorString(livro.autor);
+            const colecaoNome = getColecaoNome(livro);
+            const volume = livro.volume_colecao;
             
+            // Verificar se há volumes em falta nesta coleção
+            let missingWarningHtml = '';
+            if (colecaoNome && colecoesInfo.has(colecaoNome)) {
+                const info = colecoesInfo.get(colecaoNome);
+                if (info.faltantes.length > 0) {
+                    missingWarningHtml = '<span class="missing-warning" title="Faltam volumes: ' + info.faltantes.join(', ') + '">⚠️ ' + info.progresso + '</span>';
+                } else if (volume) {
+                    missingWarningHtml = '<span class="volume-badge" title="Coleção completa!">✅ ' + info.progresso + '</span>';
+                }
+            }
+            
+            // Meta da coleção
+            let metaHtml = '';
+            if (colecaoNome) {
+                metaHtml = '<div class="book-meta">' +
+                                '<span class="colecao-badge">📘 ' + escapeHtml(colecaoNome) + '</span>' +
+                                (volume ? '<span class="volume-badge">Vol. ' + volume + '</span>' : '') +
+                                missingWarningHtml +
+                            '</div>';
+            } else if (volume) {
+                metaHtml = '<div class="book-meta"><span class="volume-badge">Vol. ' + volume + '</span></div>';
+            }
+            
+            // Tags
             let tagsHtml = '';
             if (livro.tags && Array.isArray(livro.tags) && livro.tags.length > 0) {
                 let tagItems = '';
@@ -761,187 +708,23 @@
                 tagsHtml = '<div class="tag-list">' + tagItems + '</div>';
             }
             
-            let colecaoHtml = '';
-            const colecaoNome = getColecaoNome(livro);
-            if (colecaoNome) {
-                const volInfo = livro.volume_colecao ? ' Vol.' + livro.volume_colecao : '';
-                colecaoHtml = '<div class="colecao-badge">📘 ' + escapeHtml(colecaoNome) + volInfo + '</div>';
-            }
-            
-            let volumeBadge = '';
-            if (livro.volume_colecao && colecaoNome) {
-                volumeBadge = '<div class="book-volume-badge">📕 Volume ' + livro.volume_colecao + '</div>';
-            }
-            
             html += '<div class="book-card" data-index="' + i + '">' +
-                        volumeBadge +
                         '<div class="book-title">' + escapeHtml(titulo) + '</div>' +
                         '<div class="book-author">✍️ ' + escapeHtml(autorString) + '</div>' +
-                        colecaoHtml +
+                        metaHtml +
                         tagsHtml +
                     '</div>';
         }
-        html += '</div>';
         
         booksContainer.innerHTML = html;
         
+        // Adicionar eventos de clique
         const cards = document.querySelectorAll('.book-card');
         for (let i = 0; i < cards.length; i++) {
             cards[i].addEventListener('click', (function(idx) {
                 return function() { mostrarDetalhes(livrosArray[idx]); };
             })(i));
         }
-    }
-
-    // ========== RENDERIZAÇÃO EM LISTA (AGRUPADA POR AUTOR E COLEÇÃO) ==========
-    function renderizarLista(livrosArray) {
-        if (!livrosArray || livrosArray.length === 0) {
-            booksContainer.innerHTML = '<div class="no-results">📭 Nenhum livro encontrado.</div>';
-            return;
-        }
-        
-        // Agrupar por autor
-        const autoresMap = new Map();
-        
-        for (let i = 0; i < livrosArray.length; i++) {
-            const livro = livrosArray[i];
-            const autores = getAutorArray(livro.autor);
-            const autorPrincipal = autores[0] || "Autor desconhecido";
-            
-            if (!autoresMap.has(autorPrincipal)) {
-                autoresMap.set(autorPrincipal, []);
-            }
-            autoresMap.get(autorPrincipal).push(livro);
-        }
-        
-        // Ordenar autores
-        const autoresOrdenados = Array.from(autoresMap.keys()).sort();
-        
-        let html = '';
-        
-        for (let a = 0; a < autoresOrdenados.length; a++) {
-            const autor = autoresOrdenados[a];
-            const livrosAutor = autoresMap.get(autor);
-            
-            // Separar livros em coleções vs avulsos
-            const colecoesMap = new Map();
-            const avulsos = [];
-            
-            for (let i = 0; i < livrosAutor.length; i++) {
-                const livro = livrosAutor[i];
-                const colecaoNome = getColecaoNome(livro);
-                if (colecaoNome) {
-                    if (!colecoesMap.has(colecaoNome)) {
-                        colecoesMap.set(colecaoNome, []);
-                    }
-                    colecoesMap.get(colecaoNome).push(livro);
-                } else {
-                    avulsos.push(livro);
-                }
-            }
-            
-            // Ordenar volumes dentro de cada coleção
-            for (let [colecao, livros] of colecoesMap.entries()) {
-                livros.sort((a, b) => (a.volume_colecao || 999) - (b.volume_colecao || 999));
-            }
-            
-            html += '<div class="author-group">';
-            html += '<div class="author-header">' + escapeHtml(autor) + ' <span class="author-count">' + livrosAutor.length + ' livro(s)</span></div>';
-            
-            // Mostrar coleções
-            for (let [colecaoNome, livrosColecao] of colecoesMap.entries()) {
-                // Determinar volumes existentes e faltantes
-                const volumesExistentes = [];
-                let maxVolume = 0;
-                for (let i = 0; i < livrosColecao.length; i++) {
-                    const vol = livrosColecao[i].volume_colecao;
-                    if (vol && vol > 0) {
-                        volumesExistentes.push(vol);
-                        if (vol > maxVolume) maxVolume = vol;
-                    }
-                }
-                volumesExistentes.sort((a,b) => a - b);
-                
-                // Estimar volumes totais (usar maior volume existente como referência)
-                const totalVolumesEstimado = maxVolume;
-                const volumesEmFalta = [];
-                for (let v = 1; v <= totalVolumesEstimado; v++) {
-                    if (!volumesExistentes.includes(v)) {
-                        volumesEmFalta.push(v);
-                    }
-                }
-                
-                const progressText = volumesExistentes.length + '/' + totalVolumesEstimado;
-                const missingText = volumesEmFalta.length > 0 ? '⚠️ Faltam volumes: ' + volumesEmFalta.join(', ') : '';
-                
-                html += '<div class="colecao-group">';
-                html += '<div class="colecao-header">📚 ' + escapeHtml(colecaoNome) + 
-                        ' <span class="colecao-progress">' + progressText + '</span>' +
-                        (missingText ? ' <span class="missing-volumes">' + missingText + '</span>' : '') +
-                        '</div>';
-                
-                for (let i = 0; i < livrosColecao.length; i++) {
-                    const livro = livrosColecao[i];
-                    html += renderizarLivroItem(livro, i);
-                }
-                html += '</div>';
-            }
-            
-            // Mostrar livros avulsos
-            if (avulsos.length > 0) {
-                html += '<div class="livros-solteiros">';
-                for (let i = 0; i < avulsos.length; i++) {
-                    html += renderizarLivroItem(avulsos[i], i);
-                }
-                html += '</div>';
-            }
-            
-            html += '</div>';
-        }
-        
-        booksContainer.innerHTML = html;
-        
-        // Adicionar eventos de clique aos itens da lista
-        const items = document.querySelectorAll('.livro-item');
-        // Precisamos mapear cada item ao livro correspondente
-        // Vamos usar um índice global ou data attribute
-        let globalIndex = 0;
-        for (let a = 0; a < autoresOrdenados.length; a++) {
-            const autor = autoresOrdenados[a];
-            const livrosAutor = autoresMap.get(autor);
-            for (let i = 0; i < livrosAutor.length; i++) {
-                const item = document.querySelector('.livro-item[data-idx="' + globalIndex + '"]');
-                if (item) {
-                    item.addEventListener('click', (function(livro) {
-                        return function() { mostrarDetalhes(livro); };
-                    })(livrosAutor[i]));
-                }
-                globalIndex++;
-            }
-        }
-    }
-    
-    function renderizarLivroItem(livro, idx) {
-        const titulo = livro.titulo || "Título desconhecido";
-        const volumeInfo = livro.volume_colecao ? 'Vol. ' + livro.volume_colecao : '';
-        const editora = livro.editora || "";
-        
-        let tagsHtml = '';
-        if (livro.tags && Array.isArray(livro.tags) && livro.tags.length > 0) {
-            const maxTags = Math.min(3, livro.tags.length);
-            for (let t = 0; t < maxTags; t++) {
-                tagsHtml += '<span class="livro-tag">#' + escapeHtml(livro.tags[t]) + '</span>';
-            }
-        }
-        
-        return '<div class="livro-item" data-idx="' + idx + '">' +
-                    '<div class="livro-volume">' + (volumeInfo || '📖') + '</div>' +
-                    '<div class="livro-info">' +
-                        '<div class="livro-titulo">' + escapeHtml(titulo) + '</div>' +
-                        '<div class="livro-meta">' + (editora ? escapeHtml(editora) : '') + '</div>' +
-                        (tagsHtml ? '<div class="livro-tags">' + tagsHtml + '</div>' : '') +
-                    '</div>' +
-                '</div>';
     }
 
     // ========== MOSTRAR DETALHES ==========
@@ -956,6 +739,18 @@
         const colecaoNome = getColecaoNome(livro);
         const volumeColecao = livro.volume_colecao || "";
         
+        // Informação da coleção (volumes em falta)
+        let colecaoInfoHtml = '';
+        if (colecaoNome && colecoesInfo.has(colecaoNome)) {
+            const info = colecoesInfo.get(colecaoNome);
+            if (info.faltantes.length > 0) {
+                colecaoInfoHtml = '<div class="detail-field"><span class="detail-label">Status:</span> <span class="detail-value" style="color:#c97e2a;">⚠️ Faltam volumes: ' + info.faltantes.join(', ') + ' (tens ' + info.existentes + ' de ' + info.total + ')</span></div>';
+            } else {
+                colecaoInfoHtml = '<div class="detail-field"><span class="detail-label">Status:</span> <span class="detail-value" style="color:#2c7a4a;">✅ Coleção completa! (' + info.existentes + '/' + info.total + ')</span></div>';
+            }
+        }
+        
+        // Tags
         let tagsHtml = '';
         if (livro.tags && Array.isArray(livro.tags)) {
             for (let t = 0; t < livro.tags.length; t++) {
@@ -974,6 +769,7 @@
                             (ano !== "Não informado" ? '<div class="detail-field"><span class="detail-label">Ano:</span> <span class="detail-value">' + escapeHtml(ano) + '</span></div>' : '') +
                             (paginas !== "Não informado" ? '<div class="detail-field"><span class="detail-label">Páginas:</span> <span class="detail-value">' + escapeHtml(paginas) + '</span></div>' : '') +
                             (colecaoNome ? '<div class="detail-field"><span class="detail-label">Coleção:</span> <span class="detail-value">📘 ' + escapeHtml(colecaoNome) + (volumeColecao ? ' (Volume ' + volumeColecao + ')' : '') + '</span></div>' : '') +
+                            colecaoInfoHtml +
                             '<div class="detail-field"><span class="detail-label">ISBN:</span> <span class="detail-value">' + escapeHtml(isbn) + '</span></div>';
         
         if (tagsHtml) {
@@ -1010,15 +806,6 @@
                 };
                 img.src = coverUrl;
             }
-        }
-    }
-
-    // ========== RENDERIZAR CONFORME VIEW MODE ==========
-    function renderizarLivros() {
-        if (viewMode === 'grid') {
-            renderizarGrid(livrosFiltrados);
-        } else {
-            renderizarLista(livrosFiltrados);
         }
     }
 
@@ -1081,7 +868,7 @@
         
         livrosFiltrados = filtrados;
         resultCountSpan.textContent = "📌 " + livrosFiltrados.length + " de " + bibliotecaData.livros.length + " livro(s)";
-        renderizarLivros();
+        renderizarLivros(livrosFiltrados);
     }
 
     function atualizarFiltrosOptions() {
@@ -1140,6 +927,20 @@
             if (coll) colecaoCount.set(coll, (colecaoCount.get(coll) || 0) + 1);
         }
         
+        // Adicionar info de coleções com volumes em falta
+        let colecoesStatusHtml = '<div class="stats-section"><h3>⚠️ Coleções com volumes em falta</h3><div class="stats-grid">';
+        let temFaltantes = false;
+        for (let [colecao, info] of colecoesInfo.entries()) {
+            if (info.faltantes.length > 0) {
+                temFaltantes = true;
+                colecoesStatusHtml += '<div class="stat-item"><strong>' + escapeHtml(colecao) + '</strong> <span style="color:#c97e2a;">' + info.existentes + '/' + info.total + ' (faltam: ' + info.faltantes.join(', ') + ')</span></div>';
+            }
+        }
+        if (!temFaltantes) {
+            colecoesStatusHtml += '<div class="stat-item">🎉 Todas as coleções estão completas!</div>';
+        }
+        colecoesStatusHtml += '</div></div>';
+        
         const topAutores = Array.from(autorCount.entries()).sort((a,b) => b[1] - a[1]).slice(0, 15);
         const topTags = Array.from(tagCount.entries()).sort((a,b) => b[1] - a[1]).slice(0, 15);
         const topColecoes = Array.from(colecaoCount.entries()).sort((a,b) => b[1] - a[1]);
@@ -1149,6 +950,7 @@
                     '<div class="stat-item"><strong>Autores</strong> <span>' + autorCount.size + '</span></div>' +
                     '<div class="stat-item"><strong>Coleções</strong> <span>' + colecaoCount.size + '</span></div>' +
                     '</div></div>' +
+                    colecoesStatusHtml +
                     '<div class="stats-section"><h3>✍️ Top Autores</h3><div class="stats-grid">';
         for (let i = 0; i < topAutores.length; i++) {
             html += '<div class="stat-item">' + escapeHtml(topAutores[i][0]) + ' <span>' + topAutores[i][1] + '</span></div>';
@@ -1176,6 +978,15 @@
                 if (data && data.livros && Array.isArray(data.livros)) {
                     bibliotecaData = data;
                     console.log("✅ Carregados " + bibliotecaData.livros.length + " livros");
+                    
+                    // Calcular informações das coleções
+                    calcularInfoColecoes();
+                    console.log("📚 Coleções analisadas:", colecoesInfo.size);
+                    for (let [colecao, info] of colecoesInfo.entries()) {
+                        if (info.faltantes.length > 0) {
+                            console.log("⚠️ " + colecao + ": faltam volumes " + info.faltantes.join(', '));
+                        }
+                    }
                 }
             } else {
                 console.warn("Ficheiro não encontrado");
@@ -1203,12 +1014,6 @@
             authorFilter.value = '';
             collectionFilter.value = '';
             aplicarFiltros();
-        });
-        
-        toggleViewBtn.addEventListener('click', function() {
-            viewMode = viewMode === 'grid' ? 'list' : 'grid';
-            toggleViewBtn.textContent = viewMode === 'grid' ? '📋 Vista por Autor' : '🃏 Vista em Grade';
-            renderizarLivros();
         });
         
         openStatsBtn.addEventListener('click', function() {
