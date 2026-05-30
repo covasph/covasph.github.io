@@ -2,7 +2,7 @@
   "livros": [
     {
       "titulo": "A Cidade dos Ossos",
-      "autor": "Cassandra Clare",
+      "autor": ["Cassandra Clare"],
       "editora": "Planeta",
       "colecao": true,
       "nome_colecao": "Caçadores de Sombras",
@@ -13,7 +13,7 @@
     },
     {
       "titulo": "A Cidade das Cinzas",
-      "autor": "Cassandra Clare",
+      "autor": ["Cassandra Clare"],
       "editora": "Planeta",
       "colecao": true,
       "nome_colecao": "Caçadores de Sombras",
@@ -24,7 +24,7 @@
     },
     {
       "titulo": "A Cidade de Vidro",
-      "autor": "Cassandra Clare",
+      "autor": ["Cassandra Clare"],
       "editora": "Planeta",
       "colecao": true,
       "nome_colecao": "Caçadores de Sombras",
@@ -35,7 +35,7 @@
     },
     {
       "titulo": "A Cidade dos Anjos Caídos",
-      "autor": "Cassandra Clare",
+      "autor": ["Cassandra Clare"],
       "editora": "Planeta",
       "colecao": true,
       "nome_colecao": "Caçadores de Sombras",
@@ -46,7 +46,7 @@
     },
     {
       "titulo": "A Cidade das Almas Perdidas",
-      "autor": "Cassandra Clare",
+      "autor": ["Cassandra Clare"],
       "editora": "Planeta",
       "colecao": true,
       "nome_colecao": "Caçadores de Sombras",
@@ -57,7 +57,7 @@
     },
     {
       "titulo": "Viagem ao Centro da Terra",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -67,7 +67,7 @@
     },
     {
       "titulo": "A Volta ao Mundo em 80 Dias",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -77,7 +77,7 @@
     },
     {
       "titulo": "Vinte Mil Léguas Submarinas",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -87,7 +87,7 @@
     },
     {
       "titulo": "Miguel Strogoff",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -97,7 +97,7 @@
     },
     {
       "titulo": "Cinco Semanas num Balão",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -107,7 +107,7 @@
     },
     {
       "titulo": "Os Filhos do Capitão Grant (I): Na América do Sul",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -117,7 +117,7 @@
     },
     {
       "titulo": "A Ilha Misteriosa (I): Os Náufragos do Ar",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -127,7 +127,7 @@
     },
     {
       "titulo": "Escola de Robinsons",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -137,7 +137,7 @@
     },
     {
       "titulo": "Da Terra à Lua",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -147,7 +147,7 @@
     },
     {
       "titulo": "Viagem à Volta da Lua",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -157,7 +157,7 @@
     },
     {
       "titulo": "Os Filhos do Capitão Grant (II): Na Austrália",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -167,7 +167,7 @@
     },
     {
       "titulo": "A Ilha Misteriosa (II): O Abandonado",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -177,7 +177,7 @@
     },
     {
       "titulo": "Um Capitão de Quinze Anos",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -187,7 +187,7 @@
     },
     {
       "titulo": "Os Filhos do Capitão Grant (III): No Oceano Pacífico",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -197,7 +197,7 @@
     },
     {
       "titulo": "O País das Peles",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -207,7 +207,7 @@
     },
     {
       "titulo": "Aventuras de Três Russos e Três Ingleses no Sul da África",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -217,7 +217,7 @@
     },
     {
       "titulo": "A Ilha Misteriosa (III): O Segredo da Ilha",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -227,7 +227,7 @@
     },
     {
       "titulo": "As Tribulações de um Chinês na China",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -237,7 +237,7 @@
     },
     {
       "titulo": "Héctor Servadac",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -247,7 +247,7 @@
     },
     {
       "titulo": "O Chancellor",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -257,7 +257,7 @@
     },
     {
       "titulo": "Aventuras do Capitão Hatteras: Os Ingleses no Polo Norte",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -267,7 +267,7 @@
     },
     {
       "titulo": "Aventuras do Capitão Hatteras: O Deserto de Gelo",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -277,7 +277,7 @@
     },
     {
       "titulo": "Os Quinhentos Milhões da Begum",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -287,7 +287,7 @@
     },
     {
       "titulo": "Uma Cidade Flutuante",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -297,7 +297,7 @@
     },
     {
       "titulo": "Dois Anos de Férias I e II",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -307,7 +307,7 @@
     },
     {
       "titulo": "A Casa a Vapor",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -317,7 +317,7 @@
     },
     {
       "titulo": "Matias Sandorf I",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -327,7 +327,7 @@
     },
     {
       "titulo": "Matias Sandorf II",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -337,7 +337,7 @@
     },
     {
       "titulo": "A Jangada",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -347,7 +347,7 @@
     },
     {
       "titulo": "Norte Contra Sul",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -357,7 +357,7 @@
     },
     {
       "titulo": "Mistress Branican",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -367,7 +367,7 @@
     },
     {
       "titulo": "Perante a Bandeira",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -377,7 +377,7 @@
     },
     {
       "titulo": "César Cascabel",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -387,7 +387,7 @@
     },
     {
       "titulo": "O Raio Verde",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -397,7 +397,7 @@
     },
     {
       "titulo": "A Família sem Nome",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -407,7 +407,7 @@
     },
     {
       "titulo": "Keraban, o Cabeça Dura",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -417,7 +417,7 @@
     },
     {
       "titulo": "A Estrela do Sul",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -427,7 +427,7 @@
     },
     {
       "titulo": "As Índias Negras",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -437,7 +437,7 @@
     },
     {
       "titulo": "Robur, o Conquistador",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -447,7 +447,7 @@
     },
     {
       "titulo": "Clovis Dardentor",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -457,7 +457,7 @@
     },
     {
       "titulo": "Segunda Pátria",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -467,7 +467,7 @@
     },
     {
       "titulo": "Claudio Bombarnac",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -477,7 +477,7 @@
     },
     {
       "titulo": "Os Irmãos Kip",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -487,7 +487,7 @@
     },
     {
       "titulo": "Bolsas de Viagem",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -497,7 +497,7 @@
     },
     {
       "titulo": "A Esfinge dos Gelos",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -507,7 +507,7 @@
     },
     {
       "titulo": "O Testamento de um Excêntrico",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -517,7 +517,7 @@
     },
     {
       "titulo": "A Ilha de Hélice",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -527,7 +527,7 @@
     },
     {
       "titulo": "O Arquipélago em Chamas",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -537,7 +537,7 @@
     },
     {
       "titulo": "As Maravilhosas Aventuras de Antifer",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -547,7 +547,7 @@
     },
     {
       "titulo": "Aventuras de um Rapaz Irlandês",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -557,7 +557,7 @@
     },
     {
       "titulo": "O Soberbo Orinoco",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -567,7 +567,7 @@
     },
     {
       "titulo": "As Emocionantes Aventuras da Missão Barsac",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -577,7 +577,7 @@
     },
     {
       "titulo": "Um Bilhete de Lotaria",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -587,7 +587,7 @@
     },
     {
       "titulo": "O Castelo dos Cárpatos",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -597,7 +597,7 @@
     },
     {
       "titulo": "Um Drama na Livónia",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -607,7 +607,7 @@
     },
     {
       "titulo": "Os Náufragos do Jonathan",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -617,7 +617,7 @@
     },
     {
       "titulo": "O Caminho de França",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -627,7 +627,7 @@
     },
     {
       "titulo": "A Agência Thompson e Cia",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -637,7 +637,7 @@
     },
     {
       "titulo": "A Aldeia Aérea",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -647,7 +647,7 @@
     },
     {
       "titulo": "Os Grandes Viajantes do Século XIX I",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -657,7 +657,7 @@
     },
     {
       "titulo": "Os Grandes Viajantes do Século XIX II",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -667,7 +667,7 @@
     },
     {
       "titulo": "Os Grandes Navegadores do Século XVIII I",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -677,7 +677,7 @@
     },
     {
       "titulo": "Os Grandes Navegadores do Século XVIII II",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -687,7 +687,7 @@
     },
     {
       "titulo": "Os Grandes Exploradores do Século XIX I",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -697,7 +697,7 @@
     },
     {
       "titulo": "Os Grandes Exploradores do Século XIX II",
-      "autor": "Júlio Verne",
+      "autor": ["Júlio Verne"],
       "editora": "RBA Coleccionables",
       "colecao": true,
       "nome_colecao": "Biblioteca Júlio Verne",
@@ -707,7 +707,7 @@
     },
     {
       "titulo": "Ursito Tito - O Mecânico",
-      "autor": "Benji Davies",
+      "autor": ["Benji Davies"],
       "editora": "Planeta Júnior",
       "colecao": true,
       "nome_colecao": "Ursito Tito",
@@ -718,7 +718,7 @@
     },
     {
       "titulo": "Ursito Tito - Piloto de Corrida",
-      "autor": "Benji Davies",
+      "autor": ["Benji Davies"],
       "editora": "Planeta Júnior",
       "colecao": true,
       "nome_colecao": "Ursito Tito",
@@ -729,7 +729,7 @@
     },
     {
       "titulo": "Ursito Tito - Um Dia no Jardim",
-      "autor": "Benji Davies",
+      "autor": ["Benji Davies"],
       "editora": "Planeta Júnior",
       "colecao": true,
       "nome_colecao": "Ursito Tito",
@@ -740,7 +740,7 @@
     },
     {
       "titulo": "Ursito Tito - Hoje Há Pizza",
-      "autor": "Benji Davies",
+      "autor": ["Benji Davies"],
       "editora": "Planeta Júnior",
       "colecao": true,
       "nome_colecao": "Ursito Tito",
@@ -751,7 +751,7 @@
     },
     {
       "titulo": "Ursito Tito - No Parque dos Dinossauros",
-      "autor": "Benji Davies",
+      "autor": ["Benji Davies"],
       "editora": "Planeta Júnior",
       "colecao": true,
       "nome_colecao": "Ursito Tito",
@@ -762,7 +762,7 @@
     },
     {
       "titulo": "Ursito Tito - No Parque de Diversões",
-      "autor": "Benji Davies",
+      "autor": ["Benji Davies"],
       "editora": "Planeta Júnior",
       "colecao": true,
       "nome_colecao": "Ursito Tito",
@@ -773,7 +773,7 @@
     },
     {
       "titulo": "Ursito Tito - Brincar no Parque",
-      "autor": "Benji Davies",
+      "autor": ["Benji Davies"],
       "editora": "Planeta Júnior",
       "colecao": true,
       "nome_colecao": "Ursito Tito",
@@ -784,7 +784,7 @@
     },
     {
       "titulo": "Ursito Tito - Um Dia no Castelo",
-      "autor": "Benji Davies",
+      "autor": ["Benji Davies"],
       "editora": "Planeta Júnior",
       "colecao": true,
       "nome_colecao": "Ursito Tito",
@@ -795,7 +795,7 @@
     },
     {
       "titulo": "Ursito Tito - Vamos Construir",
-      "autor": "Benji Davies",
+      "autor": ["Benji Davies"],
       "editora": "Planeta Júnior",
       "colecao": true,
       "nome_colecao": "Ursito Tito",
@@ -806,7 +806,7 @@
     },
     {
       "titulo": "Ursito Tito - Vamos ao Espaço",
-      "autor": "Benji Davies",
+      "autor": ["Benji Davies"],
       "editora": "Planeta Júnior",
       "colecao": true,
       "nome_colecao": "Ursito Tito",
@@ -817,7 +817,7 @@
     },
     {
       "titulo": "Ursito Tito - Aventura Pirata",
-      "autor": "Benji Davies",
+      "autor": ["Benji Davies"],
       "editora": "Planeta Júnior",
       "colecao": true,
       "nome_colecao": "Ursito Tito",
@@ -828,7 +828,7 @@
     },
     {
       "titulo": "O Beijo da Meia-Noite",
-      "autor": "Lara Adrian",
+      "autor": ["Lara Adrian"],
       "editora": "Quinta Essência",
       "edicao": 1,
       "colecao": true,
@@ -840,7 +840,7 @@
     },
     {
       "titulo": "O Beijo Carmesim",
-      "autor": "Lara Adrian",
+      "autor": ["Lara Adrian"],
       "editora": "Quinta Essência",
       "colecao": true,
       "nome_colecao": "Midnight Breed",
@@ -851,7 +851,7 @@
     },
     {
       "titulo": "O Despertar da Meia-Noite",
-      "autor": "Lara Adrian",
+      "autor": ["Lara Adrian"],
       "editora": "Quinta Essência",
       "colecao": true,
       "nome_colecao": "Midnight Breed",
@@ -862,7 +862,7 @@
     },
     {
       "titulo": "Ascensão à Meia-Noite",
-      "autor": "Lara Adrian",
+      "autor": ["Lara Adrian"],
       "editora": "Quinta Essência",
       "ano": 2012,
       "edicao": 1,
@@ -876,7 +876,7 @@
     },
     {
       "titulo": "1Q84 - Livro 1",
-      "autor": "Haruki Murakami",
+      "autor": ["Haruki Murakami"],
       "editora": "Casa das Letras",
       "edicao": 1,
       "ano": 2011,
@@ -885,11 +885,11 @@
       "volume_colecao": 1,
       "tags": ["ficção", "romance", "surrealismo", "japão"],
       "isbn": "9789895559107",
-      "sinopse": "Um mundo aparentemente normal, duas personagens - Aomame, uma mulher independente, professora de artes marciais, e Tengo, professor de matemática - que não são o que aparentam e ambos se dão conta de ligeiros desajustamentos à sua volta, que os conduzirão fatalmente a um destino comum. Um universo romanesco dissecado com precisão orwelliana, em que se cruzam histórias inesquecíveis e personagens cativantes. Uma ficção que ilumina de forma transversal a aldeia global em que vivemos.[citation:4]"
+      "sinopse": "Um mundo aparentemente normal, duas personagens - Aomame, uma mulher independente, professora de artes marciais, e Tengo, professor de matemática - que não são o que aparentam e ambos se dão conta de ligeiros desajustamentos à sua volta, que os conduzirão fatalmente a um destino comum. Um universo romanesco dissecado com precisão orwelliana, em que se cruzam histórias inesquecíveis e personagens cativantes. Uma ficção que ilumina de forma transversal a aldeia global em que vivemos."
     },
     {
       "titulo": "1Q84 - Livro 2",
-      "autor": "Haruki Murakami",
+      "autor": ["Haruki Murakami"],
       "editora": "Casa das Letras",
       "edicao": 1,
       "ano": 2012,
@@ -898,11 +898,11 @@
       "volume_colecao": 2,
       "tags": ["ficção", "romance", "surrealismo", "japão"],
       "isbn": "9789724620695",
-      "sinopse": "O Livro 1 revelou a existência do mundo de 1Q84. Algumas perguntas encontraram resposta. Outras permanecem em aberto: Quem é o Povo Pequeno? Como farão esses seres para abrir caminho até ao mundo real? Existirão mesmo?, como sugere Fuka-Eri. Chegarão Aomame e Tengo a reencontrar-se? «Há coisas neste mundo que é melhor nem saber», como diz o sinistro Ushikawa. Em todo o caso, o destino dos heróis de 1Q84 está em marcha. No céu, distinguem-se nitidamente duas luas. Não é uma ilusão. Murakami descreve aqui um universo singular, que absorve, que imita a realidade, e a faz sua. A narrativa decorre em dois mundos que se cruzam, qual deles o mais real e o mais fascinante - o de 1984 e o de 1Q84. A perturbante história de um amor adiado, recortada num cenário marcado pelo desencanto e pela violência. Uma fábula sobre os dilemas do mundo contemporâneo.[citation:1][citation:8]"
+      "sinopse": "O Livro 1 revelou a existência do mundo de 1Q84. Algumas perguntas encontraram resposta. Outras permanecem em aberto: Quem é o Povo Pequeno? Como farão esses seres para abrir caminho até ao mundo real? Existirão mesmo?, como sugere Fuka-Eri. Chegarão Aomame e Tengo a reencontrar-se? «Há coisas neste mundo que é melhor nem saber», como diz o sinistro Ushikawa. Em todo o caso, o destino dos heróis de 1Q84 está em marcha. No céu, distinguem-se nitidamente duas luas. Não é uma ilusão. Murakami descreve aqui um universo singular, que absorve, que imita a realidade, e a faz sua. A narrativa decorre em dois mundos que se cruzam, qual deles o mais real e o mais fascinante - o de 1984 e o de 1Q84. A perturbante história de um amor adiado, recortada num cenário marcado pelo desencanto e pela violência. Uma fábula sobre os dilemas do mundo contemporâneo."
     },
     {
       "titulo": "1Q84 - Livro 3",
-      "autor": "Haruki Murakami",
+      "autor": ["Haruki Murakami"],
       "editora": "Casa das Letras",
       "edicao": 1,
       "ano": 2012,
@@ -911,11 +911,11 @@
       "volume_colecao": 3,
       "tags": ["ficção", "romance", "surrealismo", "japão"],
       "isbn": "9789724621098",
-      "sinopse": "O Livro 3 revela o estilo forte e truculento de uma personagem única, Ushikawa de seu nome. A par de Tengo e Aomame, a voz de Ushikawa ecoa nas páginas do terceiro volume de 1Q84 e provoca as reações mais intensas. Amem-no ou detestem-no, mas deixem-no entregue à sua sorte. Tengo e Aomame continuam sem saber, mas aquele é o único lugar perfeito no mundo. Um lugar perfeitamente isolado e, ao mesmo tempo, o único que escapa às malhas da solidão. Sob as duas luas de 1Q84, Aomame e Tengo deixam de estar sozinhos... Inspirado em parte no romance 1984, de George Orwell, 1Q84 é uma surpreendente obra de ficção, escrita de forma poderosa e imaginativa - a um tempo um thriller e uma tocante história de amor.[citation:10]"
+      "sinopse": "O Livro 3 revela o estilo forte e truculento de uma personagem única, Ushikawa de seu nome. A par de Tengo e Aomame, a voz de Ushikawa ecoa nas páginas do terceiro volume de 1Q84 e provoca as reações mais intensas. Amem-no ou detestem-no, mas deixem-no entregue à sua sorte. Tengo e Aomame continuam sem saber, mas aquele é o único lugar perfeito no mundo. Um lugar perfeitamente isolado e, ao mesmo tempo, o único que escapa às malhas da solidão. Sob as duas luas de 1Q84, Aomame e Tengo deixam de estar sozinhos... Inspirado em parte no romance 1984, de George Orwell, 1Q84 é uma surpreendente obra de ficção, escrita de forma poderosa e imaginativa - a um tempo um thriller e uma tocante história de amor."
     },
     {
       "titulo": "Renascença",
-      "autor": "Oliver Bowden",
+      "autor": ["Oliver Bowden"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2010,
@@ -924,11 +924,11 @@
       "volume_colecao": 1,
       "tags": ["ficção histórica", "aventura", "assassinos", "Renascentismo"],
       "isbn": "9789896372309",
-      "sinopse": "Traído pelas famílias que governam Itália, um jovem embarca numa épica busca por vingança. Para acabar com a corrupção e restaurar a honra da sua família, ele terá de aprender a Arte do Assassino. Eu sou Ezio Auditore da Firenze. Eu sou um Assassino…[citation:4]"
+      "sinopse": "Traído pelas famílias que governam Itália, um jovem embarca numa épica busca por vingança. Para acabar com a corrupção e restaurar a honra da sua família, ele terá de aprender a Arte do Assassino. Eu sou Ezio Auditore da Firenze. Eu sou um Assassino…"
     },
     {
       "titulo": "Irmandade",
-      "autor": "Oliver Bowden",
+      "autor": ["Oliver Bowden"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2011,
@@ -937,11 +937,11 @@
       "volume_colecao": 2,
       "tags": ["ficção histórica", "aventura", "assassinos", "Roma"],
       "isbn": "9789896373405",
-      "sinopse": "Roma, outrora poderosa, jaz em ruínas. A cidade está impregnada de sofrimento e degradação, os seus cidadãos vivem sob a sombra da impiedosa família dos Bórgia. Apenas um homem poderá libertar o povo da tirania Bórgia: Ezio Auditore, o Mestre Assassino. A demanda de Ezio irá testá-lo até aos seus limites. César Bórgia, um homem mais malévolo e perigoso que o seu pai, o Papa, não descansará enquanto não tiver conquistado Itália.[citation:4][citation:5]"
+      "sinopse": "Roma, outrora poderosa, jaz em ruínas. A cidade está impregnada de sofrimento e degradação, os seus cidadãos vivem sob a sombra da impiedosa família dos Bórgia. Apenas um homem poderá libertar o povo da tirania Bórgia: Ezio Auditore, o Mestre Assassino. A demanda de Ezio irá testá-lo até aos seus limites. César Bórgia, um homem mais malévolo e perigoso que o seu pai, o Papa, não descansará enquanto não tiver conquistado Itália."
     },
     {
       "titulo": "Cruzada Secreta",
-      "autor": "Oliver Bowden",
+      "autor": ["Oliver Bowden"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2011,
@@ -950,11 +950,11 @@
       "volume_colecao": 3,
       "tags": ["ficção histórica", "aventura", "assassinos", "Cruzadas"],
       "isbn": "9789896373832",
-      "sinopse": "Altaïr embarca numa missão formidável que o levará pela Terra Santa mostrando-lhe o verdadeiro significado do Credo dos Assassinos. De modo a provar o seu empenho, Altaïr terá de derrotar nove inimigos mortais, incluindo o líder dos Templários, Robert de Sablé. A história da vida de Altaïr é contada aqui pela primeira vez: uma viagem que vai mudar a história.[citation:4]"
+      "sinopse": "Altaïr embarca numa missão formidável que o levará pela Terra Santa mostrando-lhe o verdadeiro significado do Credo dos Assassinos. De modo a provar o seu empenho, Altaïr terá de derrotar nove inimigos mortais, incluindo o líder dos Templários, Robert de Sablé. A história da vida de Altaïr é contada aqui pela primeira vez: uma viagem que vai mudar a história."
     },
     {
       "titulo": "Revelações",
-      "autor": "Oliver Bowden",
+      "autor": ["Oliver Bowden"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2012,
@@ -963,11 +963,11 @@
       "volume_colecao": 4,
       "tags": ["ficção histórica", "aventura", "assassinos", "Constantinopla"],
       "isbn": "9789896374310",
-      "sinopse": "A biblioteca não encerra apenas saberes secretos, mas também o segredo mais perturbante que o mundo já viu, um segredo que os Templários desejam usar para controlar os destinos da humanidade. São necessárias cinco chaves para aceder à biblioteca. Para as encontrar, Ezio tem de viajar para a conturbada cidade de Constantinopla, onde um exército de Templários cada vez maior ameaça o Império Otomano.[citation:3][citation:4]"
+      "sinopse": "A biblioteca não encerra apenas saberes secretos, mas também o segredo mais perturbante que o mundo já viu, um segredo que os Templários desejam usar para controlar os destinos da humanidade. São necessárias cinco chaves para aceder à biblioteca. Para as encontrar, Ezio tem de viajar para a conturbada cidade de Constantinopla, onde um exército de Templários cada vez maior ameaça o Império Otomano."
     },
     {
       "titulo": "Renegado",
-      "autor": "Oliver Bowden",
+      "autor": ["Oliver Bowden"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2013,
@@ -976,11 +976,11 @@
       "volume_colecao": 5,
       "tags": ["ficção histórica", "aventura", "assassinos", "Revolução Americana"],
       "isbn": "9789896375171",
-      "sinopse": "O drama vivido por Haytham Kenway durante a Revolução Americana. Diferentemente dos demais livros, que são divididos em diversos capítulos, Renegado é constituído por quatro partes narradas a partir da visão de Haytham Kenway. De forma contrária ao jogo, tal obra tem como protagonista o próprio Haytham, não o seu filho Connor.[citation:1][citation:3]"
+      "sinopse": "O drama vivido por Haytham Kenway durante a Revolução Americana. Diferentemente dos demais livros, que são divididos em diversos capítulos, Renegado é constituído por quatro partes narradas a partir da visão de Haytham Kenway. De forma contrária ao jogo, tal obra tem como protagonista o próprio Haytham, não o seu filho Connor."
     },
     {
       "titulo": "Bandeira Negra",
-      "autor": "Oliver Bowden",
+      "autor": ["Oliver Bowden"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2014,
@@ -989,11 +989,11 @@
       "volume_colecao": 6,
       "tags": ["ficção histórica", "aventura", "piratas", "assassinos"],
       "isbn": "9789896376703",
-      "sinopse": "O sexto livro começa em 1715 e conta a história de Edward Kenway, um notável pirata e corsário que viveu na Era Dourada dos Piratas. Ele é o pai de Haytham Kenway e avô de Connor Kenway, personagens apresentados aos leitores em Assassin's Creed: Renegado. A obra mistura exploração naval com combate e aventuras, tanto em terra quanto no mar das Caraíbas.[citation:1][citation:3]"
+      "sinopse": "O sexto livro começa em 1715 e conta a história de Edward Kenway, um notável pirata e corsário que viveu na Era Dourada dos Piratas. Ele é o pai de Haytham Kenway e avô de Connor Kenway, personagens apresentados aos leitores em Assassin's Creed: Renegado. A obra mistura exploração naval com combate e aventuras, tanto em terra quanto no mar das Caraíbas."
     },
     {
       "titulo": "União",
-      "autor": "Oliver Bowden",
+      "autor": ["Oliver Bowden"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2015,
@@ -1002,11 +1002,11 @@
       "volume_colecao": 7,
       "tags": ["ficção histórica", "aventura", "assassinos", "Revolução Francesa"],
       "isbn": "9789896378080",
-      "sinopse": "O sétimo livro é ambientado na França durante a Revolução Francesa. O livro centra-se nos acontecimentos da Revolução na perspectiva da templária Élise De La Serre, que junto do assassino Arno Victor Dorian investigam a morte do pai de Élise bem como o crescimento de uma ideologia dentro da Ordem dos Cavaleiros Templários que ameaça a própria organização.[citation:1][citation:3]"
+      "sinopse": "O sétimo livro é ambientado na França durante a Revolução Francesa. O livro centra-se nos acontecimentos da Revolução na perspectiva da templária Élise De La Serre, que junto do assassino Arno Victor Dorian investigam a morte do pai de Élise bem como o crescimento de uma ideologia dentro da Ordem dos Cavaleiros Templários que ameaça a própria organização."
     },
     {
       "titulo": "Submundo",
-      "autor": "Oliver Bowden",
+      "autor": ["Oliver Bowden"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2016,
@@ -1015,11 +1015,11 @@
       "volume_colecao": 8,
       "tags": ["ficção histórica", "aventura", "assassinos", "Era Vitoriana"],
       "isbn": "9789896379339",
-      "sinopse": "O oitavo livro é equivalente ao jogo Assassin's Creed Syndicate, passando-se na Inglaterra da Era Vitoriana. O livro inicia no ano de 1862, antes de concluir com o enredo de Jacob e Evie Frye. Neste livro, o foco da história é Henry Green, o Assassino de Londres que direciona os irmãos Frye no jogo. Ficamos a saber mais sobre o passado do personagem (que na verdade se chama Jayadeep Mir, filho de Arbaaz Mir).[citation:1][citation:3]"
+      "sinopse": "O oitavo livro é equivalente ao jogo Assassin's Creed Syndicate, passando-se na Inglaterra da Era Vitoriana. O livro inicia no ano de 1862, antes de concluir com o enredo de Jacob e Evie Frye. Neste livro, o foco da história é Henry Green, o Assassino de Londres que direciona os irmãos Frye no jogo. Ficamos a saber mais sobre o passado do personagem (que na verdade se chama Jayadeep Mir, filho de Arbaaz Mir)."
     },
     {
       "titulo": "Talismã",
-      "autor": "Mário Zambujal",
+      "autor": ["Mário Zambujal"],
       "editora": "Clube do Autor",
       "edicao": 1,
       "ano": 2015,
@@ -1030,7 +1030,7 @@
     },
     {
       "titulo": "Tigana - Vol. I",
-      "autor": "Guy Gavriel Kay",
+      "autor": ["Guy Gavriel Kay"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2013,
@@ -1044,7 +1044,7 @@
     },
     {
       "titulo": "Tigana - Vol. II: A Voz da Vingança",
-      "autor": "Guy Gavriel Kay",
+      "autor": ["Guy Gavriel Kay"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2014,
@@ -1058,7 +1058,7 @@
     },
     {
       "titulo": "O Bibliotecário",
-      "autor": "A.M. Dean",
+      "autor": ["A. M. Dean"],
       "editora": "Clube do Autor",
       "edicao": 1,
       "ano": 2014,
@@ -1069,7 +1069,7 @@
     },
     {
       "titulo": "O Medo do Homem Sábio - Parte I",
-      "autor": "Patrick Rothfuss",
+      "autor": ["Patrick Rothfuss"],
       "editora": "Presença",
       "edicao": 1,
       "ano": 2012,
@@ -1083,7 +1083,7 @@
     },
     {
       "titulo": "O Medo do Homem Sábio - Parte II",
-      "autor": "Patrick Rothfuss",
+      "autor": ["Patrick Rothfuss"],
       "editora": "Presença",
       "edicao": 1,
       "ano": 2013,
@@ -1097,7 +1097,7 @@
     },
     {
       "titulo": "Crepúsculo / Vida e Morte: Crepúsculo Reimaginado",
-      "autor": "Stephenie Meyer",
+      "autor": ["Stephenie Meyer"],
       "editora": "Asa",
       "edicao": 1,
       "ano": 2015,
@@ -1107,32 +1107,32 @@
       "sinopse": "Edição especial de 10º aniversário que inclui o romance original 'Crepúsculo' e a sua reimaginação 'Vida e Morte'. Quando Beaufort Swan se muda para a sombria cidade de Forks e conhece a misteriosa e sedutora Edythe Cullen, a sua vida dá uma volta emocionante e aterrorizadora. Com a sua pele de porcelana, olhos dourados, voz hipnotizante e dons sobrenaturais, Edythe é ao mesmo tempo irresistível e enigmática. O que Beau não percebe é que, quanto mais se aproxima dela, mais se coloca a si mesmo, e àqueles que o rodeiam, em risco. E pode ser demasiado tarde para voltar atrás..."
     },
     {
-      "titulo": "Styxx Vol.1",
-      "subtitulo": null,
-      "autor": "Sherrilyn Kenyon",
+      "titulo": "Styxx",
+      "subtitulo": "Volume 1",
+      "autor": ["Sherrilyn Kenyon"],
       "editora": "Chá das Cinco",
       "colecao": true,
       "nome_colecao": "Predadores da Noite",
       "volume_colecao": 22,
       "tags": ["fantasia", "romance paranormal", "vampiros", "mitologia"],
       "isbn": "9789897103445",
-      "sinopse": "Os gémeos Styxx e Acheron tiveram poucos anos de paz antes de serem separados pelas intrigas que os pretendem destruir a ambos. Styxx vive na sombra do irmão, relegado para fora do reino e atormentado pelos deuses que veem nele um perigo para todo o panteão. As traições são constantes. E a lealdade é uma palavra que Styxx não conhece. Quando conhece Bethany, todo o seu mundo se transforma. Escondendo a sua identidade para evitar mais tormentos, começa a confiar na mulher que revolucionou o seu mundo. Mas, mais uma vez, a sua confiança é abalada por segredos mais dolorosos do que a traição. [citation:1]"
+      "sinopse": "Os gémeos Styxx e Acheron tiveram poucos anos de paz antes de serem separados pelas intrigas que os pretendem destruir a ambos. Styxx vive na sombra do irmão, relegado para fora do reino e atormentado pelos deuses que veem nele um perigo para todo o panteão. As traições são constantes. E a lealdade é uma palavra que Styxx não conhece. Quando conhece Bethany, todo o seu mundo se transforma. Escondendo a sua identidade para evitar mais tormentos, começa a confiar na mulher que revolucionou o seu mundo. Mas, mais uma vez, a sua confiança é abalada por segredos mais dolorosos do que a traição."
     },
     {
-      "titulo": "Styxx Vol.2",
-      "subtitulo": null,
-      "autor": "Sherrilyn Kenyon",
+      "titulo": "Styxx",
+      "subtitulo": "Volume 2",
+      "autor": ["Sherrilyn Kenyon"],
       "editora": "Chá das Cinco",
       "colecao": true,
       "nome_colecao": "Predadores da Noite",
       "volume_colecao": 23,
       "tags": ["fantasia", "romance paranormal", "vampiros", "mitologia"],
       "isbn": "9789897103520",
-      "sinopse": "Continuação da épica história de Styxx. Mergulhado num mundo de traições e segredos dolorosos, Styxx enfrenta a escuridão que ameaça a sua alma. Quando já não há ninguém em quem confiar, haverá algum caminho para a redenção? O amor de Bethany será capaz de o salvar das profundezas do seu próprio tormento? [citation:5]"
+      "sinopse": "Continuação da épica história de Styxx. Mergulhado num mundo de traições e segredos dolorosos, Styxx enfrenta a escuridão que ameaça a sua alma. Quando já não há ninguém em quem confiar, haverá algum caminho para a redenção? O amor de Bethany será capaz de o salvar das profundezas do seu próprio tormento?"
     },
     {
       "titulo": "O Assassino do Crucifixo",
-      "autor": "Chris Carter",
+      "autor": ["Chris Carter"],
       "editora": "TopSeller",
       "edicao": 1,
       "ano": 2016,
@@ -1142,11 +1142,11 @@
       "volume_colecao": 1,
       "tags": ["thriller", "policial", "suspense", "serial killer"],
       "isbn": "9789898831798",
-      "sinopse": "O corpo de uma jovem é encontrado numa cabana abandonada, no meio de uma floresta. Nua e presa pelos braços a dois postes, a vítima foi torturada até à morte e no seu corpo foi entalhada uma cruz que o detetive Robert Hunter reconhece de imediato: é a assinatura de um psicopata conhecido como Assassino do Crucifixo. Mas como é possível, se o Assassino do Crucifixo foi condenado e executado há dois anos? [citation:2][citation:9]"
+      "sinopse": "O corpo de uma jovem é encontrado numa cabana abandonada, no meio de uma floresta. Nua e presa pelos braços a dois postes, a vítima foi torturada até à morte e no seu corpo foi entalhada uma cruz que o detetive Robert Hunter reconhece de imediato: é a assinatura de um psicopata conhecido como Assassino do Crucifixo. Mas como é possível, se o Assassino do Crucifixo foi condenado e executado há dois anos?"
     },
     {
       "titulo": "O Carrasco do Medo",
-      "autor": "Chris Carter",
+      "autor": ["Chris Carter"],
       "editora": "TopSeller",
       "edicao": 1,
       "ano": 2016,
@@ -1156,11 +1156,11 @@
       "volume_colecao": 2,
       "tags": ["thriller", "policial", "suspense", "serial killer"],
       "isbn": "9789898843739",
-      "sinopse": "Quando a Unidade Especial de Homicídios da Polícia de Los Angeles é enviada a uma pequena igreja, depara-se com um cenário aterrador. O padre foi decapitado, o seu corpo dilacerado, e no seu peito lê-se o número 3 desenhado a sangue. O detetive Robert Hunter e o seu parceiro acreditam tratar-se de um crime ligado a algum ritual religioso. Mas à medida que mais corpos são revelados, o pavor espalha-se por toda a cidade. O que une realmente estes crimes, para além do terror e brutalidade de todas as mortes resultarem dos seus maiores medos? [citation:3][citation:10]"
+      "sinopse": "Quando a Unidade Especial de Homicídios da Polícia de Los Angeles é enviada a uma pequena igreja, depara-se com um cenário aterrador. O padre foi decapitado, o seu corpo dilacerado, e no seu peito lê-se o número 3 desenhado a sangue. O detetive Robert Hunter e o seu parceiro acreditam tratar-se de um crime ligado a algum ritual religioso. Mas à medida que mais corpos são revelados, o pavor espalha-se por toda a cidade. O que une realmente estes crimes, para além do terror e brutalidade de todas as mortes resultarem dos seus maiores medos?"
     },
     {
       "titulo": "O Escultor da Morte",
-      "autor": "Chris Carter",
+      "autor": ["Chris Carter"],
       "editora": "TopSeller",
       "edicao": 1,
       "ano": 2017,
@@ -1170,11 +1170,11 @@
       "volume_colecao": 3,
       "tags": ["thriller", "policial", "suspense", "serial killer"],
       "isbn": "9789898869579",
-      "sinopse": "Quando a enfermeira Melinda Wallis entra no quarto de um paciente, encontra Derek Nicholson, um importante advogado de Los Angeles, brutalmente assassinado. O homicida mutilou os seus membros e construiu com eles uma escultura. Quando um segundo corpo aparece, o mistério adensa-se. Qual será a ligação entre as vítimas? Que significado terá a disposição dos seus corpos? Um thriller vibrante e misterioso, com surpresas e revelações inesperadas ao virar de cada página. [citation:4][citation:8]"
+      "sinopse": "Quando a enfermeira Melinda Wallis entra no quarto de um paciente, encontra Derek Nicholson, um importante advogado de Los Angeles, brutalmente assassinado. O homicida mutilou os seus membros e construiu com eles uma escultura. Quando um segundo corpo aparece, o mistério adensa-se. Qual será a ligação entre as vítimas? Que significado terá a disposição dos seus corpos? Um thriller vibrante e misterioso, com surpresas e revelações inesperadas ao virar de cada página."
     },
     {
       "titulo": "O Predador da Noite",
-      "autor": "Chris Carter",
+      "autor": ["Chris Carter"],
       "editora": "TopSeller",
       "edicao": 1,
       "ano": 2017,
@@ -1184,11 +1184,11 @@
       "volume_colecao": 4,
       "tags": ["thriller", "policial", "suspense", "serial killer"],
       "isbn": "9789898855402",
-      "sinopse": "Um corpo não identificado, do sexo feminino, é trazido para a morgue. O corpo não tem outras marcas, exceto o pormenor macabro de a boca e as partes íntimas terem sido costuradas. A autópsia revela outra descoberta chocante: o assassino deixou algo dentro do corpo da vítima. O detetive Robert Hunter é chamado para tomar conta do caso. O criminoso é um impiedoso e perfeccionista serial killer de mulheres, obcecado com os segredos do passado. [citation:7]"
+      "sinopse": "Um corpo não identificado, do sexo feminino, é trazido para a morgue. O corpo não tem outras marcas, exceto o pormenor macabro de a boca e as partes íntimas terem sido costuradas. A autópsia revela outra descoberta chocante: o assassino deixou algo dentro do corpo da vítima. O detetive Robert Hunter é chamado para tomar conta do caso. O criminoso é um impiedoso e perfeccionista serial killer de mulheres, obcecado com os segredos do passado."
     },
     {
       "titulo": "Um por Um",
-      "autor": "Chris Carter",
+      "autor": ["Chris Carter"],
       "editora": "TopSeller",
       "edicao": 1,
       "ano": 2018,
@@ -1198,11 +1198,11 @@
       "volume_colecao": 5,
       "tags": ["thriller", "policial", "suspense", "serial killer"],
       "isbn": null,
-      "sinopse": "O inspetor Robert Hunter recebe um telefonema anónimo de alguém a dizer-lhe que vá a uma transmissão privada na Internet. Hunter regista-se e depara-se com um espetáculo macabro, feito apenas para os seus olhos. Obrigado a fazer uma escolha brutal entre fogo ou água, ele tem de assistir em direto à tortura e morte atroz de uma vítima não identificada. Antes de ter tempo de começar a investigação, recebe um novo telefonema. O assassino transformou o crime num programa ao vivo a que toda a gente pode assistir. [citation:5]"
+      "sinopse": "O inspetor Robert Hunter recebe um telefonema anónimo de alguém a dizer-lhe que vá a uma transmissão privada na Internet. Hunter regista-se e depara-se com um espetáculo macabro, feito apenas para os seus olhos. Obrigado a fazer uma escolha brutal entre fogo ou água, ele tem de assistir em direto à tortura e morte atroz de uma vítima não identificada. Antes de ter tempo de começar a investigação, recebe um novo telefonema. O assassino transformou o crime num programa ao vivo a que toda a gente pode assistir."
     },
     {
       "titulo": "Uma Mente Perversa",
-      "autor": "Chris Carter",
+      "autor": ["Chris Carter"],
       "editora": "TopSeller",
       "edicao": 1,
       "ano": 2019,
@@ -1212,59 +1212,41 @@
       "volume_colecao": 6,
       "tags": ["thriller", "policial", "suspense", "serial killer"],
       "isbn": "9789896686987",
-      "sinopse": "Um acidente numa zona rural leva à detenção inesperada de um homem por suspeita de duplo homicídio. Alegando ser vítima de um enorme labirinto de mentiras e enganos, ele só aceita falar com uma pessoa — o inspetor Robert Hunter. Durante os interrogatórios, descobre-se que o homem detido é um assassino em série que sequestrou, torturou e mutilou impunemente pessoas durante, pelo menos, vinte e cinco anos. Mas quando revela que nem todas as suas vítimas morreram, a investigação transforma-se numa corrida contra o tempo. [citation:1][citation:6]"
+      "sinopse": "Um acidente numa zona rural leva à detenção inesperada de um homem por suspeita de duplo homicídio. Alegando ser vítima de um enorme labirinto de mentiras e enganos, ele só aceita falar com uma pessoa — o inspetor Robert Hunter. Durante os interrogatórios, descobre-se que o homem detido é um assassino em série que sequestrou, torturou e mutilou impunemente pessoas durante, pelo menos, vinte e cinco anos. Mas quando revela que nem todas as suas vítimas morreram, a investigação transforma-se numa corrida contra o tempo."
     },
     {
       "titulo": "Guerra e Paz",
-      "subtitulo": null,
-      "autor": "Leão Tolstói",
-      "autor_original": "Lev Tolstoi",
+      "autor": ["Leão Tolstói"],
       "editora": "Círculo de Leitores",
-      "edicao": null,
-      "ano": null,
       "colecao": true,
-      "nome_colecao": null,
       "volume_colecao": 1,
       "total_volumes": 3,
       "tags": ["clássico", "literatura russa", "histórico", "romance", "guerra"],
-      "isbn": null,
-      "sinopse": "Publicado entre 1865 e 1869, «Guerra e Paz» é a obra suprema de Lev Nikolaievich Tolstoi e um dos monumentos incontestados da literatura universal. Mais do que um romance, mais do que um painel histórico, «Guerra e Paz» é uma tentativa — provavelmente a mais ambiciosa alguma vez empreendida em ficção — de captar a totalidade da experiência humana: o amor e a morte, a guerra e a paz, a história e o destino individual, o mundano e o transcendente. Centrado na invasão napoleónica da Rússia de 1812, o romance acompanha as vidas de três famílias da aristocracia russa — os Bolkonsky, os Rostov e os Bezukhov — ao longo de quinze anos de convulsões históricas. As personagens — o idealista príncipe André, a luminosa Natasha, o desastrado e bondoso Pierre Bezukhov — possuem uma tridimensionalidade e uma verdade humana que fazem delas presenças vivas na memória do leitor."
+      "sinopse": "Publicado entre 1865 e 1869, «Guerra e Paz» é a obra suprema de Lev Nikolaievich Tolstoi e um dos monumentos incontestados da literatura universal. Mais do que um romance, mais do que um painel histórico, «Guerra e Paz» é uma tentativa — provavelmente a mais ambiciosa alguma vez empreendida em ficção — de captar a totalidade da experiência humana: o amor e a morte, a guerra e a paz, a história e o destino individual, o mundano e o transcendente. Centrado na invasão napoleónica da Rússia de 1812, o romance acompanha as vidas de três famílias da aristocracia russa — os Bolkonsky, os Rostov e os Bezukhov — ao longo de quinze anos de convulsões históricas."
     },
     {
       "titulo": "Guerra e Paz",
-      "subtitulo": null,
-      "autor": "Leão Tolstói",
-      "autor_original": "Lev Tolstoi",
+      "autor": ["Leão Tolstói"],
       "editora": "Círculo de Leitores",
-      "edicao": null,
-      "ano": null,
       "colecao": true,
-      "nome_colecao": null,
       "volume_colecao": 2,
       "total_volumes": 3,
       "tags": ["clássico", "literatura russa", "histórico", "romance", "guerra"],
-      "isbn": null,
       "sinopse": "Segundo volume da obra-prima de Tolstói. Continua a saga das famílias Bolkonsky, Rostov e Bezukhov durante o período napoleónico, aprofundando os conflitos pessoais e históricos que marcaram a Rússia do século XIX."
     },
     {
       "titulo": "Guerra e Paz",
-      "subtitulo": null,
-      "autor": "Leão Tolstói",
-      "autor_original": "Lev Tolstoi",
+      "autor": ["Leão Tolstói"],
       "editora": "Círculo de Leitores",
-      "edicao": null,
-      "ano": null,
       "colecao": true,
-      "nome_colecao": null,
       "volume_colecao": 3,
       "total_volumes": 3,
       "tags": ["clássico", "literatura russa", "histórico", "romance", "guerra"],
-      "isbn": null,
       "sinopse": "Terceiro e último volume da edição do Círculo de Leitores. Conclusão da monumental narrativa que entrelaça os destinos individuais com as grandes convulsões históricas da Rússia durante as invasões napoleónicas."
     },
     {
       "titulo": "O Terceiro Desejo",
-      "autor": "Andrzej Sapkowski",
+      "autor": ["Andrzej Sapkowski"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2016,
@@ -1274,12 +1256,11 @@
       "volume_colecao": 257,
       "tags": ["fantasia", "bruxos", "contos", "witcher", "polónia"],
       "isbn": "9789897730009",
-      "sinopse": "O seu nome é Geralt de Rivia. Dizem que é um bruxo e um assassino sem misericórdia que vagueia pelo mundo à caça de monstros e predadores. Mas na verdade vive de acordo com o seu próprio código de conduta. A sua espada serve, em troca de uma recompensa, poderosos reis amaldiçoados, mas também os mais desfavorecidos. Ao longo das suas viagens, Geralt encontra todo o tipo de criaturas – algumas saídas da mitologia eslava e dos contos populares dos irmãos Grimm – como vampiros e lobisomens, elfos, quimeras e estriges, trolls e génios que o tentam, satisfazendo todos os seus desejos. Mas este é apenas o início das suas aventuras como viajante e feiticeiro que irá desafiar o destino num mundo em que criaturas de todas as raças coabitam numa paz precária prestes a despedaçar-se…",
-      "nota": "Edição baseada na tradução brasileira de Thomasz Barcinski, recomendada pelo autor como a mais fiel ao original polaco. Mantém nomes originais como Jaskier."
+      "sinopse": "O seu nome é Geralt de Rivia. Dizem que é um bruxo e um assassino sem misericórdia que vagueia pelo mundo à caça de monstros e predadores. Mas na verdade vive de acordo com o seu próprio código de conduta. A sua espada serve, em troca de uma recompensa, poderosos reis amaldiçoados, mas também os mais desfavorecidos. Ao longo das suas viagens, Geralt encontra todo o tipo de criaturas – algumas saídas da mitologia eslava e dos contos populares dos irmãos Grimm – como vampiros e lobisomens, elfos, quimeras e estriges, trolls e génios que o tentam, satisfazendo todos os seus desejos. Mas este é apenas o início das suas aventuras como viajante e feiticeiro que irá desafiar o destino num mundo em que criaturas de todas as raças coabitam numa paz precária prestes a despedaçar-se…"
     },
     {
       "titulo": "A Espada do Destino",
-      "autor": "Andrzej Sapkowski",
+      "autor": ["Andrzej Sapkowski"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2017,
@@ -1293,7 +1274,7 @@
     },
     {
       "titulo": "O Sangue dos Elfos",
-      "autor": "Andrzej Sapkowski",
+      "autor": ["Andrzej Sapkowski"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2018,
@@ -1307,7 +1288,7 @@
     },
     {
       "titulo": "O Tempo do Desprezo",
-      "autor": "Andrzej Sapkowski",
+      "autor": ["Andrzej Sapkowski"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2018,
@@ -1321,7 +1302,7 @@
     },
     {
       "titulo": "Baptismo de Fogo",
-      "autor": "Andrzej Sapkowski",
+      "autor": ["Andrzej Sapkowski"],
       "editora": "Saída de Emergência",
       "colecao": true,
       "nome_colecao": "Bang!",
@@ -1331,19 +1312,18 @@
     },
     {
       "titulo": "Astúcia",
-      "autor": "Sandra Brown",
+      "autor": ["Sandra Brown"],
       "editora": "Quinta Essência",
       "edicao": 1,
       "ano": 2022,
       "paginas": 538,
       "tags": ["thriller", "suspense", "romance", "mistério", "investigação"],
       "isbn": "9789896615222",
-      "sinopse": "Weston Graham é um enigma. O FBI recusa-se a admitir a sua existência. Weston Graham é um camaleão. Assume vários nomes e inúmeros disfarces, atrai mulheres ricas e desaparece – juntamente com elas e as suas fortunas – para reaparecer com uma nova identidade e uma nova vítima. Sem provas ou pistas, qualquer investigação está condenada à partida, mas o agente Drex Easton sabe instintivamente que este homem é real, é perigoso, e não vai parar. Para Drex, o caso é pessoal, e ele não tenciona desistir de o apanhar. Mas quem é Weston Graham, afinal? Agora, pela primeira vez no seu longo jogo do gato e do rato, Drex tem um suspeito em vista. O atraente e charmoso Jasper Ford casou-se recentemente com Talia Shafer, uma bem-sucedida mulher de negócios. Drex insinua-se na vida do casal, fazendo-se passar por um vizinho, para os poder manter sob vigilância constante. Mas a situação complica-se quando Drex se aproxima demasiado de Talia. Esta é a única oportunidade de Drex superar o astuto inimigo antes de este assassinar novamente e escapar à justiça para sempre. Mas primeiro terá de determinar se Talia é uma cúmplice implacável... ou se os seus dias estão contados.",
-      "sinopse_resumida": "Um agente do FBI persegue um vigarista camaleónico que seduz mulheres ricas e desaparece com as suas fortunas, numa trama de identidades falsas e tensão psicológica."
+      "sinopse": "Weston Graham é um enigma. O FBI recusa-se a admitir a sua existência. Weston Graham é um camaleão. Assume vários nomes e inúmeros disfarces, atrai mulheres ricas e desaparece – juntamente com elas e as suas fortunas – para reaparecer com uma nova identidade e uma nova vítima. Sem provas ou pistas, qualquer investigação está condenada à partida, mas o agente Drex Easton sabe instintivamente que este homem é real, é perigoso, e não vai parar. Para Drex, o caso é pessoal, e ele não tenciona desistir de o apanhar. Mas quem é Weston Graham, afinal? Agora, pela primeira vez no seu longo jogo do gato e do rato, Drex tem um suspeito em vista. O atraente e charmoso Jasper Ford casou-se recentemente com Talia Shafer, uma bem-sucedida mulher de negócios. Drex insinua-se na vida do casal, fazendo-se passar por um vizinho, para os poder manter sob vigilância constante. Mas a situação complica-se quando Drex se aproxima demasiado de Talia. Esta é a única oportunidade de Drex superar o astuto inimigo antes de este assassinar novamente e escapar à justiça para sempre. Mas primeiro terá de determinar se Talia é uma cúmplice implacável... ou se os seus dias estão contados."
     },
     {
       "titulo": "O Rouxinol",
-      "autor": "Kristin Hannah",
+      "autor": ["Kristin Hannah"],
       "editora": "Bertrand Editora",
       "edicao": 1,
       "ano": 2016,
@@ -1356,13 +1336,13 @@
     },
     {
       "titulo": "Primeiros Textos em Português",
-      "autor": ["José António Souto Cabo (coord.)"],
+      "autor": ["José António Souto Cabo"],
       "editora": "Círculo de Leitores",
       "colecao": true,
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 1,
       "tags": ["literatura portuguesa", "cantigas trovadorescas", "história", "cultura portuguesa"],
-      "sinopse": "É nas cantigas trovadorescas que encontramos a mais antiga expressão literária da língua portuguesa. Reúne-se neste volume uma antologia de cantigas de amor, de amigo, e de escárnio e mal-dizer, bem como uma seleção de prosa literária e os primeiros exemplos documentados do uso do português em textos não literários. Séculos XII e XIII. [citation:5][citation:7]"
+      "sinopse": "É nas cantigas trovadorescas que encontramos a mais antiga expressão literária da língua portuguesa. Reúne-se neste volume uma antologia de cantigas de amor, de amigo, e de escárnio e mal-dizer, bem como uma seleção de prosa literária e os primeiros exemplos documentados do uso do português em textos não literários. Séculos XII e XIII."
     },
     {
       "titulo": "Primeiros textos de História e Primeiro Tratado de Heráldica",
@@ -1372,7 +1352,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 2,
       "tags": ["história", "heráldica", "cultura portuguesa"],
-      "sinopse": "Primeiros textos de história e primeiro tratado de heráldica, abrangendo documentos dos séculos XIII, XVI, XVII e XIX. [citation:5][citation:7]"
+      "sinopse": "Primeiros textos de história e primeiro tratado de heráldica, abrangendo documentos dos séculos XIII, XVI, XVII e XIX."
     },
     {
       "titulo": "Primeiros livros de edificação e Primeira biografia",
@@ -1382,7 +1362,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 3,
       "tags": ["biografia", "arquitetura", "ética", "cultura portuguesa"],
-      "sinopse": "Primeiros livros de edificação moral e primeira crónica biográfica. Séculos XIV, XV e XVI. [citation:5][citation:7]"
+      "sinopse": "Primeiros livros de edificação moral e primeira crónica biográfica. Séculos XIV, XV e XVI."
     },
     {
       "titulo": "Primeiros relatos de viagens e descobrimento",
@@ -1392,7 +1372,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 4,
       "tags": ["descobrimentos", "viagens", "história", "cultura portuguesa"],
-      "sinopse": "Primeiros relatos de viagens e de descobrimento, abrangendo documentos dos séculos XV e XVI. [citation:5][citation:7]"
+      "sinopse": "Primeiros relatos de viagens e de descobrimento, abrangendo documentos dos séculos XV e XVI."
     },
     {
       "titulo": "Primeiros textos de ética social e política",
@@ -1402,7 +1382,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 5,
       "tags": ["ética", "política", "filosofia", "cultura portuguesa"],
-      "sinopse": "Primeiros textos de ética social e política. Séculos XV e XVI. [citation:5][citation:7]"
+      "sinopse": "Primeiros textos de ética social e política. Séculos XV e XVI."
     },
     {
       "titulo": "Primeiros escritos de geografia e ecologia",
@@ -1412,7 +1392,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 6,
       "tags": ["geografia", "ecologia", "ciência", "cultura portuguesa"],
-      "sinopse": "Primeiros escritos de geografia e ecologia. Séculos XVI, XVII e XIX. [citation:5][citation:7]"
+      "sinopse": "Primeiros escritos de geografia e ecologia. Séculos XVI, XVII e XIX."
     },
     {
       "titulo": "Primeiras obras de dramaturgia",
@@ -1422,7 +1402,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 7,
       "tags": ["teatro", "dramaturgia", "literatura portuguesa", "cultura portuguesa"],
-      "sinopse": "Primeiras obras de dramaturgia (seleção). Século XVI. [citation:5][citation:7]"
+      "sinopse": "Primeiras obras de dramaturgia (seleção). Século XVI."
     },
     {
       "titulo": "Primeiros livros de didática religiosa",
@@ -1432,7 +1412,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 8,
       "tags": ["religião", "didática", "história", "cultura portuguesa"],
-      "sinopse": "Primeiros livros de didática religiosa, incluindo o Catecismo Pequeno de D. Diogo Ortiz e o Catecismo ou Doutrina Cristã de D. Frei Bartolomeu dos Mártires. Século XVI. [citation:5][citation:9]"
+      "sinopse": "Primeiros livros de didática religiosa, incluindo o Catecismo Pequeno de D. Diogo Ortiz e o Catecismo ou Doutrina Cristã de D. Frei Bartolomeu dos Mártires. Século XVI."
     },
     {
       "titulo": "Primeiras obras de marinharia e guerra marítima",
@@ -1442,7 +1422,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 9,
       "tags": ["marinharia", "guerra", "navegação", "cultura portuguesa"],
-      "sinopse": "Primeiras obras de marinharia e guerra marítima, incluindo o Livro de Marinharia de João de Lisboa e a Arte da Guerra do Mar de Fernando Oliveira. Século XVI. [citation:5][citation:7][citation:9]"
+      "sinopse": "Primeiras obras de marinharia e guerra marítima, incluindo o Livro de Marinharia de João de Lisboa e a Arte da Guerra do Mar de Fernando Oliveira. Século XVI."
     },
     {
       "titulo": "Primeiro romance de cavalaria e primeira novela sentimental",
@@ -1453,7 +1433,7 @@
       "volume_colecao": 10,
       "tags": ["romance de cavalaria", "literatura portuguesa", "cultura portuguesa"],
       "isbn": "9789724251585",
-      "sinopse": "Inclui a 'Crónica do Imperador Clarimundo' de João de Barros e 'Menina e Moça' de Bernardim Ribeiro. Século XVI. [citation:2][citation:5][citation:8]"
+      "sinopse": "Inclui a 'Crónica do Imperador Clarimundo' de João de Barros e 'Menina e Moça' de Bernardim Ribeiro. Século XVI."
     },
     {
       "titulo": "Primeiras gramáticas da língua portuguesa",
@@ -1463,7 +1443,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 11,
       "tags": ["gramática", "linguística", "língua portuguesa", "cultura portuguesa"],
-      "sinopse": "Primeiras gramáticas da língua portuguesa: a 'Gramática da Linguagem Portuguesa' de Fernão de Oliveira e a 'Gramática da Língua Portuguesa' de João de Barros. Século XVI. [citation:5][citation:9]"
+      "sinopse": "Primeiras gramáticas da língua portuguesa: a 'Gramática da Linguagem Portuguesa' de Fernão de Oliveira e a 'Gramática da Língua Portuguesa' de João de Barros. Século XVI."
     },
     {
       "titulo": "Primeiros tratados de pintura",
@@ -1473,7 +1453,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 12,
       "tags": ["pintura", "arte", "tratado", "cultura portuguesa"],
-      "sinopse": "Primeiros tratados de pintura: 'Da Pintura Antiga' de Francisco de Holanda, 'Tratado de Caligrafia' de Giraldo Fernandes do Prado, 'Pintura Simples' de Filipe Nunes, e o 'Breve Tratado de Iluminação'. Séculos XVI e XVII. [citation:5][citation:9]"
+      "sinopse": "Primeiros tratados de pintura: 'Da Pintura Antiga' de Francisco de Holanda, 'Tratado de Caligrafia' de Giraldo Fernandes do Prado, 'Pintura Simples' de Filipe Nunes, e o 'Breve Tratado de Iluminação'. Séculos XVI e XVII."
     },
     {
       "titulo": "Primeiro tratado jurídico",
@@ -1484,7 +1464,7 @@
       "volume_colecao": 13,
       "tags": ["direito", "jurídico", "tratado", "cultura portuguesa"],
       "ano": 2018,
-      "sinopse": "Primeiro tratado jurídico: 'Tratado da Forma dos Libelos' de Gregório Martins Caminha. Século XVI. [citation:5][citation:6][citation:9]"
+      "sinopse": "Primeiro tratado jurídico: 'Tratado da Forma dos Libelos' de Gregório Martins Caminha. Século XVI."
     },
     {
       "titulo": "Primeiros textos sobre igualdade e dignidade humana",
@@ -1495,7 +1475,7 @@
       "volume_colecao": 14,
       "tags": ["direitos humanos", "igualdade", "filosofia", "cultura portuguesa"],
       "ano": 2019,
-      "sinopse": "Inclui textos de Rui Gonçalves sobre os privilégios do género feminino, o 'Sermão do Rosário contra a Escravatura' do Padre António Vieira, a 'Lei da Liberdade dos Índios', a abolição da distinção entre cristãos-novos e cristãos-velhos, cartas de Bocage, e as Bases da Constituição de 1822. Séculos XVI, XVII, XVIII e XIX. [citation:5][citation:6][citation:9]"
+      "sinopse": "Inclui textos de Rui Gonçalves sobre os privilégios do género feminino, o 'Sermão do Rosário contra a Escravatura' do Padre António Vieira, a 'Lei da Liberdade dos Índios', a abolição da distinção entre cristãos-novos e cristãos-velhos, cartas de Bocage, e as Bases da Constituição de 1822. Séculos XVI, XVII, XVIII e XIX."
     },
     {
       "titulo": "Primeiro livro de botânica",
@@ -1505,7 +1485,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 15,
       "tags": ["botânica", "ciência", "medicina", "cultura portuguesa"],
-      "sinopse": "Primeiro livro de botânica: 'Colóquio dos Simples e Drogas da Índia' de Garcia de Orta. Século XVI. [citation:5][citation:9]"
+      "sinopse": "Primeiro livro de botânica: 'Colóquio dos Simples e Drogas da Índia' de Garcia de Orta. Século XVI."
     },
     {
       "titulo": "Primeiras obras de arquitetura",
@@ -1515,7 +1495,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 16,
       "tags": ["arquitetura", "arte", "tratado", "cultura portuguesa"],
-      "sinopse": "Primeiras obras de arquitetura: 'Da Fábrica que falece à cidade de Lisboa' de Francisco de Holanda, 'Tratado de Arquitetura' de António Rodrigues, e 'Jornada pelo Tejo' de José Manuel Carvalho e Negreiros. Século XVI. [citation:5][citation:9]"
+      "sinopse": "Primeiras obras de arquitetura: 'Da Fábrica que falece à cidade de Lisboa' de Francisco de Holanda, 'Tratado de Arquitetura' de António Rodrigues, e 'Jornada pelo Tejo' de José Manuel Carvalho e Negreiros. Século XVI."
     },
     {
       "titulo": "Primeira epopeia",
@@ -1525,7 +1505,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 17,
       "tags": ["epopeia", "literatura portuguesa", "poesia", "cultura portuguesa"],
-      "sinopse": "Primeira epopeia: 'Os Lusíadas' de Luís de Camões. Século XVI. [citation:5][citation:9]"
+      "sinopse": "Primeira epopeia: 'Os Lusíadas' de Luís de Camões. Século XVI."
     },
     {
       "titulo": "Primeiros escritos de economia",
@@ -1535,7 +1515,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 18,
       "tags": ["economia", "política", "cultura portuguesa"],
-      "sinopse": "Primeiros escritos de economia: 'Diálogo do Sítio de Lisboa' de Luís Mendes de Vasconcelos, 'Dos Remédios para a Falta de Gente' de Manuel Severim de Faria, e 'Discurso sobre a Introdução das Artes no Reino' de Duarte Ribeiro de Macedo. Século XVII. [citation:5][citation:9]"
+      "sinopse": "Primeiros escritos de economia: 'Diálogo do Sítio de Lisboa' de Luís Mendes de Vasconcelos, 'Dos Remédios para a Falta de Gente' de Manuel Severim de Faria, e 'Discurso sobre a Introdução das Artes no Reino' de Duarte Ribeiro de Macedo. Século XVII."
     },
     {
       "titulo": "Primeira obra de aventura e contactos intercivilizacionais",
@@ -1545,7 +1525,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 19,
       "tags": ["aventura", "literatura portuguesa", "cultura portuguesa"],
-      "sinopse": "Primeiro livro de aventura e de contactos intercivilizacionais: 'Peregrinação' de Fernão Mendes Pinto. Século XVII. [citation:5][citation:9]"
+      "sinopse": "Primeiro livro de aventura e de contactos intercivilizacionais: 'Peregrinação' de Fernão Mendes Pinto. Século XVII."
     },
     {
       "titulo": "Primeiros tratados de música",
@@ -1555,7 +1535,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 20,
       "tags": ["música", "arte", "tratado", "cultura portuguesa"],
-      "sinopse": "Primeiros tratados de música: 'Arte de Cantochão' de Pedro Talésio e 'Arte de Música' de António Fernandes. Século XVII. [citation:5][citation:9]"
+      "sinopse": "Primeiros tratados de música: 'Arte de Cantochão' de Pedro Talésio e 'Arte de Música' de António Fernandes. Século XVII."
     },
     {
       "titulo": "Primeiro livro de cozinha",
@@ -1565,7 +1545,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 21,
       "tags": ["culinária", "gastronomia", "cultura portuguesa"],
-      "sinopse": "Primeiro livro de cozinha: 'Arte de Cozinha' de Domingos Rodrigues. Século XVII. [citation:5][citation:9]"
+      "sinopse": "Primeiro livro de cozinha: 'Arte de Cozinha' de Domingos Rodrigues. Século XVII."
     },
     {
       "titulo": "Primeiros escritos de medicina, farmácia e enfermagem",
@@ -1575,7 +1555,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 22,
       "tags": ["medicina", "farmácia", "enfermagem", "ciência", "cultura portuguesa"],
-      "sinopse": "Primeiros escritos de medicina, farmácia e enfermagem: 'Farmacopeia Lusitana' de D. Caetano de Santo António, 'Postila Religiosa e Arte de Enfermeiros' de Diogo de Santiago, e 'Postila de Anatomia' de Manuel Constâncio. Século XVIII. [citation:5][citation:9]"
+      "sinopse": "Primeiros escritos de medicina, farmácia e enfermagem: 'Farmacopeia Lusitana' de D. Caetano de Santo António, 'Postila Religiosa e Arte de Enfermeiros' de Diogo de Santiago, e 'Postila de Anatomia' de Manuel Constâncio. Século XVIII."
     },
     {
       "titulo": "Primeira arte de retórica",
@@ -1585,7 +1565,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 23,
       "tags": ["retórica", "filosofia", "cultura portuguesa"],
-      "sinopse": "Primeira arte de retórica. Século XVIII. [citation:5][citation:7]"
+      "sinopse": "Primeira arte de retórica. Século XVIII."
     },
     {
       "titulo": "Primeiro tratado de cabala",
@@ -1595,7 +1575,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 24,
       "tags": ["cabala", "filosofia", "misticismo", "cultura portuguesa"],
-      "sinopse": "Primeiro tratado de cabala. Século XVIII. [citation:5][citation:7]"
+      "sinopse": "Primeiro tratado de cabala. Século XVIII."
     },
     {
       "titulo": "Primeiro tratado de engenharia",
@@ -1605,7 +1585,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 25,
       "tags": ["engenharia", "ciência", "cultura portuguesa"],
-      "sinopse": "Primeiro tratado de engenharia. Século XVIII. [citation:5][citation:7]"
+      "sinopse": "Primeiro tratado de engenharia. Século XVIII."
     },
     {
       "titulo": "Primeiras narrativas de naufrágios",
@@ -1615,7 +1595,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 26,
       "tags": ["naufrágios", "aventura", "literatura portuguesa", "cultura portuguesa"],
-      "sinopse": "Primeiras narrativas de naufrágios. Século XVIII. [citation:5][citation:7]"
+      "sinopse": "Primeiras narrativas de naufrágios. Século XVIII."
     },
     {
       "titulo": "Primeiro tratado pedagógico",
@@ -1625,7 +1605,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 27,
       "tags": ["pedagogia", "educação", "filosofia", "cultura portuguesa"],
-      "sinopse": "Primeiro tratado pedagógico: 'Verdadeiro Método de Estudar' de Luís António Verney. Século XVIII. [citation:5][citation:7][citation:9]"
+      "sinopse": "Primeiro tratado pedagógico: 'Verdadeiro Método de Estudar' de Luís António Verney. Século XVIII."
     },
     {
       "titulo": "Primeira arte poética",
@@ -1635,7 +1615,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 28,
       "tags": ["poética", "literatura portuguesa", "poesia", "cultura portuguesa"],
-      "sinopse": "Primeira arte poética, da autoria de Francisco José Freire (Cândido Lusitano), figura central da Arcádia Lusitana. Século XVIII. [citation:5][citation:9]"
+      "sinopse": "Primeira arte poética, da autoria de Francisco José Freire (Cândido Lusitano), figura central da Arcádia Lusitana. Século XVIII."
     },
     {
       "titulo": "Primeiro tratado de física",
@@ -1645,7 +1625,7 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 29,
       "tags": ["física", "ciência", "iluminismo", "cultura portuguesa"],
-      "sinopse": "Primeiro tratado de física: 'Recreação Filosófica ou Diálogo sobre a Filosofia Natural' do padre Teodoro de Almeida, figura maior do Iluminismo português. Século XVIII. [citation:1][citation:5][citation:7]"
+      "sinopse": "Primeiro tratado de física: 'Recreação Filosófica ou Diálogo sobre a Filosofia Natural' do padre Teodoro de Almeida, figura maior do Iluminismo português. Século XVIII."
     },
     {
       "titulo": "Primeiro tratado de química",
@@ -1655,11 +1635,11 @@
       "nome_colecao": "Obras Pioneiras da Cultura Portuguesa",
       "volume_colecao": 30,
       "tags": ["química", "ciência", "cultura portuguesa"],
-      "sinopse": "Primeiro tratado de química, da autoria de Vicente Coelho da Silva Seabra e Telles. Século XVIII. [citation:5][citation:7][citation:9]"
+      "sinopse": "Primeiro tratado de química, da autoria de Vicente Coelho da Silva Seabra e Telles. Século XVIII."
     },
     {
       "titulo": "Marcada",
-      "autor": ["P.C. Cast", "Kristin Cast"],
+      "autor": ["P. C. Cast", "Kristin Cast"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2009,
@@ -1669,11 +1649,11 @@
       "volume_colecao": 1,
       "tags": ["fantasia", "vampiros", "young adult", "romance", "magia"],
       "isbn": null,
-      "sinopse": "Zoey Redbird tem 16 anos e vive num mundo igual ao nosso, com uma única excepção: os vampiros não só existem como são tolerados. Os humanos que os vampiros 'marcam' como especiais entram na Casa da Noite, uma escola onde se vão transformar em vampiros ou, se o corpo o rejeitar, morrer. Para Zoey, apesar do medo inicial, ser marcada é uma verdadeira bênção. É que ela nunca encaixou no mundo normal e sempre sentiu que estava destinada a algo mais. Mas mesmo na nova escola a jovem sente-se diferente dos outros: é que a marca que a Deusa Nyx lhe fez é especial, mostrando que os seus poderes são muito fortes para alguém tão jovem. Na Escola da Noite, Zoey acaba por encontrar amizade e amor, mas também mentira e inveja. Afinal, nem tudo está bem no mundo dos vampiros e os problemas que pensava ter deixado para trás não se comparam aos desafios que tem pela frente.[citation:2]"
+      "sinopse": "Zoey Redbird tem 16 anos e vive num mundo igual ao nosso, com uma única excepção: os vampiros não só existem como são tolerados. Os humanos que os vampiros 'marcam' como especiais entram na Casa da Noite, uma escola onde se vão transformar em vampiros ou, se o corpo o rejeitar, morrer. Para Zoey, apesar do medo inicial, ser marcada é uma verdadeira bênção. É que ela nunca encaixou no mundo normal e sempre sentiu que estava destinada a algo mais. Mas mesmo na nova escola a jovem sente-se diferente dos outros: é que a marca que a Deusa Nyx lhe fez é especial, mostrando que os seus poderes são muito fortes para alguém tão jovem. Na Escola da Noite, Zoey acaba por encontrar amizade e amor, mas também mentira e inveja. Afinal, nem tudo está bem no mundo dos vampiros e os problemas que pensava ter deixado para trás não se comparam aos desafios que tem pela frente."
     },
     {
       "titulo": "Traída",
-      "autor": ["P.C. Cast", "Kristin Cast"],
+      "autor": ["P. C. Cast", "Kristin Cast"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2009,
@@ -1683,11 +1663,11 @@
       "volume_colecao": 2,
       "tags": ["fantasia", "vampiros", "young adult", "romance", "magia"],
       "isbn": null,
-      "sinopse": "Zoey Redbird pertence à Casa da Noite e sabe que foi abençoada com vastos poderes pela deusa vampira Nyx. Mas quando começa finalmente a sentir-se integrada entre os amigos e é escolhida para líder das Filhas das Trevas, o impensável acontece: a Casa da Noite é acusada de mortes misteriosas de alguns adolescentes humanos. Mais do que nunca o perigo ronda os amigos de Zoey - e ela sabe que os poderes que a tornam única também ameaçam aqueles que ama. Quando a tragédia chega à Casa da Noite, a jovem precisará de coragem para enfrentar a traição que ameaça o seu coração, a sua alma... e o próprio mundo que a acolheu.[citation:2]"
+      "sinopse": "Zoey Redbird pertence à Casa da Noite e sabe que foi abençoada com vastos poderes pela deusa vampira Nyx. Mas quando começa finalmente a sentir-se integrada entre os amigos e é escolhida para líder das Filhas das Trevas, o impensável acontece: a Casa da Noite é acusada de mortes misteriosas de alguns adolescentes humanos. Mais do que nunca o perigo ronda os amigos de Zoey - e ela sabe que os poderes que a tornam única também ameaçam aqueles que ama. Quando a tragédia chega à Casa da Noite, a jovem precisará de coragem para enfrentar a traição que ameaça o seu coração, a sua alma... e o próprio mundo que a acolheu."
     },
     {
       "titulo": "Escolhida",
-      "autor": ["P.C. Cast", "Kristin Cast"],
+      "autor": ["P. C. Cast", "Kristin Cast"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2010,
@@ -1697,11 +1677,11 @@
       "volume_colecao": 3,
       "tags": ["fantasia", "vampiros", "young adult", "romance", "magia"],
       "isbn": null,
-      "sinopse": "Forças tenebrosas dominam a Casa da Noite, onde as aventuras de Zoey Redbird tomam um caminho inesperado. Aqueles que aparentam ser amigos afinal revelam-se inimigos. E estranhamente, inimigos oferecem-lhe amizade. Assim inicia-se o terceiro volume desta série viciante onde a força de Zoey será testada como nunca antes. A sua melhor amiga, Stevie Ray, julgada morta, esforça-se por manter a sua humanidade. Zoey não sabe como ajudá-la, mas sabe que tudo o que fizer tem que ser mantido secreto na Casa da Noite. Como se não bastasse, Zoey encontra-se na rara e difícil posição de ter três namorados. E quando julgava que a sua vida não podia ser mais caótica, vampiros são encontrados mortos. Realmente mortos. Aparentemente, o Povo da Fé cansou-se de viver lado a lado com vampiros. Mas, como Zoey e os seus amigos irão descobrir, as aparências raramente reflectem a verdade...[citation:2]"
+      "sinopse": "Forças tenebrosas dominam a Casa da Noite, onde as aventuras de Zoey Redbird tomam um caminho inesperado. Aqueles que aparentam ser amigos afinal revelam-se inimigos. E estranhamente, inimigos oferecem-lhe amizade. Assim inicia-se o terceiro volume desta série viciante onde a força de Zoey será testada como nunca antes. A sua melhor amiga, Stevie Ray, julgada morta, esforça-se por manter a sua humanidade. Zoey não sabe como ajudá-la, mas sabe que tudo o que fizer tem que ser mantido secreto na Casa da Noite. Como se não bastasse, Zoey encontra-se na rara e difícil posição de ter três namorados. E quando julgava que a sua vida não podia ser mais caótica, vampiros são encontrados mortos. Realmente mortos. Aparentemente, o Povo da Fé cansou-se de viver lado a lado com vampiros. Mas, como Zoey e os seus amigos irão descobrir, as aparências raramente reflectem a verdade..."
     },
     {
       "titulo": "Indomável",
-      "autor": ["P.C. Cast", "Kristin Cast"],
+      "autor": ["P. C. Cast", "Kristin Cast"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2010,
@@ -1711,11 +1691,11 @@
       "volume_colecao": 4,
       "tags": ["fantasia", "vampiros", "young adult", "romance", "magia"],
       "isbn": null,
-      "sinopse": "A vida é dura quando os amigos nos viram as costas. Que o diga Zoey Redbird que, em uma semana, passou de três namorados para nenhum, e perdeu a confiança do seu grupo íntimo de amigos. E o pior é que Zoey sabe que a culpa é sua. Marginalizada por todos, ela não resiste a criar amizade com o novo aluno da Casa da Noite, o arqueiro olímpico James Stark. Entretanto, Neferet declarou guerra aos humanos depois do assassinato de dois vampiros mortos pelo Povo da Fé. Mas ao contrário das promessas da Sumo-Sacerdotisa, as últimas visões de Afrodite mostram um mundo cheio de violência, ódio e trevas. Zoey sabe que é errado lutar contra os humanos, mas quem está disposto a dar-lhe ouvidos? As aventuras de Zoey na escola de vampiros tomam um caminho perigoso em que as lealdades são testadas, e um antigo mal é despertado…[citation:2]"
+      "sinopse": "A vida é dura quando os amigos nos viram as costas. Que o diga Zoey Redbird que, em uma semana, passou de três namorados para nenhum, e perdeu a confiança do seu grupo íntimo de amigos. E o pior é que Zoey sabe que a culpa é sua. Marginalizada por todos, ela não resiste a criar amizade com o novo aluno da Casa da Noite, o arqueiro olímpico James Stark. Entretanto, Neferet declarou guerra aos humanos depois do assassinato de dois vampiros mortos pelo Povo da Fé. Mas ao contrário das promessas da Sumo-Sacerdotisa, as últimas visões de Afrodite mostram um mundo cheio de violência, ódio e trevas. Zoey sabe que é errado lutar contra os humanos, mas quem está disposto a dar-lhe ouvidos? As aventuras de Zoey na escola de vampiros tomam um caminho perigoso em que as lealdades são testadas, e um antigo mal é despertado…"
     },
     {
       "titulo": "Perseguida",
-      "autor": ["P.C. Cast", "Kristin Cast"],
+      "autor": ["P. C. Cast", "Kristin Cast"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2010,
@@ -1725,11 +1705,11 @@
       "volume_colecao": 5,
       "tags": ["fantasia", "vampiros", "young adult", "romance", "magia"],
       "isbn": null,
-      "sinopse": "As boas notícias: Zoey conquistou os seus amigos de volta e a nova Stevie Ray já não é apenas um segredo de Neferet. As más notícias: um mal antigo com rosto de anjo foi libertado, com outras criaturas não tão angélicas. A avó Redbird está em apuros. Heath está em apuros. A Casa da Noite está em apuros. Na verdade, o mundo inteiro de Zoey está a ruir! Mas quando os problemas são desencadeados por um ser que aparenta personificar a própria beleza, em quem irá o mundo acreditar? Especialmente quando uma adolescente vampira à frente de um grupo de marginalizados é a única a compreender o perigo que ele representa. Terá Zoey a força e a sabedoria para revelar a verdade?[citation:2]"
+      "sinopse": "As boas notícias: Zoey conquistou os seus amigos de volta e a nova Stevie Ray já não é apenas um segredo de Neferet. As más notícias: um mal antigo com rosto de anjo foi libertado, com outras criaturas não tão angélicas. A avó Redbird está em apuros. Heath está em apuros. A Casa da Noite está em apuros. Na verdade, o mundo inteiro de Zoey está a ruir! Mas quando os problemas são desencadeados por um ser que aparenta personificar a própria beleza, em quem irá o mundo acreditar? Especialmente quando uma adolescente vampira à frente de um grupo de marginalizados é a única a compreender o perigo que ele representa. Terá Zoey a força e a sabedoria para revelar a verdade?"
     },
     {
       "titulo": "Seduzida",
-      "autor": ["P.C. Cast", "Kristin Cast"],
+      "autor": ["P. C. Cast", "Kristin Cast"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2011,
@@ -1739,11 +1719,11 @@
       "volume_colecao": 6,
       "tags": ["fantasia", "vampiros", "young adult", "romance", "magia"],
       "isbn": null,
-      "sinopse": "Estranhas visões avisam Zoey de que deverá resistir aos encantos de Kalona, e também mostram que apenas ela terá o poder de travar esse imortal maléfico. Cedo se torna claro que Zoey não tem escolha: se não se render a Kalona ele vingar-se-á sobre os seus amigos mais próximos e a família. Terá Zoey Redbird a coragem para arriscar perder a sua vida, o seu coração e a sua alma?[citation:2]"
+      "sinopse": "Estranhas visões avisam Zoey de que deverá resistir aos encantos de Kalona, e também mostram que apenas ela terá o poder de travar esse imortal maléfico. Cedo se torna claro que Zoey não tem escolha: se não se render a Kalona ele vingar-se-á sobre os seus amigos mais próximos e a família. Terá Zoey Redbird a coragem para arriscar perder a sua vida, o seu coração e a sua alma?"
     },
     {
       "titulo": "Queimada",
-      "autor": ["P.C. Cast", "Kristin Cast"],
+      "autor": ["P. C. Cast", "Kristin Cast"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2011,
@@ -1753,11 +1733,11 @@
       "volume_colecao": 7,
       "tags": ["fantasia", "vampiros", "young adult", "romance", "magia"],
       "isbn": null,
-      "sinopse": "Zoey Redbird, vampira destinada a ser Alta Sacerdotisa, perdeu o seu caminho. Os imensos poderes que detém foram insuficientes para salvar uma das pessoas mais próximas de si, despedaçando a sua alma e coração. Agora o seu grupo de amigos tem de lutar para que ela regresse e ponha um fim às trevas que se apoderam da Casa da Noite. Mas o mal tem os seus próprios planos e estes não esperam por Zoey. Os vampiros enfrentam a maior ameaça de sempre e precisam de toda a força da jovem para lidar com problemas muito para além de novas raças de vampiros, imortais caídos em desgraça ou namorados. A escuridão apodera-se do mundo e apenas Zoey poderá lutar por um caminho ao encontro da luz… se não se queimar…[citation:2]"
+      "sinopse": "Zoey Redbird, vampira destinada a ser Alta Sacerdotisa, perdeu o seu caminho. Os imensos poderes que detém foram insuficientes para salvar uma das pessoas mais próximas de si, despedaçando a sua alma e coração. Agora o seu grupo de amigos tem de lutar para que ela regresse e ponha um fim às trevas que se apoderam da Casa da Noite. Mas o mal tem os seus próprios planos e estes não esperam por Zoey. Os vampiros enfrentam a maior ameaça de sempre e precisam de toda a força da jovem para lidar com problemas muito para além de novas raças de vampiros, imortais caídos em desgraça ou namorados. A escuridão apodera-se do mundo e apenas Zoey poderá lutar por um caminho ao encontro da luz… se não se queimar…"
     },
     {
       "titulo": "Despertada",
-      "autor": ["P.C. Cast", "Kristin Cast"],
+      "autor": ["P. C. Cast", "Kristin Cast"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2012,
@@ -1767,11 +1747,11 @@
       "volume_colecao": 8,
       "tags": ["fantasia", "vampiros", "young adult", "romance", "magia"],
       "isbn": null,
-      "sinopse": "Exonerada pelo Alto Conselho dos Vampiros, Neferet jurou vingança contra Zoey Redbird e o domínio que exerce sobre Kalona é apenas um dos planos que pretende usar contra ela. Mas Zoey encontrou refúgio na Ilha de Skye e está a ser treinada pela rainha Sgiach para tomar o seu lugar. Haverá algo melhor do que a ideia de se tornar uma rainha? Porque desejaria voltar para Tulsa? Após a perda de Heath, Zoey nunca mais foi a mesma e a sua relação com o guerreiro Stark também poderá nunca voltar a ser igual… E conseguirão a vampira Stevie Ray e Refaim continuar juntos? Este recusa ser usado contra ela, mas que escolha tem quando ninguém, nem mesmo Zoey, aprova a relação entre ambos? Irá Refaim trair o seu pai ou escolher o seu coração?[citation:2]"
+      "sinopse": "Exonerada pelo Alto Conselho dos Vampiros, Neferet jurou vingança contra Zoey Redbird e o domínio que exerce sobre Kalona é apenas um dos planos que pretende usar contra ela. Mas Zoey encontrou refúgio na Ilha de Skye e está a ser treinada pela rainha Sgiach para tomar o seu lugar. Haverá algo melhor do que a ideia de se tornar uma rainha? Porque desejaria voltar para Tulsa? Após a perda de Heath, Zoey nunca mais foi a mesma e a sua relação com o guerreiro Stark também poderá nunca voltar a ser igual… E conseguirão a vampira Stevie Ray e Refaim continuar juntos? Este recusa ser usado contra ela, mas que escolha tem quando ninguém, nem mesmo Zoey, aprova a relação entre ambos? Irá Refaim trair o seu pai ou escolher o seu coração?"
     },
     {
       "titulo": "Destinada",
-      "autor": ["P.C. Cast", "Kristin Cast"],
+      "autor": ["P. C. Cast", "Kristin Cast"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2012,
@@ -1781,11 +1761,11 @@
       "volume_colecao": 9,
       "tags": ["fantasia", "vampiros", "young adult", "romance", "magia"],
       "isbn": null,
-      "sinopse": "As forças da Luz e das Trevas colidem numa luta épica que se desenrola na Casa da Noite. Zoey está finalmente na casa onde pertence, protegida por Stark, o seu Guerreiro Guardião, e preparada para enfrentar Neferet de uma vez por todas. Kalona libertou o seu domínio sobre Refaim e, através do dom da Deusa, ele e Stevie Rae poderão finalmente estar juntos - mas apenas se Refaim se mantiver no caminho da Deusa e se afastar da sombra do seu pai. Mas estará Zoey verdadeiramente em segurança? Conhecerá mesmo todos os seus amigos? E conseguirá o amor triunfar ao ser testado pela própria alma da Escuridão? Venham descobrir em mais um volume da Saga da Casa da Noite o destino que aguarda Zoey…[citation:2]"
+      "sinopse": "As forças da Luz e das Trevas colidem numa luta épica que se desenrola na Casa da Noite. Zoey está finalmente na casa onde pertence, protegida por Stark, o seu Guerreiro Guardião, e preparada para enfrentar Neferet de uma vez por todas. Kalona libertou o seu domínio sobre Refaim e, através do dom da Deusa, ele e Stevie Rae poderão finalmente estar juntos - mas apenas se Refaim se mantiver no caminho da Deusa e se afastar da sombra do seu pai. Mas estará Zoey verdadeiramente em segurança? Conhecerá mesmo todos os seus amigos? E conseguirá o amor triunfar ao ser testado pela própria alma da Escuridão? Venham descobrir em mais um volume da Saga da Casa da Noite o destino que aguarda Zoey…"
     },
     {
       "titulo": "Escondida",
-      "autor": ["P.C. Cast", "Kristin Cast"],
+      "autor": ["P. C. Cast", "Kristin Cast"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2013,
@@ -1795,12 +1775,12 @@
       "volume_colecao": 10,
       "tags": ["fantasia", "vampiros", "young adult", "romance", "magia"],
       "isbn": null,
-      "sinopse": "Décimo volume da saga A Casa da Noite. Zoey Redbird enfrenta novos desafios enquanto as forças do bem e do mal continuam a lutar pelo domínio do mundo. Com segredos revelados e alianças testadas, Zoey terá de descobrir o seu verdadeiro poder para proteger aqueles que ama e impedir que as trevas triunfem de uma vez por todas. Será que o amor e a amizade serão suficientes para vencer o mal que ameaça destruir tudo o que a jovem sacerdotisa construiu?[citation:2]"
+      "sinopse": "Décimo volume da saga A Casa da Noite. Zoey Redbird enfrenta novos desafios enquanto as forças do bem e do mal continuam a lutar pelo domínio do mundo. Com segredos revelados e alianças testadas, Zoey terá de descobrir o seu verdadeiro poder para proteger aqueles que ama e impedir que as trevas triunfem de uma vez por todas. Será que o amor e a amizade serão suficientes para vencer o mal que ameaça destruir tudo o que a jovem sacerdotisa construiu?"
     },
     {
       "titulo": "Desejada",
       "subtitulo": "Chamamento da Deusa - Volume 2",
-      "autor": "P. C. Cast",
+      "autor": ["P. C. Cast"],
       "editora": "Edições Asa",
       "edicao": 1,
       "ano": 2012,
@@ -1810,19 +1790,18 @@
       "volume_colecao": 2,
       "tags": ["fantasia", "romance", "mitologia grega", "humor"],
       "isbn": "9789895579341",
-      "sinopse": "Lina é proprietária de uma padaria Gourmet em Tulsa mas, infelizmente, o negócio não está a correr como esperado e ela precisa de um plano. Quando tropeça, acidentalmente, num livro de culinária italiana da deusa, Lina não consegue deixar de pensar que encontrou a solução para os problemas, mesmo que isso implique invocar uma deusa para salvar o seu negócio. Em breve, Lina encontra-se cara a cara com Deméter, que tem o seu próprio plano. Ela propõe que Lina troque a alma com Perséfone, a deusa da primavera, que irá dar uma nova vida à padaria. Em troca Lina terá que repor a ordem no submundo. Depois de ocupar o corpo de encantadora Perséfone, Lina, cujos problemas eram massa azeda e segundos encontros, tem agora assuntos maiores em mãos, como levar a primavera ao mundo dos espíritos. Mas, quando o belo e perigoso Hades acende uma chama no seu coração, Lina não pode deixar de se interrogar se o senhor do submundo não será o homem dos seus sonhos…[citation:1]"
+      "sinopse": "Lina é proprietária de uma padaria Gourmet em Tulsa mas, infelizmente, o negócio não está a correr como esperado e ela precisa de um plano. Quando tropeça, acidentalmente, num livro de culinária italiana da deusa, Lina não consegue deixar de pensar que encontrou a solução para os problemas, mesmo que isso implique invocar uma deusa para salvar o seu negócio. Em breve, Lina encontra-se cara a cara com Deméter, que tem o seu próprio plano. Ela propõe que Lina troque a alma com Perséfone, a deusa da primavera, que irá dar uma nova vida à padaria. Em troca Lina terá que repor a ordem no submundo. Depois de ocupar o corpo de encantadora Perséfone, Lina, cujos problemas eram massa azeda e segundos encontros, tem agora assuntos maiores em mãos, como levar a primavera ao mundo dos espíritos. Mas, quando o belo e perigoso Hades acende uma chama no seu coração, Lina não pode deixar de se interrogar se o senhor do submundo não será o homem dos seus sonhos…"
     },
     {
       "titulo": "Deusa do Mar",
-      "autor": "P. C. Cast",
+      "autor": ["P. C. Cast"],
       "editora": "Edições Asa",
       "tags": ["fantasia", "romance", "mitologia", "aventura"],
-      "isbn": null,
-      "nota": "ISBN não encontrado na pesquisa disponível. Poderá pertencer à série 'Goddess Summoning' ou ser um título independente."
+      "isbn": null
     },
     {
       "titulo": "Manual do Iniciado",
-      "autor": ["P.C. Cast", "Kristin Cast"],
+      "autor": ["P. C. Cast", "Kristin Cast"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2012,
@@ -1832,12 +1811,11 @@
       "volume_colecao": 154,
       "tags": ["companion book", "guia", "universo literário", "fantasia", "vampiros"],
       "isbn": "9789896373757",
-      "sinopse": "Este é o guia oficial do universo da Casa da Noite. Um manual repleto de informação sobre a história da Casa da Noite, os rituais, os deuses, e o quotidiano dos iniciados. Inclui ilustrações e textos que explicam as origens da ordem dos vampiros, as tradições e os segredos da Deusa Nyx. O livro é apresentado como se fosse um objeto do próprio universo da série, explicando o funcionamento da escola e as regras que todos os novatos devem seguir. É uma leitura essencial para os fãs que querem conhecer todos os detalhes sobre o mundo de Zoey Redbird.",
-      "nota": "Este é um companion book da série A Casa da Noite, ilustrado por Kim Doner [citation:2][citation:4]."
+      "sinopse": "Este é o guia oficial do universo da Casa da Noite. Um manual repleto de informação sobre a história da Casa da Noite, os rituais, os deuses, e o quotidiano dos iniciados. Inclui ilustrações e textos que explicam as origens da ordem dos vampiros, as tradições e os segredos da Deusa Nyx. O livro é apresentado como se fosse um objeto do próprio universo da série, explicando o funcionamento da escola e as regras que todos os novatos devem seguir. É uma leitura essencial para os fãs que querem conhecer todos os detalhes sobre o mundo de Zoey Redbird."
     },
     {
       "titulo": "Juramento de Dragão",
-      "autor": ["P.C. Cast", "Kristin Cast"],
+      "autor": ["P. C. Cast", "Kristin Cast"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2012,
@@ -1847,12 +1825,11 @@
       "volume_colecao": 192,
       "tags": ["fantasia", "vampiros", "spin-off", "young adult", "origem"],
       "isbn": "9789896374600",
-      "sinopse": "No início do século XIX, em Inglaterra, e muito antes de se tornar professor na Casa da Noite em Tulsa, Bryan Lankford é um jovem talentoso mas problemático. Até ao momento em que o seu pai, um nobre de grande fortuna, o expulsa para a América. Bryan cedo recebe a Marca dos vampyros e entra no mundo excitante e perigoso dos iniciados. Tornando-se rapidamente mestre de Esgrima, é confrontado com desafios aterrorizadores mas também com surpresas agradáveis, como Anastasia, a cativante jovem professora de Sortilégios e Rituais da Casa da Noite. Mas quando um poder negro os ameaça a todos, Lankford é apanhado no tumulto. E embora seja um poderoso iniciado, será forte o suficiente para afastar o mal e, ao mesmo tempo, proteger Anastasia? Irão as suas escolhas salvá-la - ou destruí-los a todos?",
-      "nota": "Este é um spin-off da série principal House of Night, focado na juventude de Dragon Lankford [citation:1][citation:9]."
+      "sinopse": "No início do século XIX, em Inglaterra, e muito antes de se tornar professor na Casa da Noite em Tulsa, Bryan Lankford é um jovem talentoso mas problemático. Até ao momento em que o seu pai, um nobre de grande fortuna, o expulsa para a América. Bryan cedo recebe a Marca dos vampyros e entra no mundo excitante e perigoso dos iniciados. Tornando-se rapidamente mestre de Esgrima, é confrontado com desafios aterrorizadores mas também com surpresas agradáveis, como Anastasia, a cativante jovem professora de Sortilégios e Rituais da Casa da Noite. Mas quando um poder negro os ameaça a todos, Lankford é apanhado no tumulto. E embora seja um poderoso iniciado, será forte o suficiente para afastar o mal e, ao mesmo tempo, proteger Anastasia? Irão as suas escolhas salvá-la - ou destruí-los a todos?"
     },
     {
       "titulo": "Revelada",
-      "autor": ["P.C. Cast", "Kristin Cast"],
+      "autor": ["P. C. Cast", "Kristin Cast"],
       "editora": "Saída de Emergência",
       "colecao": true,
       "nome_colecao": "A Casa da Noite",
@@ -1863,7 +1840,7 @@
     },
     {
       "titulo": "Redimida",
-      "autor": ["P.C. Cast", "Kristin Cast"],
+      "autor": ["P. C. Cast", "Kristin Cast"],
       "editora": "Saída de Emergência",
       "edicao": 1,
       "ano": 2015,
@@ -1873,7 +1850,7 @@
       "volume_colecao": 12,
       "tags": ["fantasia", "vampiros", "young adult", "romance", "magia", "final da série"],
       "isbn": "9789896377137",
-      "sinopse": "Zoey Redbird está em perigo. Isolada dos seus amigos, a jovem está determinada a encarar o castigo que merece - mesmo que tal signifique que o seu corpo rejeite a mudança e comece a definhar. Só o amor dos que lhe são próximos poderá salvá-la do vazio do seu espírito, mas um mal terrível emerge das sombras, mais poderoso que nunca. Neferet fez-se finalmente conhecer perante os mortais, coroando-se de Deusa Negra e preparando-se para escravizar todo o mundo. Os vampiros da Casa da Noite trabalham com a polícia reagrupando os recursos que possuem, mas nada parece suficiente para vencer Neferet - a não ser que o vampiro que manipule os elementos possua também o dom de manusear Magia Antiga. Somente Zoey Redbird é herdeira de tal poder… mas devido às consequências de ter usado Magia Antiga no passado, Zoey não pode ajudar ninguém. Neste último romance da série Casa da Noite terá lugar a batalha épica entre a Luz e a Escuridão - a batalha que definirá quem será redimido… ou quem ficará perdido para sempre. [citation:1]"
+      "sinopse": "Zoey Redbird está em perigo. Isolada dos seus amigos, a jovem está determinada a encarar o castigo que merece - mesmo que tal signifique que o seu corpo rejeite a mudança e comece a definhar. Só o amor dos que lhe são próximos poderá salvá-la do vazio do seu espírito, mas um mal terrível emerge das sombras, mais poderoso que nunca. Neferet fez-se finalmente conhecer perante os mortais, coroando-se de Deusa Negra e preparando-se para escravizar todo o mundo. Os vampiros da Casa da Noite trabalham com a polícia reagrupando os recursos que possuem, mas nada parece suficiente para vencer Neferet - a não ser que o vampiro que manipule os elementos possua também o dom de manusear Magia Antiga. Somente Zoey Redbird é herdeira de tal poder… mas devido às consequências de ter usado Magia Antiga no passado, Zoey não pode ajudar ninguém. Neste último romance da série Casa da Noite terá lugar a batalha épica entre a Luz e a Escuridão - a batalha que definirá quem será redimido… ou quem ficará perdido para sempre."
     }
   ]
 }
