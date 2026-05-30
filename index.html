@@ -54,7 +54,7 @@
             gap: 0.5rem;
         }
 
-        .stats-button {
+        .stats-button, .view-toggle {
             background: #2c5a7a;
             border: none;
             padding: 0.7rem 1.5rem;
@@ -69,9 +69,13 @@
             gap: 8px;
         }
 
-        .stats-button:hover {
-            background: #1e4a6b;
-            transform: scale(1.02);
+        .view-toggle {
+            background: #5a6e7a;
+        }
+
+        .view-toggle.active {
+            background: #1f4e6e;
+            box-shadow: 0 0 0 2px #fff, 0 0 0 4px #1f4e6e;
         }
 
         .search-section {
@@ -149,6 +153,136 @@
             color: #437693;
         }
 
+        /* ========== VISÃO EM LISTA (AGRUPADA) ========== */
+        .author-group {
+            margin-bottom: 2rem;
+            background: #ffffffcc;
+            border-radius: 1.2rem;
+            padding: 1rem;
+            border: 1px solid #d6e2ec;
+        }
+
+        .author-header {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1f405b;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #cbdde9;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .author-count {
+            font-size: 0.8rem;
+            background: #e3edf5;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-weight: normal;
+            color: #2c5a7a;
+        }
+
+        .colecao-group {
+            margin-bottom: 1.2rem;
+            margin-left: 1rem;
+            border-left: 3px solid #bdd4e2;
+            padding-left: 1rem;
+        }
+
+        .colecao-header {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2f6c8a;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .colecao-progress {
+            font-size: 0.75rem;
+            background: #d9e6f0;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-weight: normal;
+        }
+
+        .missing-volumes {
+            font-size: 0.7rem;
+            color: #c97e2a;
+            background: #fff3e0;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+        }
+
+        .livros-solteiros {
+            margin-left: 1rem;
+        }
+
+        .livro-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: #ffffff;
+            border-radius: 0.8rem;
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e0e8f0;
+        }
+
+        .livro-item:hover {
+            transform: translateX(5px);
+            background: #f8fbfe;
+            border-color: #adc8dd;
+        }
+
+        .livro-volume {
+            min-width: 60px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #5f8aac;
+            background: #eef3f8;
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .livro-info {
+            flex: 1;
+        }
+
+        .livro-titulo {
+            font-weight: 700;
+            color: #1f405b;
+            margin-bottom: 0.2rem;
+        }
+
+        .livro-meta {
+            font-size: 0.7rem;
+            color: #7b98ae;
+        }
+
+        .livro-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            margin-top: 0.3rem;
+        }
+
+        .livro-tag {
+            background: #eef3f8;
+            padding: 0.1rem 0.4rem;
+            border-radius: 12px;
+            font-size: 0.6rem;
+            color: #2c6482;
+        }
+
+        /* ========== VISÃO EM GRADE ========== */
         .books-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -186,6 +320,16 @@
             margin-bottom: 0.5rem;
         }
 
+        .book-volume-badge {
+            display: inline-block;
+            background: #eef3f8;
+            padding: 0.1rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.65rem;
+            margin-bottom: 0.3rem;
+            color: #2c6482;
+        }
+
         .tag-list {
             display: flex;
             flex-wrap: wrap;
@@ -220,7 +364,7 @@
             color: #5682a0;
         }
 
-        /* Modal de Detalhes */
+        /* Modal (mesmo de antes) */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -456,14 +600,15 @@
             .detail-label {
                 min-width: 80px;
             }
-            .books-grid {
-                grid-template-columns: 1fr;
+            .author-header {
+                font-size: 1.2rem;
             }
-            .stats-btn-wrapper {
-                justify-content: center;
+            .colecao-header {
+                font-size: 1rem;
             }
-            .search-wrapper, .filter-group {
-                flex-direction: column;
+            .livro-volume {
+                min-width: 50px;
+                font-size: 0.7rem;
             }
         }
 
@@ -483,6 +628,7 @@
         <div class="subtitle">Biblioteca Elsa, Vasco e Hugo</div>
         <div class="stats-btn-wrapper">
             <button id="openStatsModal" class="stats-button">📊 Estatísticas</button>
+            <button id="toggleViewBtn" class="view-toggle">📋 Vista por Autor</button>
         </div>
     </div>
 
@@ -506,24 +652,21 @@
     <footer>✨ Clique em qualquer livro para ver detalhes e capa</footer>
 </div>
 
-<!-- Modal de Detalhes -->
+<!-- Modais -->
 <div id="detailModal" class="modal-overlay">
     <div class="modal-container">
         <div class="modal-header">
-            <h2 id="modalTitle">Detalhes do Livro</h2>
+            <h2>Detalhes do Livro</h2>
             <button class="close-modal" id="closeDetailModal">&times;</button>
         </div>
-        <div class="modal-body" id="detailModalBody">
-            <div style="text-align: center;">Carregando...</div>
-        </div>
+        <div class="modal-body" id="detailModalBody">Carregando...</div>
     </div>
 </div>
 
-<!-- Modal de Estatísticas -->
 <div id="statsModal" class="modal-overlay">
     <div class="modal-container">
         <div class="modal-header">
-            <h2>📊 Estatísticas da Biblioteca</h2>
+            <h2>📊 Estatísticas</h2>
             <button class="close-modal" id="closeStatsModal">&times;</button>
         </div>
         <div class="modal-body" id="statsModalBody">Carregando...</div>
@@ -533,6 +676,8 @@
 <script>
     let bibliotecaData = { livros: [] };
     let livrosFiltrados = [];
+    let viewMode = 'grid'; // 'grid' ou 'list'
+    let coverCache = new Map();
 
     // Elementos
     const searchInput = document.getElementById('searchInput');
@@ -541,6 +686,7 @@
     const clearBtn = document.getElementById('clearFilters');
     const booksContainer = document.getElementById('booksContainer');
     const resultCountSpan = document.getElementById('resultCount');
+    const toggleViewBtn = document.getElementById('toggleViewBtn');
     
     // Modals
     const detailModal = document.getElementById('detailModal');
@@ -580,35 +726,28 @@
         return null;
     }
 
-    // ========== FUNÇÃO PARA OBTER CAPA DA PASTA LOCAL ==========
     function getCoverUrl(livro) {
         const isbn = livro.isbn;
-        
-        // Se tiver ISBN, tentar buscar na pasta capas/
         if (isbn && typeof isbn === 'string' && isbn.length >= 10) {
             const cleanIsbn = isbn.replace(/[-\s]/g, '');
-            // Tentar diferentes extensões (priorizar jpg, depois png)
             return `capas/${cleanIsbn}.jpg`;
         }
-        
-        // Se não tiver ISBN, retorna null (usa imagem padrão)
         return null;
     }
 
-    // ========== RENDERIZAR CARDS ==========
-    function renderizarLivros(livrosArray) {
+    // ========== RENDERIZAÇÃO EM GRADE (CARD VIEW) ==========
+    function renderizarGrid(livrosArray) {
         if (!livrosArray || livrosArray.length === 0) {
             booksContainer.innerHTML = '<div class="no-results">📭 Nenhum livro encontrado.</div>';
             return;
         }
         
-        let html = '';
+        let html = '<div class="books-grid">';
         for (let i = 0; i < livrosArray.length; i++) {
             const livro = livrosArray[i];
             const titulo = livro.titulo || "Título desconhecido";
             const autorString = getAutorString(livro.autor);
             
-            // Tags (máximo 5)
             let tagsHtml = '';
             if (livro.tags && Array.isArray(livro.tags) && livro.tags.length > 0) {
                 let tagItems = '';
@@ -622,7 +761,6 @@
                 tagsHtml = '<div class="tag-list">' + tagItems + '</div>';
             }
             
-            // Coleção
             let colecaoHtml = '';
             const colecaoNome = getColecaoNome(livro);
             if (colecaoNome) {
@@ -630,17 +768,23 @@
                 colecaoHtml = '<div class="colecao-badge">📘 ' + escapeHtml(colecaoNome) + volInfo + '</div>';
             }
             
+            let volumeBadge = '';
+            if (livro.volume_colecao && colecaoNome) {
+                volumeBadge = '<div class="book-volume-badge">📕 Volume ' + livro.volume_colecao + '</div>';
+            }
+            
             html += '<div class="book-card" data-index="' + i + '">' +
+                        volumeBadge +
                         '<div class="book-title">' + escapeHtml(titulo) + '</div>' +
                         '<div class="book-author">✍️ ' + escapeHtml(autorString) + '</div>' +
                         colecaoHtml +
                         tagsHtml +
                     '</div>';
         }
+        html += '</div>';
         
         booksContainer.innerHTML = html;
         
-        // Adicionar eventos de clique
         const cards = document.querySelectorAll('.book-card');
         for (let i = 0; i < cards.length; i++) {
             cards[i].addEventListener('click', (function(idx) {
@@ -649,7 +793,158 @@
         }
     }
 
-    // ========== MOSTRAR DETALHES COM CAPA (VIA PASTA LOCAL) ==========
+    // ========== RENDERIZAÇÃO EM LISTA (AGRUPADA POR AUTOR E COLEÇÃO) ==========
+    function renderizarLista(livrosArray) {
+        if (!livrosArray || livrosArray.length === 0) {
+            booksContainer.innerHTML = '<div class="no-results">📭 Nenhum livro encontrado.</div>';
+            return;
+        }
+        
+        // Agrupar por autor
+        const autoresMap = new Map();
+        
+        for (let i = 0; i < livrosArray.length; i++) {
+            const livro = livrosArray[i];
+            const autores = getAutorArray(livro.autor);
+            const autorPrincipal = autores[0] || "Autor desconhecido";
+            
+            if (!autoresMap.has(autorPrincipal)) {
+                autoresMap.set(autorPrincipal, []);
+            }
+            autoresMap.get(autorPrincipal).push(livro);
+        }
+        
+        // Ordenar autores
+        const autoresOrdenados = Array.from(autoresMap.keys()).sort();
+        
+        let html = '';
+        
+        for (let a = 0; a < autoresOrdenados.length; a++) {
+            const autor = autoresOrdenados[a];
+            const livrosAutor = autoresMap.get(autor);
+            
+            // Separar livros em coleções vs avulsos
+            const colecoesMap = new Map();
+            const avulsos = [];
+            
+            for (let i = 0; i < livrosAutor.length; i++) {
+                const livro = livrosAutor[i];
+                const colecaoNome = getColecaoNome(livro);
+                if (colecaoNome) {
+                    if (!colecoesMap.has(colecaoNome)) {
+                        colecoesMap.set(colecaoNome, []);
+                    }
+                    colecoesMap.get(colecaoNome).push(livro);
+                } else {
+                    avulsos.push(livro);
+                }
+            }
+            
+            // Ordenar volumes dentro de cada coleção
+            for (let [colecao, livros] of colecoesMap.entries()) {
+                livros.sort((a, b) => (a.volume_colecao || 999) - (b.volume_colecao || 999));
+            }
+            
+            html += '<div class="author-group">';
+            html += '<div class="author-header">' + escapeHtml(autor) + ' <span class="author-count">' + livrosAutor.length + ' livro(s)</span></div>';
+            
+            // Mostrar coleções
+            for (let [colecaoNome, livrosColecao] of colecoesMap.entries()) {
+                // Determinar volumes existentes e faltantes
+                const volumesExistentes = [];
+                let maxVolume = 0;
+                for (let i = 0; i < livrosColecao.length; i++) {
+                    const vol = livrosColecao[i].volume_colecao;
+                    if (vol && vol > 0) {
+                        volumesExistentes.push(vol);
+                        if (vol > maxVolume) maxVolume = vol;
+                    }
+                }
+                volumesExistentes.sort((a,b) => a - b);
+                
+                // Estimar volumes totais (usar maior volume existente como referência)
+                const totalVolumesEstimado = maxVolume;
+                const volumesEmFalta = [];
+                for (let v = 1; v <= totalVolumesEstimado; v++) {
+                    if (!volumesExistentes.includes(v)) {
+                        volumesEmFalta.push(v);
+                    }
+                }
+                
+                const progressText = volumesExistentes.length + '/' + totalVolumesEstimado;
+                const missingText = volumesEmFalta.length > 0 ? '⚠️ Faltam volumes: ' + volumesEmFalta.join(', ') : '';
+                
+                html += '<div class="colecao-group">';
+                html += '<div class="colecao-header">📚 ' + escapeHtml(colecaoNome) + 
+                        ' <span class="colecao-progress">' + progressText + '</span>' +
+                        (missingText ? ' <span class="missing-volumes">' + missingText + '</span>' : '') +
+                        '</div>';
+                
+                for (let i = 0; i < livrosColecao.length; i++) {
+                    const livro = livrosColecao[i];
+                    html += renderizarLivroItem(livro, i);
+                }
+                html += '</div>';
+            }
+            
+            // Mostrar livros avulsos
+            if (avulsos.length > 0) {
+                html += '<div class="livros-solteiros">';
+                for (let i = 0; i < avulsos.length; i++) {
+                    html += renderizarLivroItem(avulsos[i], i);
+                }
+                html += '</div>';
+            }
+            
+            html += '</div>';
+        }
+        
+        booksContainer.innerHTML = html;
+        
+        // Adicionar eventos de clique aos itens da lista
+        const items = document.querySelectorAll('.livro-item');
+        // Precisamos mapear cada item ao livro correspondente
+        // Vamos usar um índice global ou data attribute
+        let globalIndex = 0;
+        for (let a = 0; a < autoresOrdenados.length; a++) {
+            const autor = autoresOrdenados[a];
+            const livrosAutor = autoresMap.get(autor);
+            for (let i = 0; i < livrosAutor.length; i++) {
+                const item = document.querySelector('.livro-item[data-idx="' + globalIndex + '"]');
+                if (item) {
+                    item.addEventListener('click', (function(livro) {
+                        return function() { mostrarDetalhes(livro); };
+                    })(livrosAutor[i]));
+                }
+                globalIndex++;
+            }
+        }
+    }
+    
+    function renderizarLivroItem(livro, idx) {
+        const titulo = livro.titulo || "Título desconhecido";
+        const volumeInfo = livro.volume_colecao ? 'Vol. ' + livro.volume_colecao : '';
+        const editora = livro.editora || "";
+        
+        let tagsHtml = '';
+        if (livro.tags && Array.isArray(livro.tags) && livro.tags.length > 0) {
+            const maxTags = Math.min(3, livro.tags.length);
+            for (let t = 0; t < maxTags; t++) {
+                tagsHtml += '<span class="livro-tag">#' + escapeHtml(livro.tags[t]) + '</span>';
+            }
+        }
+        
+        return '<div class="livro-item" data-idx="' + idx + '">' +
+                    '<div class="livro-volume">' + (volumeInfo || '📖') + '</div>' +
+                    '<div class="livro-info">' +
+                        '<div class="livro-titulo">' + escapeHtml(titulo) + '</div>' +
+                        '<div class="livro-meta">' + (editora ? escapeHtml(editora) : '') + '</div>' +
+                        (tagsHtml ? '<div class="livro-tags">' + tagsHtml + '</div>' : '') +
+                    '</div>' +
+                '</div>';
+    }
+
+    // ========== MOSTRAR DETALHES ==========
     function mostrarDetalhes(livro) {
         const titulo = livro.titulo || "Título desconhecido";
         const autorString = getAutorString(livro.autor);
@@ -661,7 +956,6 @@
         const colecaoNome = getColecaoNome(livro);
         const volumeColecao = livro.volume_colecao || "";
         
-        // Tags
         let tagsHtml = '';
         if (livro.tags && Array.isArray(livro.tags)) {
             for (let t = 0; t < livro.tags.length; t++) {
@@ -669,69 +963,62 @@
             }
         }
         
-        // Construir HTML base
         let html = '<div class="detail-layout">' +
                         '<div class="detail-cover" id="detail-cover-container">' +
-                            '<div class="cover-placeholder-detail" id="cover-placeholder">📚<br><span style="font-size:12px;">A carregar capa...</span></div>' +
+                            '<div class="cover-placeholder-detail">📚<br><span style="font-size:12px;">A carregar capa...</span></div>' +
                         '</div>' +
                         '<div class="detail-info">' +
                             '<h3>' + escapeHtml(titulo) + '</h3>' +
-                            '<div class="detail-author">✍️ ' + escapeHtml(autorString) + '</div>';
+                            '<div class="detail-author">✍️ ' + escapeHtml(autorString) + '</div>' +
+                            '<div class="detail-field"><span class="detail-label">Editora:</span> <span class="detail-value">' + escapeHtml(editora) + '</span></div>' +
+                            (ano !== "Não informado" ? '<div class="detail-field"><span class="detail-label">Ano:</span> <span class="detail-value">' + escapeHtml(ano) + '</span></div>' : '') +
+                            (paginas !== "Não informado" ? '<div class="detail-field"><span class="detail-label">Páginas:</span> <span class="detail-value">' + escapeHtml(paginas) + '</span></div>' : '') +
+                            (colecaoNome ? '<div class="detail-field"><span class="detail-label">Coleção:</span> <span class="detail-value">📘 ' + escapeHtml(colecaoNome) + (volumeColecao ? ' (Volume ' + volumeColecao + ')' : '') + '</span></div>' : '') +
+                            '<div class="detail-field"><span class="detail-label">ISBN:</span> <span class="detail-value">' + escapeHtml(isbn) + '</span></div>';
         
-        // Campos
-        html += '<div class="detail-field"><span class="detail-label">Editora:</span> <span class="detail-value">' + escapeHtml(editora) + '</span></div>';
-        if (ano !== "Não informado") html += '<div class="detail-field"><span class="detail-label">Ano:</span> <span class="detail-value">' + escapeHtml(ano) + '</span></div>';
-        if (paginas !== "Não informado") html += '<div class="detail-field"><span class="detail-label">Páginas:</span> <span class="detail-value">' + escapeHtml(paginas) + '</span></div>';
-        if (colecaoNome) {
-            let colecaoInfo = escapeHtml(colecaoNome);
-            if (volumeColecao) colecaoInfo += ' (Volume ' + volumeColecao + ')';
-            html += '<div class="detail-field"><span class="detail-label">Coleção:</span> <span class="detail-value">📘 ' + colecaoInfo + '</span></div>';
-        }
-        html += '<div class="detail-field"><span class="detail-label">ISBN:</span> <span class="detail-value">' + escapeHtml(isbn) + '</span></div>';
-        
-        // Tags
         if (tagsHtml) {
             html += '<div class="detail-field"><span class="detail-label">Tags:</span></div><div class="detail-tags">' + tagsHtml + '</div>';
         }
         
-        // Sinopse
         html += '<div class="detail-sinopse">' +
                     '<div class="detail-label">📖 Sinopse:</div>' +
                     '<div class="detail-value">' + escapeHtml(sinopse).replace(/\n/g, '<br>') + '</div>' +
-                '</div>';
-        
-        html += '</div></div>';
+                '</div></div></div>';
         
         detailModalBody.innerHTML = html;
         detailModal.classList.add('active');
         
-        // Tentar carregar capa da pasta local
+        // Carregar capa
         const coverContainer = document.getElementById('detail-cover-container');
         if (coverContainer && livro.isbn) {
             const coverUrl = getCoverUrl(livro);
             if (coverUrl) {
                 const img = new Image();
                 img.onload = function() {
-                    coverContainer.innerHTML = '<img src="' + coverUrl + '" alt="Capa de ' + escapeHtml(titulo) + '">';
+                    coverContainer.innerHTML = '<img src="' + coverUrl + '" alt="Capa">';
                 };
                 img.onerror = function() {
-                    // Tentar extensão .png se .jpg falhar
                     const pngUrl = coverUrl.replace('.jpg', '.png');
                     const img2 = new Image();
                     img2.onload = function() {
-                        coverContainer.innerHTML = '<img src="' + pngUrl + '" alt="Capa de ' + escapeHtml(titulo) + '">';
+                        coverContainer.innerHTML = '<img src="' + pngUrl + '" alt="Capa">';
                     };
                     img2.onerror = function() {
-                        coverContainer.innerHTML = '<div class="cover-placeholder-detail">📚<br><span style="font-size:12px;">Capa não disponível<br><br>📥 Adicione:<br>' + coverUrl.split('/').pop() + '</span></div>';
+                        coverContainer.innerHTML = '<div class="cover-placeholder-detail">📚<br><span>Capa não disponível</span></div>';
                     };
                     img2.src = pngUrl;
                 };
                 img.src = coverUrl;
-            } else {
-                coverContainer.innerHTML = '<div class="cover-placeholder-detail">📚<br><span style="font-size:12px;">ISBN não disponível</span></div>';
             }
-        } else if (coverContainer) {
-            coverContainer.innerHTML = '<div class="cover-placeholder-detail">📚<br><span style="font-size:12px;">ISBN não disponível</span></div>';
+        }
+    }
+
+    // ========== RENDERIZAR CONFORME VIEW MODE ==========
+    function renderizarLivros() {
+        if (viewMode === 'grid') {
+            renderizarGrid(livrosFiltrados);
+        } else {
+            renderizarLista(livrosFiltrados);
         }
     }
 
@@ -794,7 +1081,7 @@
         
         livrosFiltrados = filtrados;
         resultCountSpan.textContent = "📌 " + livrosFiltrados.length + " de " + bibliotecaData.livros.length + " livro(s)";
-        renderizarLivros(livrosFiltrados);
+        renderizarLivros();
     }
 
     function atualizarFiltrosOptions() {
@@ -815,15 +1102,13 @@
         }
         
         authorFilter.innerHTML = '<option value="">Todos os autores</option>';
-        const autoresArray = Array.from(autores);
-        autoresArray.sort();
+        const autoresArray = Array.from(autores).sort();
         for (let i = 0; i < autoresArray.length; i++) {
             authorFilter.innerHTML += '<option value="' + escapeHtml(autoresArray[i]) + '">' + escapeHtml(autoresArray[i]) + '</option>';
         }
         
         collectionFilter.innerHTML = '<option value="">Todas as coleções</option>';
-        const colecoesArray = Array.from(colecoes);
-        colecoesArray.sort();
+        const colecoesArray = Array.from(colecoes).sort();
         for (let i = 0; i < colecoesArray.length; i++) {
             collectionFilter.innerHTML += '<option value="' + escapeHtml(colecoesArray[i]) + '">' + escapeHtml(colecoesArray[i]) + '</option>';
         }
@@ -855,16 +1140,9 @@
             if (coll) colecaoCount.set(coll, (colecaoCount.get(coll) || 0) + 1);
         }
         
-        const topAutores = Array.from(autorCount.entries());
-        topAutores.sort(function(a, b) { return b[1] - a[1]; });
-        const topAutoresSlice = topAutores.slice(0, 15);
-        
-        const topTags = Array.from(tagCount.entries());
-        topTags.sort(function(a, b) { return b[1] - a[1]; });
-        const topTagsSlice = topTags.slice(0, 15);
-        
-        const topColecoes = Array.from(colecaoCount.entries());
-        topColecoes.sort(function(a, b) { return b[1] - a[1]; });
+        const topAutores = Array.from(autorCount.entries()).sort((a,b) => b[1] - a[1]).slice(0, 15);
+        const topTags = Array.from(tagCount.entries()).sort((a,b) => b[1] - a[1]).slice(0, 15);
+        const topColecoes = Array.from(colecaoCount.entries()).sort((a,b) => b[1] - a[1]);
         
         let html = '<div class="stats-section"><h3>📚 Resumo</h3><div class="stats-grid">' +
                     '<div class="stat-item"><strong>Total livros</strong> <span>' + livros.length + '</span></div>' +
@@ -872,12 +1150,12 @@
                     '<div class="stat-item"><strong>Coleções</strong> <span>' + colecaoCount.size + '</span></div>' +
                     '</div></div>' +
                     '<div class="stats-section"><h3>✍️ Top Autores</h3><div class="stats-grid">';
-        for (let i = 0; i < topAutoresSlice.length; i++) {
-            html += '<div class="stat-item">' + escapeHtml(topAutoresSlice[i][0]) + ' <span>' + topAutoresSlice[i][1] + '</span></div>';
+        for (let i = 0; i < topAutores.length; i++) {
+            html += '<div class="stat-item">' + escapeHtml(topAutores[i][0]) + ' <span>' + topAutores[i][1] + '</span></div>';
         }
         html += '</div></div><div class="stats-section"><h3>🏷️ Tags</h3><div class="tag-cloud">';
-        for (let i = 0; i < topTagsSlice.length; i++) {
-            html += '<span class="tag-stat">#' + escapeHtml(topTagsSlice[i][0]) + ' (' + topTagsSlice[i][1] + ')</span>';
+        for (let i = 0; i < topTags.length; i++) {
+            html += '<span class="tag-stat">#' + escapeHtml(topTags[i][0]) + ' (' + topTags[i][1] + ')</span>';
         }
         html += '</div></div><div class="stats-section"><h3>📖 Coleções</h3><div class="stats-grid">';
         for (let i = 0; i < topColecoes.length; i++) {
@@ -898,13 +1176,6 @@
                 if (data && data.livros && Array.isArray(data.livros)) {
                     bibliotecaData = data;
                     console.log("✅ Carregados " + bibliotecaData.livros.length + " livros");
-                    
-                    let comIsbn = 0;
-                    for (let i = 0; i < bibliotecaData.livros.length; i++) {
-                        if (bibliotecaData.livros[i].isbn) comIsbn++;
-                    }
-                    console.log("📚 Livros com ISBN: " + comIsbn);
-                    console.log("💡 Dica: Adicione as capas na pasta 'capas/' com o nome do ISBN (ex: 9789897772542.jpg)");
                 }
             } else {
                 console.warn("Ficheiro não encontrado");
@@ -932,6 +1203,12 @@
             authorFilter.value = '';
             collectionFilter.value = '';
             aplicarFiltros();
+        });
+        
+        toggleViewBtn.addEventListener('click', function() {
+            viewMode = viewMode === 'grid' ? 'list' : 'grid';
+            toggleViewBtn.textContent = viewMode === 'grid' ? '📋 Vista por Autor' : '🃏 Vista em Grade';
+            renderizarLivros();
         });
         
         openStatsBtn.addEventListener('click', function() {
