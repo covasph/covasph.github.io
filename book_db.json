@@ -1821,20 +1821,59 @@
       "nota": "ISBN não encontrado na pesquisa disponível. Poderá pertencer à série 'Goddess Summoning' ou ser um título independente."
     },
     {
-      "titulo": "Juramento de Dragão",
-      "autor": ["P. C. Cast", "Kim Doner"],
-      "editora": "Edições Asa",
-      "tags": ["fantasia", "dragões", "aventura", "magia"],
-      "isbn": null,
-      "nota": "Possível título de uma série ou livro da autora. ISBN não encontrado na pesquisa disponível."
+      "titulo": "Manual do Iniciado",
+      "autor": ["P.C. Cast", "Kristin Cast"],
+      "editora": "Saída de Emergência",
+      "edicao": 1,
+      "ano": 2012,
+      "paginas": 208,
+      "colecao": true,
+      "nome_colecao": "Bang!",
+      "volume_colecao": 154,
+      "tags": ["companion book", "guia", "universo literário", "fantasia", "vampiros"],
+      "isbn": "9789896373757",
+      "sinopse": "Este é o guia oficial do universo da Casa da Noite. Um manual repleto de informação sobre a história da Casa da Noite, os rituais, os deuses, e o quotidiano dos iniciados. Inclui ilustrações e textos que explicam as origens da ordem dos vampiros, as tradições e os segredos da Deusa Nyx. O livro é apresentado como se fosse um objeto do próprio universo da série, explicando o funcionamento da escola e as regras que todos os novatos devem seguir. É uma leitura essencial para os fãs que querem conhecer todos os detalhes sobre o mundo de Zoey Redbird.",
+      "nota": "Este é um companion book da série A Casa da Noite, ilustrado por Kim Doner [citation:2][citation:4]."
     },
     {
-      "titulo": "Manual do Iniciado",
-      "autor": ["P. C. Cast", "Kristin Cast"],
-      "editora": "Edições Asa",
-      "tags": ["companion book", "universo literário", "guia", "casa da noite"],
+      "titulo": "Juramento de Dragão",
+      "autor": ["P.C. Cast", "Kristin Cast"],
+      "editora": "Saída de Emergência",
+      "edicao": 1,
+      "ano": 2012,
+      "paginas": 144,
+      "colecao": true,
+      "nome_colecao": "Bang!",
+      "volume_colecao": 192,
+      "tags": ["fantasia", "vampiros", "spin-off", "young adult", "origem"],
+      "isbn": "9789896374600",
+      "sinopse": "No início do século XIX, em Inglaterra, e muito antes de se tornar professor na Casa da Noite em Tulsa, Bryan Lankford é um jovem talentoso mas problemático. Até ao momento em que o seu pai, um nobre de grande fortuna, o expulsa para a América. Bryan cedo recebe a Marca dos vampyros e entra no mundo excitante e perigoso dos iniciados. Tornando-se rapidamente mestre de Esgrima, é confrontado com desafios aterrorizadores mas também com surpresas agradáveis, como Anastasia, a cativante jovem professora de Sortilégios e Rituais da Casa da Noite. Mas quando um poder negro os ameaça a todos, Lankford é apanhado no tumulto. E embora seja um poderoso iniciado, será forte o suficiente para afastar o mal e, ao mesmo tempo, proteger Anastasia? Irão as suas escolhas salvá-la - ou destruí-los a todos?",
+      "nota": "Este é um spin-off da série principal House of Night, focado na juventude de Dragon Lankford [citation:1][citation:9]."
+    },
+    {
+      "titulo": "Revelada",
+      "autor": ["P.C. Cast", "Kristin Cast"],
+      "editora": "Saída de Emergência",
+      "colecao": true,
+      "nome_colecao": "A Casa da Noite",
+      "volume_colecao": 11,
+      "tags": ["fantasia", "vampiros", "young adult", "romance", "magia"],
       "isbn": null,
-      "nota": "Material complementar da série 'A Casa da Noite'. Pode incluir conteúdo extra, entrevistas e informações sobre o universo da série. ISBN não encontrado na pesquisa disponível."
-    }    
+      "sinopse": "Décimo primeiro volume da saga A Casa da Noite. As forças da Luz e das Trevas continuam a sua luta épica. Neferet está mais poderosa do que nunca e Zoey Redbird terá de enfrentar desafios que testarão os seus limites. Revelações surpreendentes virão à tona, mudando para sempre o destino de todos os que habitam a Casa da Noite. O amor, a amizade e a lealdade serão postos à prova enquanto os personagens se aproximam da batalha final que decidirá o futuro do mundo dos vampiros."
+    },
+    {
+      "titulo": "Redimida",
+      "autor": ["P.C. Cast", "Kristin Cast"],
+      "editora": "Saída de Emergência",
+      "edicao": 1,
+      "ano": 2015,
+      "paginas": 352,
+      "colecao": true,
+      "nome_colecao": "A Casa da Noite",
+      "volume_colecao": 12,
+      "tags": ["fantasia", "vampiros", "young adult", "romance", "magia", "final da série"],
+      "isbn": "9789896377137",
+      "sinopse": "Zoey Redbird está em perigo. Isolada dos seus amigos, a jovem está determinada a encarar o castigo que merece - mesmo que tal signifique que o seu corpo rejeite a mudança e comece a definhar. Só o amor dos que lhe são próximos poderá salvá-la do vazio do seu espírito, mas um mal terrível emerge das sombras, mais poderoso que nunca. Neferet fez-se finalmente conhecer perante os mortais, coroando-se de Deusa Negra e preparando-se para escravizar todo o mundo. Os vampiros da Casa da Noite trabalham com a polícia reagrupando os recursos que possuem, mas nada parece suficiente para vencer Neferet - a não ser que o vampiro que manipule os elementos possua também o dom de manusear Magia Antiga. Somente Zoey Redbird é herdeira de tal poder… mas devido às consequências de ter usado Magia Antiga no passado, Zoey não pode ajudar ninguém. Neste último romance da série Casa da Noite terá lugar a batalha épica entre a Luz e a Escuridão - a batalha que definirá quem será redimido… ou quem ficará perdido para sempre. [citation:1]"
+    }
   ]
 }
