@@ -1796,6 +1796,45 @@
       "tags": ["fantasia", "vampiros", "young adult", "romance", "magia"],
       "isbn": null,
       "sinopse": "Décimo volume da saga A Casa da Noite. Zoey Redbird enfrenta novos desafios enquanto as forças do bem e do mal continuam a lutar pelo domínio do mundo. Com segredos revelados e alianças testadas, Zoey terá de descobrir o seu verdadeiro poder para proteger aqueles que ama e impedir que as trevas triunfem de uma vez por todas. Será que o amor e a amizade serão suficientes para vencer o mal que ameaça destruir tudo o que a jovem sacerdotisa construiu?[citation:2]"
-    }
+    },
+    {
+      "titulo": "Desejada",
+      "subtitulo": "Chamamento da Deusa - Volume 2",
+      "autor": "P. C. Cast",
+      "editora": "Edições Asa",
+      "edicao": 1,
+      "ano": 2012,
+      "paginas": 352,
+      "colecao": true,
+      "nome_colecao": "Chamamento da Deusa",
+      "volume_colecao": 2,
+      "tags": ["fantasia", "romance", "mitologia grega", "humor"],
+      "isbn": "9789895579341",
+      "sinopse": "Lina é proprietária de uma padaria Gourmet em Tulsa mas, infelizmente, o negócio não está a correr como esperado e ela precisa de um plano. Quando tropeça, acidentalmente, num livro de culinária italiana da deusa, Lina não consegue deixar de pensar que encontrou a solução para os problemas, mesmo que isso implique invocar uma deusa para salvar o seu negócio. Em breve, Lina encontra-se cara a cara com Deméter, que tem o seu próprio plano. Ela propõe que Lina troque a alma com Perséfone, a deusa da primavera, que irá dar uma nova vida à padaria. Em troca Lina terá que repor a ordem no submundo. Depois de ocupar o corpo de encantadora Perséfone, Lina, cujos problemas eram massa azeda e segundos encontros, tem agora assuntos maiores em mãos, como levar a primavera ao mundo dos espíritos. Mas, quando o belo e perigoso Hades acende uma chama no seu coração, Lina não pode deixar de se interrogar se o senhor do submundo não será o homem dos seus sonhos…[citation:1]"
+    },
+    {
+      "titulo": "Deusa do Mar",
+      "autor": "P. C. Cast",
+      "editora": "Edições Asa",
+      "tags": ["fantasia", "romance", "mitologia", "aventura"],
+      "isbn": null,
+      "nota": "ISBN não encontrado na pesquisa disponível. Poderá pertencer à série 'Goddess Summoning' ou ser um título independente."
+    },
+    {
+      "titulo": "Juramento de Dragão",
+      "autor": ["P. C. Cast", "Kim Doner"],
+      "editora": "Edições Asa",
+      "tags": ["fantasia", "dragões", "aventura", "magia"],
+      "isbn": null,
+      "nota": "Possível título de uma série ou livro da autora. ISBN não encontrado na pesquisa disponível."
+    },
+    {
+      "titulo": "Manual do Iniciado",
+      "autor": ["P. C. Cast", "Kristin Cast"],
+      "editora": "Edições Asa",
+      "tags": ["companion book", "universo literário", "guia", "casa da noite"],
+      "isbn": null,
+      "nota": "Material complementar da série 'A Casa da Noite'. Pode incluir conteúdo extra, entrevistas e informações sobre o universo da série. ISBN não encontrado na pesquisa disponível."
+    }    
   ]
 }
