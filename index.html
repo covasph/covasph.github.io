@@ -211,7 +211,7 @@
             color: #5682a0;
         }
 
-        /* Modal de Detalhes */
+        /* Modal */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -524,7 +524,6 @@
 <script>
     let bibliotecaData = { livros: [] };
     let livrosFiltrados = [];
-    let coverCache = new Map();
 
     // Elementos
     const searchInput = document.getElementById('searchInput');
@@ -572,37 +571,24 @@
         return null;
     }
 
-    // ========== FUNÇÃO SIMPLES PARA OBTER CAPA VIA GOOGLE BOOKS ==========
-    async function getGoogleBooksCover(titulo, autor) {
-        // Verificar cache
-        const cacheKey = `${titulo}|${autor}`.toLowerCase();
-        if (coverCache.has(cacheKey)) {
-            return coverCache.get(cacheKey);
+    // ========== FUNÇÃO PARA OBTER CAPA (Amazon + Open Library) ==========
+    function getCoverUrl(livro) {
+        const isbn = livro.isbn;
+        
+        // Se tiver ISBN, tenta Amazon (melhor cobertura)
+        if (isbn && typeof isbn === 'string' && isbn.length >= 10) {
+            // Amazon USA (funciona para muitos livros)
+            // Diferentes formatos de URL para tentar
+            const amazonUrls = [
+                `https://images-na.ssl-images-amazon.com/images/P/${isbn}.01.L.jpg`,
+                `https://images-na.ssl-images-amazon.com/images/I/51%2B${isbn}.jpg`,
+                `https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg`
+            ];
+            return amazonUrls;
         }
         
-        // Construir query com título e autor
-        const query = encodeURIComponent(`${titulo} ${autor}`);
-        const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
-        
-        try {
-            const response = await fetch(url);
-            const data = await response.json();
-            
-            if (data.items && data.items[0] && data.items[0].volumeInfo.imageLinks) {
-                let coverUrl = data.items[0].volumeInfo.imageLinks.thumbnail;
-                if (coverUrl) {
-                    coverUrl = coverUrl.replace('&edge=curl', '').replace('http://', 'https://');
-                    coverCache.set(cacheKey, coverUrl);
-                    return coverUrl;
-                }
-            }
-            coverCache.set(cacheKey, null);
-            return null;
-        } catch (error) {
-            console.warn(`Erro ao buscar capa para ${titulo}:`, error);
-            coverCache.set(cacheKey, null);
-            return null;
-        }
+        // Sem ISBN, retorna null
+        return null;
     }
 
     // ========== RENDERIZAR CARDS ==========
@@ -660,7 +646,7 @@
     }
 
     // ========== MOSTRAR DETALHES COM CAPA ==========
-    async function mostrarDetalhes(livro) {
+    function mostrarDetalhes(livro) {
         const titulo = livro.titulo || "Título desconhecido";
         const autorString = getAutorString(livro.autor);
         const editora = livro.editora || "Não informada";
@@ -679,10 +665,10 @@
             }
         }
         
-        // Construir HTML base (com placeholder da capa)
+        // Construir HTML base
         let html = '<div class="detail-layout">' +
                         '<div class="detail-cover" id="detail-cover-container">' +
-                            '<div class="cover-placeholder-detail" id="cover-placeholder">📚<br><span style="font-size:12px;">A carregar...</span></div>' +
+                            '<div class="cover-placeholder-detail" id="cover-placeholder">📚<br><span style="font-size:12px;">Capa não disponível</span></div>' +
                         '</div>' +
                         '<div class="detail-info">' +
                             '<h3>' + escapeHtml(titulo) + '</h3>' +
@@ -715,14 +701,38 @@
         detailModalBody.innerHTML = html;
         detailModal.classList.add('active');
         
-        // Tentar carregar a capa
+        // Tentar carregar capa
         const coverContainer = document.getElementById('detail-cover-container');
-        if (coverContainer) {
-            const coverUrl = await getGoogleBooksCover(titulo, autorString);
-            if (coverUrl) {
-                coverContainer.innerHTML = '<img src="' + coverUrl + '" alt="Capa de ' + escapeHtml(titulo) + '" onerror="this.parentElement.innerHTML=\'<div class=\\\'cover-placeholder-detail\\\'>📚<br><span style=\\\'font-size:12px;\\\'>Capa não disponível</span></div>\'">';
-            } else {
-                coverContainer.innerHTML = '<div class="cover-placeholder-detail">📚<br><span style="font-size:12px;">Capa não disponível</span></div>';
+        if (coverContainer && livro.isbn) {
+            const coverUrls = getCoverUrl(livro);
+            if (coverUrls) {
+                // Tentar cada URL até encontrar uma que funciona
+                let urlIndex = 0;
+                
+                function tryNextUrl() {
+                    if (urlIndex >= coverUrls.length) {
+                        coverContainer.innerHTML = '<div class="cover-placeholder-detail">📚<br><span style="font-size:12px;">Capa não disponível</span></div>';
+                        return;
+                    }
+                    
+                    const url = coverUrls[urlIndex];
+                    const img = new Image();
+                    
+                    img.onload = function() {
+                        // Imagem carregou!
+                        coverContainer.innerHTML = '<img src="' + url + '" alt="Capa de ' + escapeHtml(titulo) + '">';
+                    };
+                    
+                    img.onerror = function() {
+                        // Tentar próxima URL
+                        urlIndex++;
+                        tryNextUrl();
+                    };
+                    
+                    img.src = url;
+                }
+                
+                tryNextUrl();
             }
         }
     }
@@ -849,11 +859,11 @@
         
         const topAutores = Array.from(autorCount.entries());
         topAutores.sort(function(a, b) { return b[1] - a[1]; });
-        topAutores.slice(0, 15);
+        const topAutoresSlice = topAutores.slice(0, 15);
         
         const topTags = Array.from(tagCount.entries());
         topTags.sort(function(a, b) { return b[1] - a[1]; });
-        topTags.slice(0, 15);
+        const topTagsSlice = topTags.slice(0, 15);
         
         const topColecoes = Array.from(colecaoCount.entries());
         topColecoes.sort(function(a, b) { return b[1] - a[1]; });
@@ -864,12 +874,12 @@
                     '<div class="stat-item"><strong>Coleções</strong> <span>' + colecaoCount.size + '</span></div>' +
                     '</div></div>' +
                     '<div class="stats-section"><h3>✍️ Top Autores</h3><div class="stats-grid">';
-        for (let i = 0; i < Math.min(15, topAutores.length); i++) {
-            html += '<div class="stat-item">' + escapeHtml(topAutores[i][0]) + ' <span>' + topAutores[i][1] + '</span></div>';
+        for (let i = 0; i < topAutoresSlice.length; i++) {
+            html += '<div class="stat-item">' + escapeHtml(topAutoresSlice[i][0]) + ' <span>' + topAutoresSlice[i][1] + '</span></div>';
         }
         html += '</div></div><div class="stats-section"><h3>🏷️ Tags</h3><div class="tag-cloud">';
-        for (let i = 0; i < Math.min(15, topTags.length); i++) {
-            html += '<span class="tag-stat">#' + escapeHtml(topTags[i][0]) + ' (' + topTags[i][1] + ')</span>';
+        for (let i = 0; i < topTagsSlice.length; i++) {
+            html += '<span class="tag-stat">#' + escapeHtml(topTagsSlice[i][0]) + ' (' + topTagsSlice[i][1] + ')</span>';
         }
         html += '</div></div><div class="stats-section"><h3>📖 Coleções</h3><div class="stats-grid">';
         for (let i = 0; i < topColecoes.length; i++) {
