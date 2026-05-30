@@ -54,7 +54,7 @@
             gap: 0.5rem;
         }
 
-        .stats-button, .debug-button {
+        .stats-button, .reload-button {
             background: #2c5a7a;
             border: none;
             padding: 0.7rem 1.5rem;
@@ -69,7 +69,7 @@
             gap: 8px;
         }
 
-        .debug-button {
+        .reload-button {
             background: #5a6e7a;
         }
 
@@ -146,60 +146,96 @@
 
         .books-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 1.8rem;
         }
 
         .book-card {
             background: #ffffff;
-            border-radius: 1.5rem;
+            border-radius: 1.2rem;
             overflow: hidden;
             transition: transform 0.2s ease, box-shadow 0.2s;
             box-shadow: 0 6px 14px rgba(33, 58, 78, 0.06);
             border: 1px solid #d6e2ec;
             display: flex;
-            flex-direction: column;
-            height: 100%;
+            flex-direction: row;
+            height: 180px;
         }
 
         .book-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 30px -12px rgba(28, 75, 105, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px -8px rgba(28, 75, 105, 0.2);
+        }
+
+        /* Capa do livro */
+        .book-cover {
+            width: 120px;
+            min-width: 120px;
+            background: #f0f4f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-right: 1px solid #e0e8f0;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cover-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #d4e0e8, #e8f0f5);
+            color: #5f8aac;
+            font-size: 2rem;
         }
 
         .card-content {
-            padding: 1.4rem 1.4rem 1.2rem;
+            padding: 1rem 1.2rem;
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
         }
 
         .book-title {
-            font-size: 1.35rem;
+            font-size: 1rem;
             font-weight: 700;
             line-height: 1.3;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
             color: #1f405b;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .book-author {
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             font-weight: 600;
             color: #2f6c8a;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.4rem;
         }
 
         .book-meta {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            font-size: 0.75rem;
-            margin: 0.7rem 0;
+            gap: 0.3rem;
+            font-size: 0.65rem;
+            margin: 0.4rem 0;
             color: #5f7e96;
         }
 
         .editora-badge, .colecao-tag {
             background: #eaf1f7;
-            padding: 0.2rem 0.6rem;
-            border-radius: 30px;
+            padding: 0.15rem 0.5rem;
+            border-radius: 20px;
         }
 
         .colecao-tag {
@@ -210,37 +246,35 @@
         .tag-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.45rem;
-            margin: 0.8rem 0 0.6rem;
+            gap: 0.3rem;
+            margin: 0.4rem 0;
         }
 
         .tag {
             background: #eef3f8;
-            padding: 0.2rem 0.65rem;
-            border-radius: 20px;
-            font-size: 0.7rem;
+            padding: 0.1rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.6rem;
             font-weight: 500;
             color: #2c6482;
         }
 
         .sinopse {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: #2e546e;
-            line-height: 1.4;
-            margin-top: 0.7rem;
-            border-top: 1px dashed #cbdde9;
-            padding-top: 0.7rem;
+            line-height: 1.3;
+            margin-top: 0.4rem;
             display: -webkit-box;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
 
         .isbn {
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-family: monospace;
             color: #7b98ae;
-            margin-top: 0.5rem;
+            margin-top: 0.3rem;
         }
 
         .no-results, .error-message {
@@ -254,7 +288,6 @@
         .error-message {
             background: #fff0f0;
             color: #c7254e;
-            border: 1px solid #f5c6cb;
         }
 
         .modal-overlay {
@@ -291,7 +324,7 @@
         }
 
         .modal-header {
-            padding: 1.5rem 1.8rem;
+            padding: 1.2rem 1.5rem;
             background: #e5f0f7;
             border-bottom: 1px solid #c9deec;
             display: flex;
@@ -300,80 +333,91 @@
         }
 
         .modal-header h2 {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             color: #1b4f6e;
         }
 
         .close-modal {
             background: none;
             border: none;
-            font-size: 2rem;
+            font-size: 1.8rem;
             cursor: pointer;
             color: #4c7b9b;
         }
 
         .modal-body {
-            padding: 1.5rem 1.8rem;
+            padding: 1.2rem 1.5rem;
             overflow-y: auto;
             flex: 1;
         }
 
         .stats-section {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .stats-section h3 {
-            font-size: 1.3rem;
-            border-left: 6px solid #5f9bc2;
-            padding-left: 0.8rem;
-            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            border-left: 4px solid #5f9bc2;
+            padding-left: 0.6rem;
+            margin-bottom: 0.8rem;
             color: #1e5779;
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-            gap: 0.9rem;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 0.6rem;
             background: #f6fafd;
-            padding: 1rem;
-            border-radius: 1.2rem;
+            padding: 0.8rem;
+            border-radius: 1rem;
         }
 
         .stat-item {
             display: flex;
             justify-content: space-between;
-            padding: 0.5rem 0;
+            padding: 0.3rem 0;
             border-bottom: 1px dashed #cde0ec;
+            font-size: 0.8rem;
         }
 
         .tag-cloud {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.6rem;
+            gap: 0.5rem;
         }
 
         .tag-stat {
             background: #e6f0f7;
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            font-size: 0.8rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
         }
 
         @media (max-width: 640px) {
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+            .book-card {
+                height: 160px;
+            }
+            .book-cover {
+                width: 100px;
+                min-width: 100px;
+            }
+            .book-title {
+                font-size: 0.9rem;
+            }
             .stats-btn-wrapper {
                 justify-content: center;
             }
             .search-wrapper, .filter-group {
                 flex-direction: column;
             }
-            .books-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
         footer {
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 2rem;
             font-size: 0.7rem;
             color: #7c9bb3;
         }
@@ -387,7 +431,7 @@
         <div class="subtitle">Biblioteca Elsa, Vasco e Hugo</div>
         <div class="stats-btn-wrapper">
             <button id="openStatsModal" class="stats-button">📊 Estatísticas</button>
-            <button id="debugRenderBtn" class="debug-button">🔧 Debug</button>
+            <button id="reloadCoversBtn" class="reload-button">🖼️ Recarregar Capas</button>
         </div>
     </div>
 
@@ -408,7 +452,7 @@
     <div id="booksContainer" class="books-grid">
         <div class="no-results">📖 A carregar biblioteca...</div>
     </div>
-    <footer>✨ Antioch · livros, palavras e histórias partilhadas</footer>
+    <footer>✨ Antioch · capas obtidas via Open Library e Google Books</footer>
 </div>
 
 <div id="statsModal" class="modal-overlay">
@@ -424,6 +468,7 @@
 <script>
     let bibliotecaData = { livros: [] };
     let livrosFiltrados = [];
+    let coverCache = new Map(); // Cache das URLs das capas
 
     // Elementos
     const searchInput = document.getElementById('searchInput');
@@ -432,7 +477,7 @@
     const clearBtn = document.getElementById('clearFilters');
     const booksContainer = document.getElementById('booksContainer');
     const resultCountSpan = document.getElementById('resultCount');
-    const debugBtn = document.getElementById('debugRenderBtn');
+    const reloadCoversBtn = document.getElementById('reloadCoversBtn');
     
     // Modal
     const modal = document.getElementById('statsModal');
@@ -450,18 +495,13 @@
         });
     }
 
-    // FUNÇÃO IMPORTANTE: Normaliza o autor (pode ser string ou array)
     function getAutorString(autor) {
         if (!autor) return "Autor desconhecido";
         if (typeof autor === 'string') return autor;
-        if (Array.isArray(autor)) {
-            // Se for array, junta com " e "
-            return autor.join(' e ');
-        }
+        if (Array.isArray(autor)) return autor.join(' e ');
         return String(autor);
     }
 
-    // Versão para filtros (retorna array para pesquisa)
     function getAutorArray(autor) {
         if (!autor) return [];
         if (typeof autor === 'string') return [autor];
@@ -474,111 +514,149 @@
         return null;
     }
 
-    function atualizarFiltrosOptions() {
-        const autores = new Set();
-        const colecoes = new Set();
-        
-        for (var i = 0; i < bibliotecaData.livros.length; i++) {
-            var livro = bibliotecaData.livros[i];
-            
-            // Autor pode ser string ou array
-            var autoresLivro = getAutorArray(livro.autor);
-            for (var a = 0; a < autoresLivro.length; a++) {
-                var nomeAutor = autoresLivro[a];
-                if (nomeAutor && typeof nomeAutor === 'string' && nomeAutor.trim() !== '') {
-                    autores.add(nomeAutor.trim());
-                }
-            }
-            
-            var coll = getColecaoNome(livro);
-            if (coll) {
-                colecoes.add(coll);
-            }
-        }
-        
-        // Preencher select de autores
-        authorFilter.innerHTML = '<option value="">Todos os autores</option>';
-        var autoresArray = Array.from(autores);
-        autoresArray.sort();
-        for (var i = 0; i < autoresArray.length; i++) {
-            var autor = autoresArray[i];
-            authorFilter.innerHTML += '<option value="' + escapeHtml(autor) + '">' + escapeHtml(autor) + '</option>';
-        }
-        
-        // Preencher select de coleções
-        collectionFilter.innerHTML = '<option value="">Todas as coleções</option>';
-        var colecoesArray = Array.from(colecoes);
-        colecoesArray.sort();
-        for (var i = 0; i < colecoesArray.length; i++) {
-            var cole = colecoesArray[i];
-            collectionFilter.innerHTML += '<option value="' + escapeHtml(cole) + '">' + escapeHtml(cole) + '</option>';
-        }
-        
-        console.log("✅ Filtros atualizados: Autores=" + autores.size + ", Coleções=" + colecoes.size);
+    // ========== FUNÇÕES PARA OBTER CAPAS ==========
+    
+    // Tenta obter capa via Open Library (mais simples)
+    function getOpenLibraryCover(isbn) {
+        if (!isbn) return null;
+        return `https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg`;
     }
-
-    function renderizarLivros(livrosArray) {
-        console.log("🎨 Renderizando", livrosArray.length, "livros");
+    
+    // Tenta obter capa via Google Books (fallback)
+    async function getGoogleBooksCover(isbn, titulo, autor) {
+        return new Promise((resolve) => {
+            let query = '';
+            if (isbn) {
+                query = `isbn:${isbn}`;
+            } else {
+                query = encodeURIComponent(`${titulo} ${getAutorString(autor)}`);
+            }
+            
+            const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
+            
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.items && data.items[0] && data.items[0].volumeInfo.imageLinks) {
+                        const coverUrl = data.items[0].volumeInfo.imageLinks.thumbnail;
+                        resolve(coverUrl ? coverUrl.replace('&edge=curl', '') : null);
+                    } else {
+                        resolve(null);
+                    }
+                })
+                .catch(() => resolve(null));
+        });
+    }
+    
+    // Função principal para obter URL da capa (com cache)
+    async function getBookCoverUrl(livro) {
+        const isbn = livro.isbn;
+        const titulo = livro.titulo || '';
+        const autor = livro.autor;
         
+        // Verificar cache
+        const cacheKey = isbn || `${titulo}_${getAutorString(autor)}`;
+        if (coverCache.has(cacheKey)) {
+            return coverCache.get(cacheKey);
+        }
+        
+        // Tentar Open Library (mais rápido)
+        if (isbn) {
+            const openLibraryUrl = getOpenLibraryCover(isbn);
+            // Verificar se a imagem existe (teste rápido)
+            try {
+                const testResponse = await fetch(openLibraryUrl, { method: 'HEAD' });
+                if (testResponse.ok) {
+                    coverCache.set(cacheKey, openLibraryUrl);
+                    return openLibraryUrl;
+                }
+            } catch(e) {
+                // Falhou, tentar Google Books
+            }
+        }
+        
+        // Fallback: Google Books
+        const googleUrl = await getGoogleBooksCover(isbn, titulo, autor);
+        if (googleUrl) {
+            coverCache.set(cacheKey, googleUrl);
+            return googleUrl;
+        }
+        
+        // Sem capa encontrada
+        coverCache.set(cacheKey, null);
+        return null;
+    }
+    
+    // Renderizar livros COM capas (carregamento assíncrono)
+    function renderizarLivros(livrosArray) {
         if (!livrosArray || livrosArray.length === 0) {
             booksContainer.innerHTML = '<div class="no-results">📭 Nenhum livro encontrado.</div>';
             return;
         }
         
-        try {
-            var html = '';
-            var cardsCriados = 0;
+        // Gerar HTML base com placeholders
+        let html = '';
+        for (var i = 0; i < livrosArray.length; i++) {
+            var livro = livrosArray[i];
             
-            for (var i = 0; i < livrosArray.length; i++) {
-                var livro = livrosArray[i];
-                
-                var titulo = livro.titulo || "Título desconhecido";
-                var autorString = getAutorString(livro.autor);  // Normaliza autor
-                var editora = livro.editora || "";
-                var sinopseText = livro.sinopse || "Sem sinopse disponível.";
-                var shortSinopse = sinopseText.length > 140 ? sinopseText.substring(0, 140) + '…' : sinopseText;
-                var isbn = livro.isbn || "";
-                
-                // Tags
-                var tagsHtml = '';
-                if (livro.tags && Array.isArray(livro.tags) && livro.tags.length > 0) {
-                    var tagItems = '';
-                    for (var t = 0; t < livro.tags.length; t++) {
-                        var tag = livro.tags[t];
-                        tagItems += '<span class="tag">#' + escapeHtml(tag || '') + '</span>';
-                    }
-                    tagsHtml = '<div class="tag-list">' + tagItems + '</div>';
+            var titulo = livro.titulo || "Título desconhecido";
+            var autorString = getAutorString(livro.autor);
+            var editora = livro.editora || "";
+            var sinopseText = livro.sinopse || "Sem sinopse disponível.";
+            var shortSinopse = sinopseText.length > 100 ? sinopseText.substring(0, 100) + '…' : sinopseText;
+            var isbn = livro.isbn || "";
+            
+            // Tags
+            var tagsHtml = '';
+            if (livro.tags && Array.isArray(livro.tags) && livro.tags.length > 0) {
+                var tagItems = '';
+                for (var t = 0; t < Math.min(3, livro.tags.length); t++) {
+                    tagItems += '<span class="tag">#' + escapeHtml(livro.tags[t]) + '</span>';
                 }
-                
-                // Coleção
-                var colecaoHtml = '';
-                if (livro.colecao === true && livro.nome_colecao) {
-                    var volInfo = livro.volume_colecao ? ' · Vol. ' + livro.volume_colecao : '';
-                    colecaoHtml = '<div class="colecao-tag">📘 ' + escapeHtml(livro.nome_colecao) + volInfo + '</div>';
+                if (livro.tags.length > 3) {
+                    tagItems += '<span class="tag">+'+ (livro.tags.length - 3) +'</span>';
                 }
-                
-                var editoraHtml = editora ? '<span class="editora-badge">🏢 ' + escapeHtml(editora) + '</span>' : '';
-                
-                html += '<div class="book-card">' +
-                            '<div class="card-content">' +
-                                '<div class="book-title">' + escapeHtml(titulo) + '</div>' +
-                                '<div class="book-author">✍️ ' + escapeHtml(autorString) + '</div>' +
-                                '<div class="book-meta">' + editoraHtml + ' ' + colecaoHtml + '</div>' +
-                                tagsHtml +
-                                '<div class="sinopse">📖 ' + escapeHtml(shortSinopse) + '</div>' +
-                                (isbn ? '<div class="isbn">ISBN: ' + escapeHtml(isbn) + '</div>' : '') +
-                            '</div>' +
-                        '</div>';
-                cardsCriados++;
+                tagsHtml = '<div class="tag-list">' + tagItems + '</div>';
             }
             
-            booksContainer.innerHTML = html;
-            console.log("✅ Renderização OK! Cards criados:", cardsCriados);
+            // Coleção
+            var colecaoHtml = '';
+            if (livro.colecao === true && livro.nome_colecao) {
+                var volInfo = livro.volume_colecao ? ' Vol.' + livro.volume_colecao : '';
+                colecaoHtml = '<span class="colecao-tag">📘 ' + escapeHtml(livro.nome_colecao) + volInfo + '</span>';
+            }
             
-        } catch (error) {
-            console.error("❌ ERRO na renderização:", error);
-            booksContainer.innerHTML = '<div class="error-message">Erro ao mostrar livros: ' + escapeHtml(error.message) + '<br><br>Verifique o console (F12) para mais detalhes.</div>';
+            var editoraHtml = editora ? '<span class="editora-badge">🏢 ' + escapeHtml(editora) + '</span>' : '';
+            
+            // ID único para atualizar a capa depois
+            var cardId = 'card_' + i + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
+            
+            html += '<div class="book-card" id="' + cardId + '">' +
+                        '<div class="book-cover" id="cover_' + cardId + '">' +
+                            '<div class="cover-placeholder">📚</div>' +
+                        '</div>' +
+                        '<div class="card-content">' +
+                            '<div class="book-title">' + escapeHtml(titulo) + '</div>' +
+                            '<div class="book-author">✍️ ' + escapeHtml(autorString) + '</div>' +
+                            '<div class="book-meta">' + editoraHtml + ' ' + colecaoHtml + '</div>' +
+                            tagsHtml +
+                            '<div class="sinopse">📖 ' + escapeHtml(shortSinopse) + '</div>' +
+                            (isbn ? '<div class="isbn">ISBN: ' + isbn + '</div>' : '') +
+                        '</div>' +
+                    '</div>';
+            
+            // Carregar capa assincronamente
+            (function(id, livroLocal, idx) {
+                getBookCoverUrl(livroLocal).then(coverUrl => {
+                    var coverDiv = document.getElementById('cover_' + id);
+                    if (coverDiv && coverUrl) {
+                        coverDiv.innerHTML = '<img src="' + coverUrl + '" alt="Capa" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=\\\'cover-placeholder\\\'>📚</div>\'">';
+                    }
+                }).catch(() => {});
+            })(cardId, livro, i);
         }
+        
+        booksContainer.innerHTML = html;
     }
 
     function aplicarFiltros() {
@@ -593,8 +671,6 @@
             var matchTexto = true;
             if (termo !== "") {
                 var tituloMatch = (livro.titulo || "").toLowerCase().indexOf(termo) !== -1;
-                
-                // Autor pode ser string ou array - pesquisa em todos os autores
                 var autoresLivro = getAutorArray(livro.autor);
                 var autorMatch = false;
                 for (var a = 0; a < autoresLivro.length; a++) {
@@ -603,7 +679,6 @@
                         break;
                     }
                 }
-                
                 var sinopseMatch = (livro.sinopse || "").toLowerCase().indexOf(termo) !== -1;
                 var tagsMatch = false;
                 if (livro.tags && Array.isArray(livro.tags)) {
@@ -617,7 +692,6 @@
                 matchTexto = tituloMatch || autorMatch || sinopseMatch || tagsMatch;
             }
             
-            // Filtro por autor selecionado (verifica se o autor está na lista de autores do livro)
             var matchAutor = true;
             if (autorSel !== "") {
                 var autoresLivro = getAutorArray(livro.autor);
@@ -646,6 +720,38 @@
         renderizarLivros(livrosFiltrados);
     }
 
+    function atualizarFiltrosOptions() {
+        const autores = new Set();
+        const colecoes = new Set();
+        
+        for (var i = 0; i < bibliotecaData.livros.length; i++) {
+            var livro = bibliotecaData.livros[i];
+            var autoresLivro = getAutorArray(livro.autor);
+            for (var a = 0; a < autoresLivro.length; a++) {
+                var nomeAutor = autoresLivro[a];
+                if (nomeAutor && typeof nomeAutor === 'string' && nomeAutor.trim() !== '') {
+                    autores.add(nomeAutor.trim());
+                }
+            }
+            var coll = getColecaoNome(livro);
+            if (coll) colecoes.add(coll);
+        }
+        
+        authorFilter.innerHTML = '<option value="">Todos os autores</option>';
+        var autoresArray = Array.from(autores);
+        autoresArray.sort();
+        for (var i = 0; i < autoresArray.length; i++) {
+            authorFilter.innerHTML += '<option value="' + escapeHtml(autoresArray[i]) + '">' + escapeHtml(autoresArray[i]) + '</option>';
+        }
+        
+        collectionFilter.innerHTML = '<option value="">Todas as coleções</option>';
+        var colecoesArray = Array.from(colecoes);
+        colecoesArray.sort();
+        for (var i = 0; i < colecoesArray.length; i++) {
+            collectionFilter.innerHTML += '<option value="' + escapeHtml(colecoesArray[i]) + '">' + escapeHtml(colecoesArray[i]) + '</option>';
+        }
+    }
+
     function gerarEstatisticas() {
         var livros = bibliotecaData.livros;
         if (!livros.length) return "<div>Nenhum livro carregado.</div>";
@@ -656,71 +762,49 @@
         
         for (var i = 0; i < livros.length; i++) {
             var livro = livros[i];
-            
-            // Contagem por autor (cada autor do array conta individualmente)
             var autoresLivro = getAutorArray(livro.autor);
             for (var a = 0; a < autoresLivro.length; a++) {
                 var autor = autoresLivro[a] || "Desconhecido";
                 autorCount.set(autor, (autorCount.get(autor) || 0) + 1);
             }
-            
             if (livro.tags && Array.isArray(livro.tags)) {
                 for (var t = 0; t < livro.tags.length; t++) {
                     var tag = (livro.tags[t] || "").toLowerCase();
                     if (tag) tagCount.set(tag, (tagCount.get(tag) || 0) + 1);
                 }
             }
-            
             var coll = getColecaoNome(livro);
             if (coll) colecaoCount.set(coll, (colecaoCount.get(coll) || 0) + 1);
         }
         
-        // Converter para arrays e ordenar
         var topAutores = Array.from(autorCount.entries());
         topAutores.sort(function(a, b) { return b[1] - a[1]; });
         topAutores = topAutores.slice(0, 15);
         
         var topTags = Array.from(tagCount.entries());
         topTags.sort(function(a, b) { return b[1] - a[1]; });
-        topTags = topTags.slice(0, 20);
+        topTags = topTags.slice(0, 15);
         
         var topColecoes = Array.from(colecaoCount.entries());
         topColecoes.sort(function(a, b) { return b[1] - a[1]; });
         
-        var html = '<div class="stats-section">' +
-                        '<h3>📚 Resumo</h3>' +
-                        '<div class="stats-grid">' +
-                            '<div class="stat-item"><strong>Total livros</strong> <span>' + livros.length + '</span></div>' +
-                            '<div class="stat-item"><strong>Autores (total)</strong> <span>' + autorCount.size + '</span></div>' +
-                            '<div class="stat-item"><strong>Coleções</strong> <span>' + colecaoCount.size + '</span></div>' +
-                        '</div>' +
-                    '</div>' +
-                    '<div class="stats-section">' +
-                        '<h3>✍️ Autores (mais livros)</h3>' +
-                        '<div class="stats-grid">';
-        
+        var html = '<div class="stats-section"><h3>📚 Resumo</h3><div class="stats-grid">' +
+                    '<div class="stat-item"><strong>Total livros</strong> <span>' + livros.length + '</span></div>' +
+                    '<div class="stat-item"><strong>Autores</strong> <span>' + autorCount.size + '</span></div>' +
+                    '<div class="stat-item"><strong>Coleções</strong> <span>' + colecaoCount.size + '</span></div>' +
+                    '</div></div>' +
+                    '<div class="stats-section"><h3>✍️ Autores</h3><div class="stats-grid">';
         for (var i = 0; i < topAutores.length; i++) {
             html += '<div class="stat-item">' + escapeHtml(topAutores[i][0]) + ' <span>' + topAutores[i][1] + '</span></div>';
         }
-        
-        html += '</div></div>' +
-                '<div class="stats-section">' +
-                    '<h3>🏷️ Tags</h3>' +
-                    '<div class="tag-cloud">';
-        
+        html += '</div></div><div class="stats-section"><h3>🏷️ Tags</h3><div class="tag-cloud">';
         for (var i = 0; i < topTags.length; i++) {
             html += '<span class="tag-stat">#' + escapeHtml(topTags[i][0]) + ' (' + topTags[i][1] + ')</span>';
         }
-        
-        html += '</div></div>' +
-                '<div class="stats-section">' +
-                    '<h3>📖 Coleções</h3>' +
-                    '<div class="stats-grid">';
-        
+        html += '</div></div><div class="stats-section"><h3>📖 Coleções</h3><div class="stats-grid">';
         for (var i = 0; i < topColecoes.length; i++) {
             html += '<div class="stat-item">' + escapeHtml(topColecoes[i][0]) + ' <span>' + topColecoes[i][1] + ' vol.</span></div>';
         }
-        
         html += '</div></div>';
         return html;
     }
@@ -734,35 +818,28 @@
                 var data = await response.json();
                 if (data && data.livros && Array.isArray(data.livros)) {
                     bibliotecaData = data;
-                    console.log("✅ Carregados " + bibliotecaData.livros.length + " livros do ficheiro");
-                    
-                    // Debug: mostrar exemplo de autor variado
-                    var temArray = false;
-                    for (var i = 0; i < Math.min(5, bibliotecaData.livros.length); i++) {
-                        if (Array.isArray(bibliotecaData.livros[i].autor)) {
-                            temArray = true;
-                            break;
-                        }
-                    }
-                    if (temArray) console.log("📌 Detetados livros com array de autores");
-                    
-                } else {
-                    console.warn("Ficheiro com formato inválido");
+                    console.log("✅ Carregados " + bibliotecaData.livros.length + " livros");
                 }
             } else {
-                console.warn("Ficheiro não encontrado (HTTP " + response.status + ")");
+                console.warn("Ficheiro não encontrado");
             }
         } catch (e) {
             console.warn("Erro no fetch:", e.message);
         }
         
         if (bibliotecaData.livros.length === 0) {
-            console.error("❌ Nenhum livro carregado!");
-            booksContainer.innerHTML = '<div class="error-message">⚠️ Não foi possível carregar os livros.<br><br>Verifique se o ficheiro <strong>book_db.json</strong> está no mesmo diretório.<br><br>URL atual: ' + window.location.href + '</div>';
+            booksContainer.innerHTML = '<div class="error-message">⚠️ Não foi possível carregar os livros.</div>';
             return;
         }
         
+        // Limpar cache de capas ao recarregar
+        coverCache.clear();
         atualizarFiltrosOptions();
+        aplicarFiltros();
+    }
+
+    function recarregarCapas() {
+        coverCache.clear();
         aplicarFiltros();
     }
 
@@ -776,19 +853,7 @@
             collectionFilter.value = '';
             aplicarFiltros();
         });
-        debugBtn.addEventListener('click', function() {
-            console.log("=== DEBUG INFO ===");
-            console.log("Total livros:", bibliotecaData.livros.length);
-            if (bibliotecaData.livros.length > 0) {
-                console.log("Primeiro livro:", bibliotecaData.livros[0]);
-                console.log("Tipo do autor:", typeof bibliotecaData.livros[0].autor);
-                if (Array.isArray(bibliotecaData.livros[0].autor)) {
-                    console.log("Autor é array:", bibliotecaData.livros[0].autor);
-                }
-            }
-            console.log("Container existe?", !!booksContainer);
-            renderizarLivros(livrosFiltrados);
-        });
+        reloadCoversBtn.addEventListener('click', recarregarCapas);
         openStatsBtn.addEventListener('click', function() {
             statsModalBody.innerHTML = gerarEstatisticas();
             modal.classList.add('active');
