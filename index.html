@@ -54,7 +54,7 @@
             gap: 0.5rem;
         }
 
-        .stats-button {
+        .stats-button, .colecoes-button {
             background: #2c5a7a;
             border: none;
             padding: 0.7rem 1.5rem;
@@ -69,9 +69,13 @@
             gap: 8px;
         }
 
-        .stats-button:hover {
-            background: #1e4a6b;
+        .colecoes-button {
+            background: #5a6e7a;
+        }
+
+        .stats-button:hover, .colecoes-button:hover {
             transform: scale(1.02);
+            opacity: 0.9;
         }
 
         .search-section {
@@ -212,17 +216,6 @@
             color: #2c6482;
         }
 
-        .missing-warning {
-            display: inline-block;
-            background: #fff3e0;
-            color: #c97e2a;
-            padding: 0.2rem 0.6rem;
-            border-radius: 15px;
-            font-size: 0.65rem;
-            font-weight: 600;
-            cursor: help;
-        }
-
         .tag-list {
             display: flex;
             flex-wrap: wrap;
@@ -247,7 +240,7 @@
             color: #5682a0;
         }
 
-        /* Modal */
+        /* Modal principal */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -329,6 +322,97 @@
             flex: 1;
         }
 
+        /* Estilos para o modal de coleções */
+        .colecoes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .colecao-card {
+            background: #f8fbfe;
+            border: 1px solid #d6e2ec;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .colecao-header {
+            background: #e5f0f7;
+            padding: 1rem;
+            border-bottom: 1px solid #c9deec;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .colecao-nome {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1f405b;
+        }
+
+        .colecao-status {
+            font-size: 0.8rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            background: #fff3e0;
+            color: #c97e2a;
+        }
+
+        .colecao-status.completa {
+            background: #e0f5e8;
+            color: #2c7a4a;
+        }
+
+        .colecao-livros {
+            padding: 0.5rem;
+        }
+
+        .colecao-livro {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.6rem 0.8rem;
+            border-bottom: 1px solid #e0e8f0;
+        }
+
+        .colecao-livro:last-child {
+            border-bottom: none;
+        }
+
+        .colecao-livro-vol {
+            min-width: 60px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #2c6482;
+            background: #eef3f8;
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .colecao-livro-titulo {
+            flex: 1;
+            font-size: 0.9rem;
+            color: #1a2c3c;
+        }
+
+        .colecao-livro-autor {
+            font-size: 0.7rem;
+            color: #7b98ae;
+        }
+
+        .missing-volumes {
+            padding: 0.8rem;
+            background: #fff8f0;
+            border-top: 1px solid #ffe0b3;
+            font-size: 0.8rem;
+            color: #c97e2a;
+        }
+
+        /* Modal de detalhes do livro */
         .detail-layout {
             display: flex;
             flex-direction: row;
@@ -349,7 +433,6 @@
             border: 1px solid #d6e2ec;
         }
 
-        /* Placeholder corrigido - tamanho fixo e texto pequeno */
         .cover-placeholder-detail {
             width: 180px;
             height: 260px;
@@ -507,6 +590,10 @@
             .search-wrapper, .filter-group {
                 flex-direction: column;
             }
+            .colecao-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
 
         footer {
@@ -525,6 +612,7 @@
         <div class="subtitle">Biblioteca Elsa, Vasco e Hugo</div>
         <div class="stats-btn-wrapper">
             <button id="openStatsModal" class="stats-button">📊 Estatísticas</button>
+            <button id="openColecoesModal" class="colecoes-button">📚 Ver Coleções</button>
         </div>
     </div>
 
@@ -548,7 +636,7 @@
     <footer>✨ Clique em qualquer livro para ver detalhes e capa</footer>
 </div>
 
-<!-- Modal de Detalhes -->
+<!-- Modal de Detalhes do Livro -->
 <div id="detailModal" class="modal-overlay">
     <div class="modal-container">
         <div class="modal-header">
@@ -556,6 +644,17 @@
             <button class="close-modal" id="closeDetailModal">&times;</button>
         </div>
         <div class="modal-body" id="detailModalBody">Carregando...</div>
+    </div>
+</div>
+
+<!-- Modal de Coleções -->
+<div id="colecoesModal" class="modal-overlay">
+    <div class="modal-container">
+        <div class="modal-header">
+            <h2>📚 Coleções da Biblioteca</h2>
+            <button class="close-modal" id="closeColecoesModal">&times;</button>
+        </div>
+        <div class="modal-body" id="colecoesModalBody">Carregando...</div>
     </div>
 </div>
 
@@ -573,7 +672,7 @@
 <script>
     let bibliotecaData = { livros: [] };
     let livrosFiltrados = [];
-    let colecoesInfo = new Map();
+    let colecoesInfo = new Map(); // Mapa com info detalhada de cada coleção
 
     // Elementos
     const searchInput = document.getElementById('searchInput');
@@ -586,11 +685,15 @@
     // Modals
     const detailModal = document.getElementById('detailModal');
     const statsModal = document.getElementById('statsModal');
+    const colecoesModal = document.getElementById('colecoesModal');
     const detailModalBody = document.getElementById('detailModalBody');
     const statsModalBody = document.getElementById('statsModalBody');
+    const colecoesModalBody = document.getElementById('colecoesModalBody');
     const closeDetailModal = document.getElementById('closeDetailModal');
     const closeStatsModal = document.getElementById('closeStatsModal');
+    const closeColecoesModal = document.getElementById('closeColecoesModal');
     const openStatsBtn = document.getElementById('openStatsModal');
+    const openColecoesBtn = document.getElementById('openColecoesModal');
 
     function escapeHtml(str) {
         if (!str) return '';
@@ -630,44 +733,135 @@
         return null;
     }
 
-    // Calcular informações das coleções
+    // ========== CALCULAR INFORMAÇÕES DAS COLEÇÕES ==========
     function calcularInfoColecoes() {
         colecoesInfo.clear();
-        const colecaoMap = new Map();
+        const colecaoMap = new Map(); // nome -> array de {volume, titulo, autor}
         
         for (let i = 0; i < bibliotecaData.livros.length; i++) {
             const livro = bibliotecaData.livros[i];
             const colecaoNome = getColecaoNome(livro);
-            if (colecaoNome && livro.volume_colecao && livro.volume_colecao > 0) {
+            if (colecaoNome) {
                 if (!colecaoMap.has(colecaoNome)) {
                     colecaoMap.set(colecaoNome, []);
                 }
-                colecaoMap.get(colecaoNome).push(livro.volume_colecao);
+                colecaoMap.get(colecaoNome).push({
+                    volume: livro.volume_colecao,
+                    titulo: livro.titulo,
+                    autor: livro.autor,
+                    livro: livro
+                });
             }
         }
         
-        for (let [colecaoNome, volumes] of colecaoMap.entries()) {
-            volumes.sort((a, b) => a - b);
-            const maxVolume = Math.max(...volumes);
-            const volumesExistentes = new Set(volumes);
+        for (let [colecaoNome, livros] of colecaoMap.entries()) {
+            // Ordenar por volume
+            livros.sort((a, b) => (a.volume || 999) - (b.volume || 999));
+            
+            const volumesExistentes = [];
+            for (let i = 0; i < livros.length; i++) {
+                if (livros[i].volume) volumesExistentes.push(livros[i].volume);
+            }
+            volumesExistentes.sort((a,b) => a - b);
+            
+            const maxVolume = volumesExistentes.length > 0 ? Math.max(...volumesExistentes) : 0;
+            const volumesSet = new Set(volumesExistentes);
             const volumesFaltantes = [];
             
             for (let v = 1; v <= maxVolume; v++) {
-                if (!volumesExistentes.has(v)) {
+                if (!volumesSet.has(v)) {
                     volumesFaltantes.push(v);
                 }
             }
             
             colecoesInfo.set(colecaoNome, {
+                livros: livros,
                 total: maxVolume,
-                existentes: volumes.length,
+                existentes: livros.length,
                 faltantes: volumesFaltantes,
-                progresso: volumes.length + '/' + maxVolume
+                progresso: livros.length + '/' + maxVolume
             });
         }
     }
 
-    // Renderizar cards
+    // ========== RENDERIZAR MODAL DE COLEÇÕES ==========
+    function renderizarModalColecoes() {
+        if (colecoesInfo.size === 0) {
+            colecoesModalBody.innerHTML = '<div class="no-results">📭 Nenhuma coleção encontrada.</div>';
+            return;
+        }
+        
+        let html = '<div class="colecoes-list">';
+        
+        // Ordenar coleções por nome
+        const colecoesOrdenadas = Array.from(colecoesInfo.keys()).sort();
+        
+        for (let i = 0; i < colecoesOrdenadas.length; i++) {
+            const nome = colecoesOrdenadas[i];
+            const info = colecoesInfo.get(nome);
+            const isCompleta = info.faltantes.length === 0;
+            
+            html += '<div class="colecao-card">';
+            html += '<div class="colecao-header">';
+            html += '<span class="colecao-nome">📚 ' + escapeHtml(nome) + '</span>';
+            html += '<span class="colecao-status ' + (isCompleta ? 'completa' : '') + '">' + 
+                        (isCompleta ? '✅ Completa' : '⚠️ ' + info.existentes + '/' + info.total) + 
+                    '</span>';
+            html += '</div>';
+            
+            html += '<div class="colecao-livros">';
+            
+            // Mostrar livros existentes
+            for (let j = 0; j < info.livros.length; j++) {
+                const item = info.livros[j];
+                const autorStr = getAutorString(item.autor);
+                html += '<div class="colecao-livro" data-livro-index="' + j + '">' +
+                            '<div class="colecao-livro-vol">Vol. ' + (item.volume || '?') + '</div>' +
+                            '<div class="colecao-livro-titulo">' +
+                                escapeHtml(item.titulo) +
+                                '<div class="colecao-livro-autor">✍️ ' + escapeHtml(autorStr) + '</div>' +
+                            '</div>' +
+                        '</div>';
+            }
+            
+            html += '</div>';
+            
+            // Mostrar volumes em falta
+            if (info.faltantes.length > 0) {
+                html += '<div class="missing-volumes">';
+                html += '⚠️ <strong>Volumes em falta:</strong> ' + info.faltantes.join(', ');
+                html += '</div>';
+            }
+            
+            html += '</div>';
+        }
+        
+        html += '</div>';
+        colecoesModalBody.innerHTML = html;
+        
+        // Adicionar eventos de clique nos livros da coleção
+        const colecaoLivros = document.querySelectorAll('.colecao-livro');
+        for (let i = 0; i < colecaoLivros.length; i++) {
+            colecaoLivros[i].addEventListener('click', (function(idx) {
+                return function() {
+                    // Encontrar qual livro foi clicado
+                    let count = 0;
+                    for (let [nome, info] of colecoesInfo.entries()) {
+                        for (let j = 0; j < info.livros.length; j++) {
+                            if (count === idx) {
+                                mostrarDetalhes(info.livros[j].livro);
+                                colecoesModal.classList.remove('active');
+                                return;
+                            }
+                            count++;
+                        }
+                    }
+                };
+            })(i));
+        }
+    }
+
+    // ========== RENDERIZAR CARDS ==========
     function renderizarLivros(livrosArray) {
         if (!livrosArray || livrosArray.length === 0) {
             booksContainer.innerHTML = '<div class="no-results">📭 Nenhum livro encontrado.</div>';
@@ -682,22 +876,11 @@
             const colecaoNome = getColecaoNome(livro);
             const volume = livro.volume_colecao;
             
-            let missingWarningHtml = '';
-            if (colecaoNome && colecoesInfo.has(colecaoNome)) {
-                const info = colecoesInfo.get(colecaoNome);
-                if (info.faltantes.length > 0) {
-                    missingWarningHtml = '<span class="missing-warning" title="⚠️ Faltam volumes: ' + info.faltantes.join(', ') + '">⚠️ ' + info.progresso + '</span>';
-                } else if (volume) {
-                    missingWarningHtml = '<span class="volume-badge" title="✅ Coleção completa!">✅ ' + info.progresso + '</span>';
-                }
-            }
-            
             let metaHtml = '';
             if (colecaoNome) {
                 metaHtml = '<div class="book-meta">' +
                                 '<span class="colecao-badge">📘 ' + escapeHtml(colecaoNome) + '</span>' +
                                 (volume ? '<span class="volume-badge">Vol. ' + volume + '</span>' : '') +
-                                missingWarningHtml +
                             '</div>';
             } else if (volume) {
                 metaHtml = '<div class="book-meta"><span class="volume-badge">Vol. ' + volume + '</span></div>';
@@ -734,7 +917,7 @@
         }
     }
 
-    // Mostrar detalhes
+    // ========== MOSTRAR DETALHES DO LIVRO ==========
     function mostrarDetalhes(livro) {
         const titulo = livro.titulo || "Título desconhecido";
         const autorString = getAutorString(livro.autor);
@@ -745,16 +928,6 @@
         const sinopse = livro.sinopse || "Sem sinopse disponível.";
         const colecaoNome = getColecaoNome(livro);
         const volumeColecao = livro.volume_colecao || "";
-        
-        let colecaoInfoHtml = '';
-        if (colecaoNome && colecoesInfo.has(colecaoNome)) {
-            const info = colecoesInfo.get(colecaoNome);
-            if (info.faltantes.length > 0) {
-                colecaoInfoHtml = '<div class="detail-field"><span class="detail-label">Status:</span> <span class="detail-value" style="color:#c97e2a;">⚠️ Faltam volumes: ' + info.faltantes.join(', ') + ' (tens ' + info.existentes + ' de ' + info.total + ')</span></div>';
-            } else {
-                colecaoInfoHtml = '<div class="detail-field"><span class="detail-label">Status:</span> <span class="detail-value" style="color:#2c7a4a;">✅ Coleção completa! (' + info.existentes + '/' + info.total + ')</span></div>';
-            }
-        }
         
         let tagsHtml = '';
         if (livro.tags && Array.isArray(livro.tags)) {
@@ -777,7 +950,6 @@
                             (ano !== "Não informado" ? '<div class="detail-field"><span class="detail-label">Ano:</span> <span class="detail-value">' + escapeHtml(ano) + '</span></div>' : '') +
                             (paginas !== "Não informado" ? '<div class="detail-field"><span class="detail-label">Páginas:</span> <span class="detail-value">' + escapeHtml(paginas) + '</span></div>' : '') +
                             (colecaoNome ? '<div class="detail-field"><span class="detail-label">Coleção:</span> <span class="detail-value">📘 ' + escapeHtml(colecaoNome) + (volumeColecao ? ' (Volume ' + volumeColecao + ')' : '') + '</span></div>' : '') +
-                            colecaoInfoHtml +
                             '<div class="detail-field"><span class="detail-label">ISBN:</span> <span class="detail-value">' + escapeHtml(isbn) + '</span></div>';
         
         if (tagsHtml) {
@@ -820,7 +992,7 @@
         }
     }
 
-    // Filtros
+    // ========== FILTROS ==========
     function aplicarFiltros() {
         const termo = searchInput.value.trim().toLowerCase();
         const autorSel = authorFilter.value;
@@ -912,6 +1084,7 @@
         }
     }
 
+    // ========== ESTATÍSTICAS ==========
     function gerarEstatisticas() {
         const livros = bibliotecaData.livros;
         if (!livros.length) return "<div>Nenhum livro carregado.</div>";
@@ -937,19 +1110,6 @@
             if (coll) colecaoCount.set(coll, (colecaoCount.get(coll) || 0) + 1);
         }
         
-        let colecoesStatusHtml = '<div class="stats-section"><h3>⚠️ Coleções com volumes em falta</h3><div class="stats-grid">';
-        let temFaltantes = false;
-        for (let [colecao, info] of colecoesInfo.entries()) {
-            if (info.faltantes.length > 0) {
-                temFaltantes = true;
-                colecoesStatusHtml += '<div class="stat-item"><strong>' + escapeHtml(colecao) + '</strong> <span style="color:#c97e2a;">' + info.existentes + '/' + info.total + ' (faltam: ' + info.faltantes.join(', ') + ')</span></div>';
-            }
-        }
-        if (!temFaltantes) {
-            colecoesStatusHtml += '<div class="stat-item">🎉 Todas as coleções estão completas!</div>';
-        }
-        colecoesStatusHtml += '</div></div>';
-        
         const topAutores = Array.from(autorCount.entries()).sort((a,b) => b[1] - a[1]).slice(0, 15);
         const topTags = Array.from(tagCount.entries()).sort((a,b) => b[1] - a[1]).slice(0, 15);
         const topColecoes = Array.from(colecaoCount.entries()).sort((a,b) => b[1] - a[1]);
@@ -959,7 +1119,6 @@
                     '<div class="stat-item"><strong>Autores</strong> <span>' + autorCount.size + '</span></div>' +
                     '<div class="stat-item"><strong>Coleções</strong> <span>' + colecaoCount.size + '</span></div>' +
                     '</div></div>' +
-                    colecoesStatusHtml +
                     '<div class="stats-section"><h3>✍️ Top Autores</h3><div class="stats-grid">';
         for (let i = 0; i < topAutores.length; i++) {
             html += '<div class="stat-item">' + escapeHtml(topAutores[i][0]) + ' <span>' + topAutores[i][1] + '</span></div>';
@@ -976,6 +1135,7 @@
         return html;
     }
 
+    // ========== CARREGAR DADOS ==========
     async function carregarDados() {
         booksContainer.innerHTML = '<div class="no-results">📖 A carregar biblioteca...</div>';
         
@@ -987,6 +1147,12 @@
                     bibliotecaData = data;
                     console.log("✅ Carregados " + bibliotecaData.livros.length + " livros");
                     calcularInfoColecoes();
+                    console.log("📚 Coleções encontradas:", colecoesInfo.size);
+                    for (let [nome, info] of colecoesInfo.entries()) {
+                        if (info.faltantes.length > 0) {
+                            console.log("⚠️ " + nome + ": faltam volumes " + info.faltantes.join(', '));
+                        }
+                    }
                 }
             } else {
                 console.warn("Ficheiro não encontrado");
@@ -1004,6 +1170,7 @@
         aplicarFiltros();
     }
 
+    // ========== EVENTOS ==========
     function initEventos() {
         searchInput.addEventListener('input', aplicarFiltros);
         authorFilter.addEventListener('change', aplicarFiltros);
@@ -1020,6 +1187,11 @@
             statsModal.classList.add('active');
         });
         
+        openColecoesBtn.addEventListener('click', function() {
+            renderizarModalColecoes();
+            colecoesModal.classList.add('active');
+        });
+        
         closeDetailModal.addEventListener('click', function() {
             detailModal.classList.remove('active');
         });
@@ -1028,12 +1200,20 @@
             statsModal.classList.remove('active');
         });
         
+        closeColecoesModal.addEventListener('click', function() {
+            colecoesModal.classList.remove('active');
+        });
+        
         detailModal.addEventListener('click', function(e) {
             if (e.target === detailModal) detailModal.classList.remove('active');
         });
         
         statsModal.addEventListener('click', function(e) {
             if (e.target === statsModal) statsModal.classList.remove('active');
+        });
+        
+        colecoesModal.addEventListener('click', function(e) {
+            if (e.target === colecoesModal) colecoesModal.classList.remove('active');
         });
     }
 
