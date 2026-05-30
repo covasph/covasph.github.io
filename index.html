@@ -494,7 +494,7 @@
     <div id="booksContainer" class="books-grid">
         <div class="no-results">📖 A carregar biblioteca...</div>
     </div>
-    <footer>✨ Clique em qualquer livro para ver detalhes e capa</footer>
+    <footer>✨ Clique em qualquer livro para ver detalhes e capa (Amazon.es + Open Library)</footer>
 </div>
 
 <!-- Modal de Detalhes -->
@@ -571,23 +571,29 @@
         return null;
     }
 
-    // ========== FUNÇÃO PARA OBTER CAPA (Amazon + Open Library) ==========
-    function getCoverUrl(livro) {
+    // ========== FUNÇÃO PARA OBTER CAPA (Amazon.es + Open Library) ==========
+    function getCoverUrls(livro) {
         const isbn = livro.isbn;
         
-        // Se tiver ISBN, tenta Amazon (melhor cobertura)
         if (isbn && typeof isbn === 'string' && isbn.length >= 10) {
-            // Amazon USA (funciona para muitos livros)
-            // Diferentes formatos de URL para tentar
-            const amazonUrls = [
-                `https://images-na.ssl-images-amazon.com/images/P/${isbn}.01.L.jpg`,
-                `https://images-na.ssl-images-amazon.com/images/I/51%2B${isbn}.jpg`,
-                `https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg`
+            // Limpar ISBN (remover espaços e hífens)
+            const cleanIsbn = isbn.replace(/[-\s]/g, '');
+            
+            // URLs Amazon España (prioridade)
+            // Diferentes padrões de URL que a Amazon usa
+            return [
+                // Amazon España - padrão mais comum
+                `https://images-eu.ssl-images-amazon.com/images/I/51${cleanIsbn}.jpg`,
+                `https://images-eu.ssl-images-amazon.com/images/I/61${cleanIsbn}.jpg`,
+                `https://images-eu.ssl-images-amazon.com/images/I/71${cleanIsbn}.jpg`,
+                // Amazon global
+                `https://images-na.ssl-images-amazon.com/images/I/51${cleanIsbn}.jpg`,
+                `https://m.media-amazon.com/images/I/51${cleanIsbn}.jpg`,
+                // Open Library (fallback)
+                `https://covers.openlibrary.org/b/isbn/${cleanIsbn}-L.jpg`,
+                `https://covers.openlibrary.org/b/isbn/${cleanIsbn}-M.jpg`
             ];
-            return amazonUrls;
         }
-        
-        // Sem ISBN, retorna null
         return null;
     }
 
@@ -668,7 +674,7 @@
         // Construir HTML base
         let html = '<div class="detail-layout">' +
                         '<div class="detail-cover" id="detail-cover-container">' +
-                            '<div class="cover-placeholder-detail" id="cover-placeholder">📚<br><span style="font-size:12px;">Capa não disponível</span></div>' +
+                            '<div class="cover-placeholder-detail" id="cover-placeholder">📚<br><span style="font-size:12px;">A procurar capa...</span></div>' +
                         '</div>' +
                         '<div class="detail-info">' +
                             '<h3>' + escapeHtml(titulo) + '</h3>' +
@@ -704,9 +710,8 @@
         // Tentar carregar capa
         const coverContainer = document.getElementById('detail-cover-container');
         if (coverContainer && livro.isbn) {
-            const coverUrls = getCoverUrl(livro);
+            const coverUrls = getCoverUrls(livro);
             if (coverUrls) {
-                // Tentar cada URL até encontrar uma que funciona
                 let urlIndex = 0;
                 
                 function tryNextUrl() {
@@ -719,12 +724,10 @@
                     const img = new Image();
                     
                     img.onload = function() {
-                        // Imagem carregou!
-                        coverContainer.innerHTML = '<img src="' + url + '" alt="Capa de ' + escapeHtml(titulo) + '">';
+                        coverContainer.innerHTML = '<img src="' + url + '" alt="Capa de ' + escapeHtml(titulo) + '" onerror="this.parentElement.innerHTML=\'<div class=\\\'cover-placeholder-detail\\\'>📚<br><span style=\\\'font-size:12px;\\\">Capa não disponível</span></div>\'">';
                     };
                     
                     img.onerror = function() {
-                        // Tentar próxima URL
                         urlIndex++;
                         tryNextUrl();
                     };
@@ -734,6 +737,8 @@
                 
                 tryNextUrl();
             }
+        } else if (coverContainer) {
+            coverContainer.innerHTML = '<div class="cover-placeholder-detail">📚<br><span style="font-size:12px;">ISBN não disponível</span></div>';
         }
     }
 
@@ -900,6 +905,13 @@
                 if (data && data.livros && Array.isArray(data.livros)) {
                     bibliotecaData = data;
                     console.log("✅ Carregados " + bibliotecaData.livros.length + " livros");
+                    
+                    // Contar quantos livros têm ISBN
+                    let comIsbn = 0;
+                    for (let i = 0; i < bibliotecaData.livros.length; i++) {
+                        if (bibliotecaData.livros[i].isbn) comIsbn++;
+                    }
+                    console.log("📚 Livros com ISBN: " + comIsbn);
                 }
             } else {
                 console.warn("Ficheiro não encontrado");
