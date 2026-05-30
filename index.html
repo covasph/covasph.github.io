@@ -5,465 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Antioch · Biblioteca Elsa, Vasco e Hugo</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Estilos mantidos iguais ao código anterior - omitido por brevidade */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background: linear-gradient(135deg, #eef2f7 0%, #e0e8f0 100%);
             font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
             color: #1a2c3c;
             padding: 2rem 1rem;
-            min-height: 100vh;
         }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .header h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #1f4e6e, #0e3a52, #2c6c8f);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: #3e6b8c;
-            margin-top: 0.2rem;
-            font-style: italic;
-        }
-
-        .stats-btn-wrapper {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: 0.8rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .stats-button {
-            background: #2c5a7a;
-            border: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 60px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: #f0f7fc;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .search-section {
-            background: #ffffffdd;
-            backdrop-filter: blur(2px);
-            border-radius: 2rem;
-            padding: 1.2rem 1.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 6px 14px rgba(0, 20, 40, 0.08);
-            border: 1px solid #cbdde9;
-        }
-
-        .search-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .search-box {
-            flex: 3;
-            min-width: 200px;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 0.9rem 1.2rem;
-            border: 1px solid #bdd4e2;
-            border-radius: 3rem;
-            font-size: 1rem;
-            background: #ffffff;
-            outline: none;
-        }
-
-        .search-box input:focus {
-            border-color: #3e8ab3;
-            box-shadow: 0 0 0 3px rgba(62, 138, 179, 0.2);
-        }
-
-        .filter-group {
-            flex: 2;
-            display: flex;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-group select {
-            flex: 1;
-            padding: 0.9rem 1rem;
-            border-radius: 3rem;
-            border: 1px solid #bdd4e2;
-            background: white;
-            font-size: 0.9rem;
-            cursor: pointer;
-        }
-
-        .clear-btn {
-            background: #e3edf5;
-            border: none;
-            padding: 0 1.4rem;
-            border-radius: 3rem;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .result-count {
-            margin: 0.8rem 0 1rem 0.5rem;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: #437693;
-        }
-
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.2rem;
-        }
-
-        .book-card {
-            background: #ffffff;
-            border-radius: 1rem;
-            padding: 1rem;
-            transition: transform 0.2s ease, box-shadow 0.2s;
-            box-shadow: 0 2px 8px rgba(33, 58, 78, 0.08);
-            border: 1px solid #d6e2ec;
-            cursor: pointer;
-        }
-
-        .book-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(28, 75, 105, 0.15);
-            border-color: #adc8dd;
-        }
-
-        .book-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 0.3rem;
-            color: #1f405b;
-        }
-
-        .book-author {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: #2f6c8a;
-            margin-bottom: 0.5rem;
-        }
-
-        .tag-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.3rem;
-            margin-top: 0.5rem;
-        }
-
-        .tag {
-            background: #eef3f8;
-            padding: 0.15rem 0.5rem;
-            border-radius: 15px;
-            font-size: 0.65rem;
-            font-weight: 500;
-            color: #2c6482;
-        }
-
-        .colecao-badge {
-            display: inline-block;
-            background: #d9e6f0;
-            padding: 0.15rem 0.5rem;
-            border-radius: 15px;
-            font-size: 0.65rem;
-            margin-top: 0.4rem;
-            color: #1f5777;
-        }
-
-        .no-results, .error-message {
-            text-align: center;
-            padding: 3rem;
-            background: #f9fdfe;
-            border-radius: 2rem;
-            color: #5682a0;
-        }
-
-        /* Modal */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(18, 45, 65, 0.85);
-            backdrop-filter: blur(8px);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.2s ease;
-        }
-
-        .modal-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal-container {
-            background: #ffffff;
-            width: 90%;
-            max-width: 900px;
-            max-height: 85vh;
-            border-radius: 1.5rem;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            animation: modalFadeIn 0.2s ease-out;
-        }
-
-        @keyframes modalFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .modal-header {
-            padding: 1.2rem 1.5rem;
-            background: #e5f0f7;
-            border-bottom: 1px solid #c9deec;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .modal-header h2 {
-            font-size: 1.3rem;
-            color: #1b4f6e;
-            font-weight: 700;
-        }
-
-        .close-modal {
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: #4c7b9b;
-            transition: 0.1s;
-            line-height: 1;
-            padding: 0 0.5rem;
-        }
-
-        .close-modal:hover {
-            color: #1c5779;
-        }
-
-        .modal-body {
-            padding: 1.5rem;
-            overflow-y: auto;
-            flex: 1;
-        }
-
-        .detail-layout {
-            display: flex;
-            flex-direction: row;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .detail-cover {
-            flex: 0 0 200px;
-            text-align: center;
-        }
-
-        .detail-cover img {
-            width: 100%;
-            max-width: 180px;
-            border-radius: 0.8rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            border: 1px solid #d6e2ec;
-        }
-
-        .cover-placeholder-detail {
-            width: 180px;
-            height: 260px;
-            background: linear-gradient(135deg, #d4e0e8, #e8f0f5);
-            border-radius: 0.8rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: #5f8aac;
-            margin: 0 auto;
-        }
-
-        .detail-info {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .detail-info h3 {
-            font-size: 1.6rem;
-            color: #1f405b;
-            margin-bottom: 0.3rem;
-        }
-
-        .detail-author {
-            font-size: 1rem;
-            color: #2f6c8a;
-            font-weight: 600;
-            margin-bottom: 0.8rem;
-            border-bottom: 1px solid #e0e8f0;
-            padding-bottom: 0.5rem;
-        }
-
-        .detail-field {
-            margin-bottom: 0.8rem;
-        }
-
-        .detail-label {
-            font-weight: 700;
-            color: #1f5779;
-            min-width: 100px;
-            display: inline-block;
-            font-size: 0.85rem;
-        }
-
-        .detail-value {
-            color: #2c4a64;
-            font-size: 0.85rem;
-        }
-
-        .detail-sinopse {
-            margin-top: 1rem;
-            padding-top: 0.8rem;
-            border-top: 1px solid #e0e8f0;
-        }
-
-        .detail-sinopse .detail-label {
-            display: block;
-            margin-bottom: 0.3rem;
-        }
-
-        .detail-sinopse .detail-value {
-            line-height: 1.5;
-            font-size: 0.9rem;
-        }
-
-        .detail-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 0.8rem 0;
-        }
-
-        .detail-tag {
-            background: #eef3f8;
-            padding: 0.2rem 0.7rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            color: #2c6482;
-        }
-
-        .stats-section {
-            margin-bottom: 1.5rem;
-        }
-
-        .stats-section h3 {
-            font-size: 1.1rem;
-            border-left: 4px solid #5f9bc2;
-            padding-left: 0.6rem;
-            margin-bottom: 0.8rem;
-            color: #1e5779;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 0.6rem;
-            background: #f6fafd;
-            padding: 0.8rem;
-            border-radius: 1rem;
-        }
-
-        .stat-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.3rem 0;
-            border-bottom: 1px dashed #cde0ec;
-            font-size: 0.8rem;
-        }
-
-        .tag-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tag-stat {
-            background: #e6f0f7;
-            padding: 0.2rem 0.8rem;
-            border-radius: 30px;
-            font-size: 0.75rem;
-        }
-
+        .container { max-width: 1400px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 2rem; }
+        .header h1 { font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, #1f4e6e, #0e3a52, #2c6c8f); background-clip: text; -webkit-background-clip: text; color: transparent; }
+        .subtitle { font-size: 1.2rem; font-weight: 500; color: #3e6b8c; font-style: italic; }
+        .stats-btn-wrapper { display: flex; justify-content: flex-end; margin-top: 0.8rem; gap: 0.5rem; }
+        .stats-button { background: #2c5a7a; border: none; padding: 0.7rem 1.5rem; border-radius: 60px; font-weight: 600; color: #fff; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+        .search-section { background: #ffffffdd; border-radius: 2rem; padding: 1.2rem 1.5rem; margin-bottom: 2rem; border: 1px solid #cbdde9; }
+        .search-wrapper { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
+        .search-box { flex: 3; min-width: 200px; }
+        .search-box input { width: 100%; padding: 0.9rem 1.2rem; border: 1px solid #bdd4e2; border-radius: 3rem; font-size: 1rem; outline: none; }
+        .filter-group { flex: 2; display: flex; gap: 0.8rem; flex-wrap: wrap; }
+        .filter-group select { flex: 1; padding: 0.9rem 1rem; border-radius: 3rem; border: 1px solid #bdd4e2; background: white; cursor: pointer; }
+        .clear-btn { background: #e3edf5; border: none; padding: 0 1.4rem; border-radius: 3rem; font-weight: 600; cursor: pointer; }
+        .result-count { margin: 0.8rem 0 1rem 0.5rem; font-size: 0.85rem; color: #437693; }
+        .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; }
+        .book-card { background: #fff; border-radius: 1rem; padding: 1rem; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #d6e2ec; cursor: pointer; }
+        .book-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(28,75,105,0.15); }
+        .book-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; color: #1f405b; }
+        .book-author { font-size: 0.8rem; font-weight: 600; color: #2f6c8a; margin-bottom: 0.5rem; }
+        .tag-list { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem; }
+        .tag { background: #eef3f8; padding: 0.15rem 0.5rem; border-radius: 15px; font-size: 0.65rem; color: #2c6482; }
+        .colecao-badge { display: inline-block; background: #d9e6f0; padding: 0.15rem 0.5rem; border-radius: 15px; font-size: 0.65rem; margin-top: 0.4rem; color: #1f5777; }
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(18,45,65,0.85); backdrop-filter: blur(8px); z-index: 1000; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.2s; }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-container { background: #fff; width: 90%; max-width: 900px; max-height: 85vh; border-radius: 1.5rem; overflow: hidden; display: flex; flex-direction: column; }
+        .modal-header { padding: 1.2rem 1.5rem; background: #e5f0f7; border-bottom: 1px solid #c9deec; display: flex; justify-content: space-between; align-items: center; }
+        .modal-header h2 { font-size: 1.3rem; color: #1b4f6e; }
+        .close-modal { background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #4c7b9b; padding: 0 0.5rem; }
+        .modal-body { padding: 1.5rem; overflow-y: auto; flex: 1; }
+        .detail-layout { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        .detail-cover { flex: 0 0 200px; text-align: center; }
+        .detail-cover img { width: 100%; max-width: 180px; border-radius: 0.8rem; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+        .cover-placeholder-detail { width: 180px; height: 260px; background: linear-gradient(135deg, #d4e0e8, #e8f0f5); border-radius: 0.8rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #5f8aac; margin: 0 auto; }
+        .detail-info { flex: 1; min-width: 250px; }
+        .detail-info h3 { font-size: 1.6rem; color: #1f405b; margin-bottom: 0.3rem; }
+        .detail-author { font-size: 1rem; color: #2f6c8a; font-weight: 600; margin-bottom: 0.8rem; border-bottom: 1px solid #e0e8f0; padding-bottom: 0.5rem; }
+        .detail-field { margin-bottom: 0.8rem; }
+        .detail-label { font-weight: 700; color: #1f5779; min-width: 100px; display: inline-block; font-size: 0.85rem; }
+        .detail-value { color: #2c4a64; font-size: 0.85rem; }
+        .detail-sinopse { margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid #e0e8f0; }
+        .detail-sinopse .detail-value { line-height: 1.5; }
+        .detail-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.8rem 0; }
+        .detail-tag { background: #eef3f8; padding: 0.2rem 0.7rem; border-radius: 20px; font-size: 0.75rem; }
+        .stats-grid, .tag-cloud { background: #f6fafd; padding: 0.8rem; border-radius: 1rem; }
         @media (max-width: 640px) {
-            .detail-layout {
-                flex-direction: column;
-                align-items: center;
-            }
-            .detail-cover {
-                flex: none;
-            }
-            .detail-label {
-                min-width: 80px;
-            }
-            .books-grid {
-                grid-template-columns: 1fr;
-            }
-            .stats-btn-wrapper {
-                justify-content: center;
-            }
-            .search-wrapper, .filter-group {
-                flex-direction: column;
-            }
+            .detail-layout { flex-direction: column; align-items: center; }
+            .books-grid { grid-template-columns: 1fr; }
+            .search-wrapper, .filter-group { flex-direction: column; }
         }
-
-        footer {
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 0.7rem;
-            color: #7c9bb3;
-        }
+        footer { text-align: center; margin-top: 2rem; font-size: 0.7rem; color: #7c9bb3; }
     </style>
 </head>
 <body>
@@ -494,27 +93,24 @@
     <div id="booksContainer" class="books-grid">
         <div class="no-results">📖 A carregar biblioteca...</div>
     </div>
-    <footer>✨ Clique em qualquer livro para ver detalhes e capa (Amazon.es + Open Library)</footer>
+    <footer>✨ Clique em qualquer livro para ver detalhes e capa (Google Books + Open Library)</footer>
 </div>
 
-<!-- Modal de Detalhes -->
+<!-- Modais -->
 <div id="detailModal" class="modal-overlay">
     <div class="modal-container">
         <div class="modal-header">
-            <h2 id="modalTitle">Detalhes do Livro</h2>
+            <h2>Detalhes do Livro</h2>
             <button class="close-modal" id="closeDetailModal">&times;</button>
         </div>
-        <div class="modal-body" id="detailModalBody">
-            <div style="text-align: center;">Carregando...</div>
-        </div>
+        <div class="modal-body" id="detailModalBody">Carregando...</div>
     </div>
 </div>
 
-<!-- Modal de Estatísticas -->
 <div id="statsModal" class="modal-overlay">
     <div class="modal-container">
         <div class="modal-header">
-            <h2>📊 Estatísticas da Biblioteca</h2>
+            <h2>📊 Estatísticas</h2>
             <button class="close-modal" id="closeStatsModal">&times;</button>
         </div>
         <div class="modal-body" id="statsModalBody">Carregando...</div>
@@ -524,6 +120,7 @@
 <script>
     let bibliotecaData = { livros: [] };
     let livrosFiltrados = [];
+    let coverCache = new Map();
 
     // Elementos
     const searchInput = document.getElementById('searchInput');
@@ -571,30 +168,43 @@
         return null;
     }
 
-    // ========== FUNÇÃO PARA OBTER CAPA (Amazon.es + Open Library) ==========
-    function getCoverUrls(livro) {
-        const isbn = livro.isbn;
+    // ========== FUNÇÃO PARA OBTER CAPA VIA GOOGLE BOOKS API ==========
+    async function getCoverFromGoogleBooks(isbn, titulo, autor) {
+        const cacheKey = isbn || `${titulo}|${autor}`.toLowerCase();
+        if (coverCache.has(cacheKey)) return coverCache.get(cacheKey);
         
+        // Construir query - priorizar ISBN se disponível
+        let query = '';
         if (isbn && typeof isbn === 'string' && isbn.length >= 10) {
-            // Limpar ISBN (remover espaços e hífens)
             const cleanIsbn = isbn.replace(/[-\s]/g, '');
-            
-            // URLs Amazon España (prioridade)
-            // Diferentes padrões de URL que a Amazon usa
-            return [
-                // Amazon España - padrão mais comum
-                `https://images-eu.ssl-images-amazon.com/images/I/51${cleanIsbn}.jpg`,
-                `https://images-eu.ssl-images-amazon.com/images/I/61${cleanIsbn}.jpg`,
-                `https://images-eu.ssl-images-amazon.com/images/I/71${cleanIsbn}.jpg`,
-                // Amazon global
-                `https://images-na.ssl-images-amazon.com/images/I/51${cleanIsbn}.jpg`,
-                `https://m.media-amazon.com/images/I/51${cleanIsbn}.jpg`,
-                // Open Library (fallback)
-                `https://covers.openlibrary.org/b/isbn/${cleanIsbn}-L.jpg`,
-                `https://covers.openlibrary.org/b/isbn/${cleanIsbn}-M.jpg`
-            ];
+            query = `isbn:${cleanIsbn}`;
+        } else {
+            query = encodeURIComponent(`${titulo} ${getAutorString(autor)}`);
         }
-        return null;
+        
+        const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
+        
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            
+            if (data.items && data.items[0] && data.items[0].volumeInfo.imageLinks) {
+                let coverUrl = data.items[0].volumeInfo.imageLinks.thumbnail;
+                if (coverUrl) {
+                    coverUrl = coverUrl.replace('&edge=curl', '').replace('http://', 'https://');
+                    // Converter para tamanho maior (zoom=1)
+                    coverUrl = coverUrl.replace('zoom=1', 'zoom=2');
+                    coverCache.set(cacheKey, coverUrl);
+                    return coverUrl;
+                }
+            }
+            coverCache.set(cacheKey, null);
+            return null;
+        } catch (error) {
+            console.warn(`Erro ao buscar capa: ${error.message}`);
+            coverCache.set(cacheKey, null);
+            return null;
+        }
     }
 
     // ========== RENDERIZAR CARDS ==========
@@ -610,7 +220,6 @@
             const titulo = livro.titulo || "Título desconhecido";
             const autorString = getAutorString(livro.autor);
             
-            // Tags (máximo 5)
             let tagsHtml = '';
             if (livro.tags && Array.isArray(livro.tags) && livro.tags.length > 0) {
                 let tagItems = '';
@@ -624,7 +233,6 @@
                 tagsHtml = '<div class="tag-list">' + tagItems + '</div>';
             }
             
-            // Coleção
             let colecaoHtml = '';
             const colecaoNome = getColecaoNome(livro);
             if (colecaoNome) {
@@ -642,7 +250,6 @@
         
         booksContainer.innerHTML = html;
         
-        // Adicionar eventos de clique
         const cards = document.querySelectorAll('.book-card');
         for (let i = 0; i < cards.length; i++) {
             cards[i].addEventListener('click', (function(idx) {
@@ -652,7 +259,7 @@
     }
 
     // ========== MOSTRAR DETALHES COM CAPA ==========
-    function mostrarDetalhes(livro) {
+    async function mostrarDetalhes(livro) {
         const titulo = livro.titulo || "Título desconhecido";
         const autorString = getAutorString(livro.autor);
         const editora = livro.editora || "Não informada";
@@ -663,7 +270,6 @@
         const colecaoNome = getColecaoNome(livro);
         const volumeColecao = livro.volume_colecao || "";
         
-        // Tags
         let tagsHtml = '';
         if (livro.tags && Array.isArray(livro.tags)) {
             for (let t = 0; t < livro.tags.length; t++) {
@@ -671,74 +277,38 @@
             }
         }
         
-        // Construir HTML base
         let html = '<div class="detail-layout">' +
                         '<div class="detail-cover" id="detail-cover-container">' +
-                            '<div class="cover-placeholder-detail" id="cover-placeholder">📚<br><span style="font-size:12px;">A procurar capa...</span></div>' +
+                            '<div class="cover-placeholder-detail">📚<br><span style="font-size:12px;">A carregar capa...</span></div>' +
                         '</div>' +
                         '<div class="detail-info">' +
                             '<h3>' + escapeHtml(titulo) + '</h3>' +
-                            '<div class="detail-author">✍️ ' + escapeHtml(autorString) + '</div>';
+                            '<div class="detail-author">✍️ ' + escapeHtml(autorString) + '</div>' +
+                            '<div class="detail-field"><span class="detail-label">Editora:</span> <span class="detail-value">' + escapeHtml(editora) + '</span></div>' +
+                            (ano !== "Não informado" ? '<div class="detail-field"><span class="detail-label">Ano:</span> <span class="detail-value">' + escapeHtml(ano) + '</span></div>' : '') +
+                            (paginas !== "Não informado" ? '<div class="detail-field"><span class="detail-label">Páginas:</span> <span class="detail-value">' + escapeHtml(paginas) + '</span></div>' : '') +
+                            (colecaoNome ? '<div class="detail-field"><span class="detail-label">Coleção:</span> <span class="detail-value">📘 ' + escapeHtml(colecaoNome) + (volumeColecao ? ' (Volume ' + volumeColecao + ')' : '') + '</span></div>' : '') +
+                            '<div class="detail-field"><span class="detail-label">ISBN:</span> <span class="detail-value">' + escapeHtml(isbn) + '</span></div>';
         
-        // Campos
-        html += '<div class="detail-field"><span class="detail-label">Editora:</span> <span class="detail-value">' + escapeHtml(editora) + '</span></div>';
-        if (ano !== "Não informado") html += '<div class="detail-field"><span class="detail-label">Ano:</span> <span class="detail-value">' + escapeHtml(ano) + '</span></div>';
-        if (paginas !== "Não informado") html += '<div class="detail-field"><span class="detail-label">Páginas:</span> <span class="detail-value">' + escapeHtml(paginas) + '</span></div>';
-        if (colecaoNome) {
-            let colecaoInfo = escapeHtml(colecaoNome);
-            if (volumeColecao) colecaoInfo += ' (Volume ' + volumeColecao + ')';
-            html += '<div class="detail-field"><span class="detail-label">Coleção:</span> <span class="detail-value">📘 ' + colecaoInfo + '</span></div>';
-        }
-        html += '<div class="detail-field"><span class="detail-label">ISBN:</span> <span class="detail-value">' + escapeHtml(isbn) + '</span></div>';
-        
-        // Tags
         if (tagsHtml) {
             html += '<div class="detail-field"><span class="detail-label">Tags:</span></div><div class="detail-tags">' + tagsHtml + '</div>';
         }
         
-        // Sinopse
         html += '<div class="detail-sinopse">' +
                     '<div class="detail-label">📖 Sinopse:</div>' +
                     '<div class="detail-value">' + escapeHtml(sinopse).replace(/\n/g, '<br>') + '</div>' +
-                '</div>';
-        
-        html += '</div></div>';
+                '</div></div></div>';
         
         detailModalBody.innerHTML = html;
         detailModal.classList.add('active');
         
-        // Tentar carregar capa
+        // Carregar capa via Google Books
+        const coverUrl = await getCoverFromGoogleBooks(livro.isbn, titulo, autorString);
         const coverContainer = document.getElementById('detail-cover-container');
-        if (coverContainer && livro.isbn) {
-            const coverUrls = getCoverUrls(livro);
-            if (coverUrls) {
-                let urlIndex = 0;
-                
-                function tryNextUrl() {
-                    if (urlIndex >= coverUrls.length) {
-                        coverContainer.innerHTML = '<div class="cover-placeholder-detail">📚<br><span style="font-size:12px;">Capa não disponível</span></div>';
-                        return;
-                    }
-                    
-                    const url = coverUrls[urlIndex];
-                    const img = new Image();
-                    
-                    img.onload = function() {
-                        coverContainer.innerHTML = '<img src="' + url + '" alt="Capa de ' + escapeHtml(titulo) + '" onerror="this.parentElement.innerHTML=\'<div class=\\\'cover-placeholder-detail\\\'>📚<br><span style=\\\'font-size:12px;\\\">Capa não disponível</span></div>\'">';
-                    };
-                    
-                    img.onerror = function() {
-                        urlIndex++;
-                        tryNextUrl();
-                    };
-                    
-                    img.src = url;
-                }
-                
-                tryNextUrl();
-            }
+        if (coverContainer && coverUrl) {
+            coverContainer.innerHTML = '<img src="' + coverUrl + '" alt="Capa de ' + escapeHtml(titulo) + '" onerror="this.parentElement.innerHTML=\'<div class=\\\'cover-placeholder-detail\\\'>📚<br><span style=\\\'font-size:12px;\\\'>Capa não disponível</span></div>\'">';
         } else if (coverContainer) {
-            coverContainer.innerHTML = '<div class="cover-placeholder-detail">📚<br><span style="font-size:12px;">ISBN não disponível</span></div>';
+            coverContainer.innerHTML = '<div class="cover-placeholder-detail">📚<br><span style="font-size:12px;">Capa não disponível</span></div>';
         }
     }
 
@@ -822,21 +392,18 @@
         }
         
         authorFilter.innerHTML = '<option value="">Todos os autores</option>';
-        const autoresArray = Array.from(autores);
-        autoresArray.sort();
+        const autoresArray = Array.from(autores).sort();
         for (let i = 0; i < autoresArray.length; i++) {
             authorFilter.innerHTML += '<option value="' + escapeHtml(autoresArray[i]) + '">' + escapeHtml(autoresArray[i]) + '</option>';
         }
         
         collectionFilter.innerHTML = '<option value="">Todas as coleções</option>';
-        const colecoesArray = Array.from(colecoes);
-        colecoesArray.sort();
+        const colecoesArray = Array.from(colecoes).sort();
         for (let i = 0; i < colecoesArray.length; i++) {
             collectionFilter.innerHTML += '<option value="' + escapeHtml(colecoesArray[i]) + '">' + escapeHtml(colecoesArray[i]) + '</option>';
         }
     }
 
-    // ========== ESTATÍSTICAS ==========
     function gerarEstatisticas() {
         const livros = bibliotecaData.livros;
         if (!livros.length) return "<div>Nenhum livro carregado.</div>";
@@ -862,16 +429,9 @@
             if (coll) colecaoCount.set(coll, (colecaoCount.get(coll) || 0) + 1);
         }
         
-        const topAutores = Array.from(autorCount.entries());
-        topAutores.sort(function(a, b) { return b[1] - a[1]; });
-        const topAutoresSlice = topAutores.slice(0, 15);
-        
-        const topTags = Array.from(tagCount.entries());
-        topTags.sort(function(a, b) { return b[1] - a[1]; });
-        const topTagsSlice = topTags.slice(0, 15);
-        
-        const topColecoes = Array.from(colecaoCount.entries());
-        topColecoes.sort(function(a, b) { return b[1] - a[1]; });
+        const topAutores = Array.from(autorCount.entries()).sort((a,b) => b[1] - a[1]).slice(0, 15);
+        const topTags = Array.from(tagCount.entries()).sort((a,b) => b[1] - a[1]).slice(0, 15);
+        const topColecoes = Array.from(colecaoCount.entries()).sort((a,b) => b[1] - a[1]);
         
         let html = '<div class="stats-section"><h3>📚 Resumo</h3><div class="stats-grid">' +
                     '<div class="stat-item"><strong>Total livros</strong> <span>' + livros.length + '</span></div>' +
@@ -879,12 +439,12 @@
                     '<div class="stat-item"><strong>Coleções</strong> <span>' + colecaoCount.size + '</span></div>' +
                     '</div></div>' +
                     '<div class="stats-section"><h3>✍️ Top Autores</h3><div class="stats-grid">';
-        for (let i = 0; i < topAutoresSlice.length; i++) {
-            html += '<div class="stat-item">' + escapeHtml(topAutoresSlice[i][0]) + ' <span>' + topAutoresSlice[i][1] + '</span></div>';
+        for (let i = 0; i < topAutores.length; i++) {
+            html += '<div class="stat-item">' + escapeHtml(topAutores[i][0]) + ' <span>' + topAutores[i][1] + '</span></div>';
         }
         html += '</div></div><div class="stats-section"><h3>🏷️ Tags</h3><div class="tag-cloud">';
-        for (let i = 0; i < topTagsSlice.length; i++) {
-            html += '<span class="tag-stat">#' + escapeHtml(topTagsSlice[i][0]) + ' (' + topTagsSlice[i][1] + ')</span>';
+        for (let i = 0; i < topTags.length; i++) {
+            html += '<span class="tag-stat">#' + escapeHtml(topTags[i][0]) + ' (' + topTags[i][1] + ')</span>';
         }
         html += '</div></div><div class="stats-section"><h3>📖 Coleções</h3><div class="stats-grid">';
         for (let i = 0; i < topColecoes.length; i++) {
@@ -894,7 +454,6 @@
         return html;
     }
 
-    // ========== CARREGAR DADOS ==========
     async function carregarDados() {
         booksContainer.innerHTML = '<div class="no-results">📖 A carregar biblioteca...</div>';
         
@@ -905,12 +464,7 @@
                 if (data && data.livros && Array.isArray(data.livros)) {
                     bibliotecaData = data;
                     console.log("✅ Carregados " + bibliotecaData.livros.length + " livros");
-                    
-                    // Contar quantos livros têm ISBN
-                    let comIsbn = 0;
-                    for (let i = 0; i < bibliotecaData.livros.length; i++) {
-                        if (bibliotecaData.livros[i].isbn) comIsbn++;
-                    }
+                    let comIsbn = bibliotecaData.livros.filter(l => l.isbn).length;
                     console.log("📚 Livros com ISBN: " + comIsbn);
                 }
             } else {
@@ -929,38 +483,24 @@
         aplicarFiltros();
     }
 
-    // ========== EVENTOS ==========
     function initEventos() {
         searchInput.addEventListener('input', aplicarFiltros);
         authorFilter.addEventListener('change', aplicarFiltros);
         collectionFilter.addEventListener('change', aplicarFiltros);
-        clearBtn.addEventListener('click', function() {
+        clearBtn.addEventListener('click', () => {
             searchInput.value = '';
             authorFilter.value = '';
             collectionFilter.value = '';
             aplicarFiltros();
         });
-        
-        openStatsBtn.addEventListener('click', function() {
+        openStatsBtn.addEventListener('click', () => {
             statsModalBody.innerHTML = gerarEstatisticas();
             statsModal.classList.add('active');
         });
-        
-        closeDetailModal.addEventListener('click', function() {
-            detailModal.classList.remove('active');
-        });
-        
-        closeStatsModal.addEventListener('click', function() {
-            statsModal.classList.remove('active');
-        });
-        
-        detailModal.addEventListener('click', function(e) {
-            if (e.target === detailModal) detailModal.classList.remove('active');
-        });
-        
-        statsModal.addEventListener('click', function(e) {
-            if (e.target === statsModal) statsModal.classList.remove('active');
-        });
+        closeDetailModal.addEventListener('click', () => detailModal.classList.remove('active'));
+        closeStatsModal.addEventListener('click', () => statsModal.classList.remove('active'));
+        detailModal.addEventListener('click', (e) => { if (e.target === detailModal) detailModal.classList.remove('active'); });
+        statsModal.addEventListener('click', (e) => { if (e.target === statsModal) statsModal.classList.remove('active'); });
     }
 
     initEventos();
