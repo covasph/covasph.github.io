@@ -54,7 +54,7 @@
             gap: 0.5rem;
         }
 
-        .stats-button, .reload-button {
+        .stats-button {
             background: #2c5a7a;
             border: none;
             padding: 0.7rem 1.5rem;
@@ -67,10 +67,6 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-        }
-
-        .reload-button {
-            background: #5a6e7a;
         }
 
         .search-section {
@@ -146,135 +142,65 @@
 
         .books-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.8rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.2rem;
         }
 
         .book-card {
             background: #ffffff;
-            border-radius: 1.2rem;
-            overflow: hidden;
+            border-radius: 1rem;
+            padding: 1rem;
             transition: transform 0.2s ease, box-shadow 0.2s;
-            box-shadow: 0 6px 14px rgba(33, 58, 78, 0.06);
+            box-shadow: 0 2px 8px rgba(33, 58, 78, 0.08);
             border: 1px solid #d6e2ec;
-            display: flex;
-            flex-direction: row;
-            height: 180px;
+            cursor: pointer;
         }
 
         .book-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 24px -8px rgba(28, 75, 105, 0.2);
-        }
-
-        /* Capa do livro */
-        .book-cover {
-            width: 120px;
-            min-width: 120px;
-            background: #f0f4f8;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border-right: 1px solid #e0e8f0;
-        }
-
-        .book-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .cover-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #d4e0e8, #e8f0f5);
-            color: #5f8aac;
-            font-size: 2rem;
-        }
-
-        .card-content {
-            padding: 1rem 1.2rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(28, 75, 105, 0.15);
+            border-color: #adc8dd;
         }
 
         .book-title {
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 700;
             line-height: 1.3;
             margin-bottom: 0.3rem;
             color: #1f405b;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
         }
 
         .book-author {
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             font-weight: 600;
             color: #2f6c8a;
-            margin-bottom: 0.4rem;
-        }
-
-        .book-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.3rem;
-            font-size: 0.65rem;
-            margin: 0.4rem 0;
-            color: #5f7e96;
-        }
-
-        .editora-badge, .colecao-tag {
-            background: #eaf1f7;
-            padding: 0.15rem 0.5rem;
-            border-radius: 20px;
-        }
-
-        .colecao-tag {
-            background: #d9e6f0;
-            color: #1f5777;
+            margin-bottom: 0.5rem;
         }
 
         .tag-list {
             display: flex;
             flex-wrap: wrap;
             gap: 0.3rem;
-            margin: 0.4rem 0;
+            margin-top: 0.5rem;
         }
 
         .tag {
             background: #eef3f8;
-            padding: 0.1rem 0.5rem;
+            padding: 0.15rem 0.5rem;
             border-radius: 15px;
-            font-size: 0.6rem;
+            font-size: 0.65rem;
             font-weight: 500;
             color: #2c6482;
         }
 
-        .sinopse {
-            font-size: 0.7rem;
-            color: #2e546e;
-            line-height: 1.3;
+        .colecao-badge {
+            display: inline-block;
+            background: #d9e6f0;
+            padding: 0.15rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.65rem;
             margin-top: 0.4rem;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .isbn {
-            font-size: 0.6rem;
-            font-family: monospace;
-            color: #7b98ae;
-            margin-top: 0.3rem;
+            color: #1f5777;
         }
 
         .no-results, .error-message {
@@ -285,19 +211,15 @@
             color: #5682a0;
         }
 
-        .error-message {
-            background: #fff0f0;
-            color: #c7254e;
-        }
-
+        /* ========== MODAL DE DETALHES ========== */
         .modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(18, 45, 65, 0.8);
-            backdrop-filter: blur(6px);
+            background-color: rgba(18, 45, 65, 0.85);
+            backdrop-filter: blur(8px);
             z-index: 1000;
             display: flex;
             align-items: center;
@@ -313,14 +235,26 @@
         }
 
         .modal-container {
-            background: #fefefe;
+            background: #ffffff;
             width: 90%;
-            max-width: 780px;
+            max-width: 900px;
             max-height: 85vh;
-            border-radius: 2rem;
+            border-radius: 1.5rem;
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            animation: modalFadeIn 0.2s ease-out;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .modal-header {
@@ -333,8 +267,9 @@
         }
 
         .modal-header h2 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: #1b4f6e;
+            font-weight: 700;
         }
 
         .close-modal {
@@ -343,12 +278,120 @@
             font-size: 1.8rem;
             cursor: pointer;
             color: #4c7b9b;
+            transition: 0.1s;
+            line-height: 1;
+            padding: 0 0.5rem;
+        }
+
+        .close-modal:hover {
+            color: #1c5779;
         }
 
         .modal-body {
-            padding: 1.2rem 1.5rem;
+            padding: 1.5rem;
             overflow-y: auto;
             flex: 1;
+        }
+
+        .detail-layout {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .detail-cover {
+            flex: 0 0 200px;
+            text-align: center;
+        }
+
+        .detail-cover img {
+            width: 100%;
+            max-width: 180px;
+            border-radius: 0.8rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border: 1px solid #d6e2ec;
+        }
+
+        .cover-placeholder-detail {
+            width: 180px;
+            height: 260px;
+            background: linear-gradient(135deg, #d4e0e8, #e8f0f5);
+            border-radius: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #5f8aac;
+            margin: 0 auto;
+        }
+
+        .detail-info {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .detail-info h3 {
+            font-size: 1.6rem;
+            color: #1f405b;
+            margin-bottom: 0.3rem;
+        }
+
+        .detail-author {
+            font-size: 1rem;
+            color: #2f6c8a;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #e0e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .detail-field {
+            margin-bottom: 0.8rem;
+        }
+
+        .detail-label {
+            font-weight: 700;
+            color: #1f5779;
+            min-width: 100px;
+            display: inline-block;
+            font-size: 0.85rem;
+        }
+
+        .detail-value {
+            color: #2c4a64;
+            font-size: 0.85rem;
+        }
+
+        .detail-sinopse {
+            margin-top: 1rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid #e0e8f0;
+        }
+
+        .detail-sinopse .detail-label {
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .detail-sinopse .detail-value {
+            line-height: 1.5;
+            font-size: 0.9rem;
+        }
+
+        .detail-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.8rem 0;
+        }
+
+        .detail-tag {
+            background: #eef3f8;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #2c6482;
         }
 
         .stats-section {
@@ -394,18 +437,18 @@
         }
 
         @media (max-width: 640px) {
+            .detail-layout {
+                flex-direction: column;
+                align-items: center;
+            }
+            .detail-cover {
+                flex: none;
+            }
+            .detail-label {
+                min-width: 80px;
+            }
             .books-grid {
                 grid-template-columns: 1fr;
-            }
-            .book-card {
-                height: 160px;
-            }
-            .book-cover {
-                width: 100px;
-                min-width: 100px;
-            }
-            .book-title {
-                font-size: 0.9rem;
             }
             .stats-btn-wrapper {
                 justify-content: center;
@@ -431,7 +474,6 @@
         <div class="subtitle">Biblioteca Elsa, Vasco e Hugo</div>
         <div class="stats-btn-wrapper">
             <button id="openStatsModal" class="stats-button">📊 Estatísticas</button>
-            <button id="reloadCoversBtn" class="reload-button">🖼️ Recarregar Capas</button>
         </div>
     </div>
 
@@ -452,14 +494,28 @@
     <div id="booksContainer" class="books-grid">
         <div class="no-results">📖 A carregar biblioteca...</div>
     </div>
-    <footer>✨ Antioch · capas obtidas via Open Library e Google Books</footer>
+    <footer>✨ Clique em qualquer livro para ver todos os detalhes e a capa</footer>
 </div>
 
+<!-- Modal de Detalhes -->
+<div id="detailModal" class="modal-overlay">
+    <div class="modal-container">
+        <div class="modal-header">
+            <h2 id="modalTitle">Detalhes do Livro</h2>
+            <button class="close-modal" id="closeDetailModal">&times;</button>
+        </div>
+        <div class="modal-body" id="detailModalBody">
+            <div style="text-align: center;">Carregando...</div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Estatísticas -->
 <div id="statsModal" class="modal-overlay">
     <div class="modal-container">
         <div class="modal-header">
-            <h2>📊 Estatísticas</h2>
-            <button class="close-modal" id="closeModalBtn">&times;</button>
+            <h2>📊 Estatísticas da Biblioteca</h2>
+            <button class="close-modal" id="closeStatsModal">&times;</button>
         </div>
         <div class="modal-body" id="statsModalBody">Carregando...</div>
     </div>
@@ -468,7 +524,6 @@
 <script>
     let bibliotecaData = { livros: [] };
     let livrosFiltrados = [];
-    let coverCache = new Map(); // Cache das URLs das capas
 
     // Elementos
     const searchInput = document.getElementById('searchInput');
@@ -477,13 +532,15 @@
     const clearBtn = document.getElementById('clearFilters');
     const booksContainer = document.getElementById('booksContainer');
     const resultCountSpan = document.getElementById('resultCount');
-    const reloadCoversBtn = document.getElementById('reloadCoversBtn');
     
-    // Modal
-    const modal = document.getElementById('statsModal');
-    const openStatsBtn = document.getElementById('openStatsModal');
-    const closeModalBtn = document.getElementById('closeModalBtn');
+    // Modals
+    const detailModal = document.getElementById('detailModal');
+    const statsModal = document.getElementById('statsModal');
+    const detailModalBody = document.getElementById('detailModalBody');
     const statsModalBody = document.getElementById('statsModalBody');
+    const closeDetailModal = document.getElementById('closeDetailModal');
+    const closeStatsModal = document.getElementById('closeStatsModal');
+    const openStatsBtn = document.getElementById('openStatsModal');
 
     function escapeHtml(str) {
         if (!str) return '';
@@ -514,22 +571,30 @@
         return null;
     }
 
-    // ========== FUNÇÕES PARA OBTER CAPAS ==========
-    
-    // Tenta obter capa via Open Library (mais simples)
-    function getOpenLibraryCover(isbn) {
-        if (!isbn) return null;
-        return `https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg`;
-    }
-    
-    // Tenta obter capa via Google Books (fallback)
-    async function getGoogleBooksCover(isbn, titulo, autor) {
+    // ========== FUNÇÕES PARA OBTER CAPA (apenas quando necessário) ==========
+    async function getBookCoverUrl(livro) {
+        const isbn = livro.isbn;
+        const titulo = livro.titulo || '';
+        const autor = getAutorString(livro.autor);
+        
+        // Tentar Open Library primeiro
+        if (isbn) {
+            const openLibraryUrl = `https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg`;
+            try {
+                const testResponse = await fetch(openLibraryUrl, { method: 'HEAD' });
+                if (testResponse.ok) {
+                    return openLibraryUrl;
+                }
+            } catch(e) {}
+        }
+        
+        // Tentar Google Books por ISBN ou título+autor
         return new Promise((resolve) => {
             let query = '';
             if (isbn) {
                 query = `isbn:${isbn}`;
             } else {
-                query = encodeURIComponent(`${titulo} ${getAutorString(autor)}`);
+                query = encodeURIComponent(`${titulo} ${autor}`);
             }
             
             const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
@@ -538,8 +603,13 @@
                 .then(response => response.json())
                 .then(data => {
                     if (data.items && data.items[0] && data.items[0].volumeInfo.imageLinks) {
-                        const coverUrl = data.items[0].volumeInfo.imageLinks.thumbnail;
-                        resolve(coverUrl ? coverUrl.replace('&edge=curl', '') : null);
+                        let coverUrl = data.items[0].volumeInfo.imageLinks.thumbnail;
+                        if (coverUrl) {
+                            coverUrl = coverUrl.replace('&edge=curl', '').replace('http://', 'https://');
+                            resolve(coverUrl);
+                        } else {
+                            resolve(null);
+                        }
                     } else {
                         resolve(null);
                     }
@@ -547,118 +617,129 @@
                 .catch(() => resolve(null));
         });
     }
-    
-    // Função principal para obter URL da capa (com cache)
-    async function getBookCoverUrl(livro) {
-        const isbn = livro.isbn;
-        const titulo = livro.titulo || '';
-        const autor = livro.autor;
-        
-        // Verificar cache
-        const cacheKey = isbn || `${titulo}_${getAutorString(autor)}`;
-        if (coverCache.has(cacheKey)) {
-            return coverCache.get(cacheKey);
-        }
-        
-        // Tentar Open Library (mais rápido)
-        if (isbn) {
-            const openLibraryUrl = getOpenLibraryCover(isbn);
-            // Verificar se a imagem existe (teste rápido)
-            try {
-                const testResponse = await fetch(openLibraryUrl, { method: 'HEAD' });
-                if (testResponse.ok) {
-                    coverCache.set(cacheKey, openLibraryUrl);
-                    return openLibraryUrl;
-                }
-            } catch(e) {
-                // Falhou, tentar Google Books
-            }
-        }
-        
-        // Fallback: Google Books
-        const googleUrl = await getGoogleBooksCover(isbn, titulo, autor);
-        if (googleUrl) {
-            coverCache.set(cacheKey, googleUrl);
-            return googleUrl;
-        }
-        
-        // Sem capa encontrada
-        coverCache.set(cacheKey, null);
-        return null;
-    }
-    
-    // Renderizar livros COM capas (carregamento assíncrono)
+
+    // ========== RENDERIZAR CARDS (sem imagens) ==========
     function renderizarLivros(livrosArray) {
         if (!livrosArray || livrosArray.length === 0) {
             booksContainer.innerHTML = '<div class="no-results">📭 Nenhum livro encontrado.</div>';
             return;
         }
         
-        // Gerar HTML base com placeholders
         let html = '';
         for (var i = 0; i < livrosArray.length; i++) {
             var livro = livrosArray[i];
-            
             var titulo = livro.titulo || "Título desconhecido";
             var autorString = getAutorString(livro.autor);
-            var editora = livro.editora || "";
-            var sinopseText = livro.sinopse || "Sem sinopse disponível.";
-            var shortSinopse = sinopseText.length > 100 ? sinopseText.substring(0, 100) + '…' : sinopseText;
-            var isbn = livro.isbn || "";
             
-            // Tags
+            // Tags (máximo 5)
             var tagsHtml = '';
             if (livro.tags && Array.isArray(livro.tags) && livro.tags.length > 0) {
                 var tagItems = '';
-                for (var t = 0; t < Math.min(3, livro.tags.length); t++) {
+                var maxTags = Math.min(5, livro.tags.length);
+                for (var t = 0; t < maxTags; t++) {
                     tagItems += '<span class="tag">#' + escapeHtml(livro.tags[t]) + '</span>';
                 }
-                if (livro.tags.length > 3) {
-                    tagItems += '<span class="tag">+'+ (livro.tags.length - 3) +'</span>';
+                if (livro.tags.length > 5) {
+                    tagItems += '<span class="tag">+'+ (livro.tags.length - 5) +'</span>';
                 }
                 tagsHtml = '<div class="tag-list">' + tagItems + '</div>';
             }
             
             // Coleção
             var colecaoHtml = '';
-            if (livro.colecao === true && livro.nome_colecao) {
+            var colecaoNome = getColecaoNome(livro);
+            if (colecaoNome) {
                 var volInfo = livro.volume_colecao ? ' Vol.' + livro.volume_colecao : '';
-                colecaoHtml = '<span class="colecao-tag">📘 ' + escapeHtml(livro.nome_colecao) + volInfo + '</span>';
+                colecaoHtml = '<div class="colecao-badge">📘 ' + escapeHtml(colecaoNome) + volInfo + '</div>';
             }
             
-            var editoraHtml = editora ? '<span class="editora-badge">🏢 ' + escapeHtml(editora) + '</span>' : '';
-            
-            // ID único para atualizar a capa depois
-            var cardId = 'card_' + i + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
-            
-            html += '<div class="book-card" id="' + cardId + '">' +
-                        '<div class="book-cover" id="cover_' + cardId + '">' +
-                            '<div class="cover-placeholder">📚</div>' +
-                        '</div>' +
-                        '<div class="card-content">' +
-                            '<div class="book-title">' + escapeHtml(titulo) + '</div>' +
-                            '<div class="book-author">✍️ ' + escapeHtml(autorString) + '</div>' +
-                            '<div class="book-meta">' + editoraHtml + ' ' + colecaoHtml + '</div>' +
-                            tagsHtml +
-                            '<div class="sinopse">📖 ' + escapeHtml(shortSinopse) + '</div>' +
-                            (isbn ? '<div class="isbn">ISBN: ' + isbn + '</div>' : '') +
-                        '</div>' +
+            html += '<div class="book-card" data-index="' + i + '">' +
+                        '<div class="book-title">' + escapeHtml(titulo) + '</div>' +
+                        '<div class="book-author">✍️ ' + escapeHtml(autorString) + '</div>' +
+                        colecaoHtml +
+                        tagsHtml +
                     '</div>';
-            
-            // Carregar capa assincronamente
-            (function(id, livroLocal, idx) {
-                getBookCoverUrl(livroLocal).then(coverUrl => {
-                    var coverDiv = document.getElementById('cover_' + id);
-                    if (coverDiv && coverUrl) {
-                        coverDiv.innerHTML = '<img src="' + coverUrl + '" alt="Capa" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=\\\'cover-placeholder\\\'>📚</div>\'">';
-                    }
-                }).catch(() => {});
-            })(cardId, livro, i);
         }
         
         booksContainer.innerHTML = html;
+        
+        // Adicionar eventos de clique aos cards
+        var cards = document.querySelectorAll('.book-card');
+        for (var i = 0; i < cards.length; i++) {
+            cards[i].addEventListener('click', (function(idx) {
+                return function() { mostrarDetalhes(livrosArray[idx]); };
+            })(i));
+        }
     }
 
+    // ========== MOSTRAR DETALHES NO MODAL (COM CAPA) ==========
+    async function mostrarDetalhes(livro) {
+        // Preparar conteúdo básico
+        var titulo = livro.titulo || "Título desconhecido";
+        var autorString = getAutorString(livro.autor);
+        var editora = livro.editora || "Não informada";
+        var ano = livro.ano || "Não informado";
+        var paginas = livro.paginas || "Não informado";
+        var isbn = livro.isbn || "Não informado";
+        var sinopse = livro.sinopse || "Sem sinopse disponível.";
+        var colecaoNome = getColecaoNome(livro);
+        var volumeColecao = livro.volume_colecao || "";
+        
+        // Tags
+        var tagsHtml = '';
+        if (livro.tags && Array.isArray(livro.tags)) {
+            for (var t = 0; t < livro.tags.length; t++) {
+                tagsHtml += '<span class="detail-tag">#' + escapeHtml(livro.tags[t]) + '</span>';
+            }
+        }
+        
+        // Construir HTML base (sem capa ainda)
+        var html = '<div class="detail-layout">' +
+                        '<div class="detail-cover" id="detail-cover-container">' +
+                            '<div class="cover-placeholder-detail" id="cover-placeholder">📚</div>' +
+                        '</div>' +
+                        '<div class="detail-info">' +
+                            '<h3>' + escapeHtml(titulo) + '</h3>' +
+                            '<div class="detail-author">✍️ ' + escapeHtml(autorString) + '</div>';
+        
+        // Campos de informação
+        html += '<div class="detail-field"><span class="detail-label">Editora:</span> <span class="detail-value">' + escapeHtml(editora) + '</span></div>';
+        if (ano !== "Não informado") html += '<div class="detail-field"><span class="detail-label">Ano:</span> <span class="detail-value">' + escapeHtml(ano) + '</span></div>';
+        if (paginas !== "Não informado") html += '<div class="detail-field"><span class="detail-label">Páginas:</span> <span class="detail-value">' + escapeHtml(paginas) + '</span></div>';
+        if (colecaoNome) {
+            var colecaoInfo = escapeHtml(colecaoNome);
+            if (volumeColecao) colecaoInfo += ' (Volume ' + volumeColecao + ')';
+            html += '<div class="detail-field"><span class="detail-label">Coleção:</span> <span class="detail-value">📘 ' + colecaoInfo + '</span></div>';
+        }
+        html += '<div class="detail-field"><span class="detail-label">ISBN:</span> <span class="detail-value">' + escapeHtml(isbn) + '</span></div>';
+        
+        // Tags
+        if (tagsHtml) {
+            html += '<div class="detail-field"><span class="detail-label">Tags:</span></div><div class="detail-tags">' + tagsHtml + '</div>';
+        }
+        
+        // Sinopse
+        html += '<div class="detail-sinopse">' +
+                    '<div class="detail-label">📖 Sinopse:</div>' +
+                    '<div class="detail-value">' + escapeHtml(sinopse).replace(/\n/g, '<br>') + '</div>' +
+                '</div>';
+        
+        html += '</div></div>';
+        
+        detailModalBody.innerHTML = html;
+        detailModal.classList.add('active');
+        
+        // Tentar carregar a capa
+        var coverContainer = document.getElementById('detail-cover-container');
+        if (coverContainer) {
+            var coverUrl = await getBookCoverUrl(livro);
+            if (coverUrl) {
+                coverContainer.innerHTML = '<img src="' + coverUrl + '" alt="Capa de ' + escapeHtml(titulo) + '" onerror="this.parentElement.innerHTML=\'<div class=\\\'cover-placeholder-detail\\\'>📚</div>\'">';
+            }
+        }
+    }
+
+    // ========== FILTROS ==========
     function aplicarFiltros() {
         var termo = searchInput.value.trim().toLowerCase();
         var autorSel = authorFilter.value;
@@ -752,6 +833,7 @@
         }
     }
 
+    // ========== ESTATÍSTICAS ==========
     function gerarEstatisticas() {
         var livros = bibliotecaData.livros;
         if (!livros.length) return "<div>Nenhum livro carregado.</div>";
@@ -793,7 +875,7 @@
                     '<div class="stat-item"><strong>Autores</strong> <span>' + autorCount.size + '</span></div>' +
                     '<div class="stat-item"><strong>Coleções</strong> <span>' + colecaoCount.size + '</span></div>' +
                     '</div></div>' +
-                    '<div class="stats-section"><h3>✍️ Autores</h3><div class="stats-grid">';
+                    '<div class="stats-section"><h3>✍️ Top Autores</h3><div class="stats-grid">';
         for (var i = 0; i < topAutores.length; i++) {
             html += '<div class="stat-item">' + escapeHtml(topAutores[i][0]) + ' <span>' + topAutores[i][1] + '</span></div>';
         }
@@ -809,6 +891,7 @@
         return html;
     }
 
+    // ========== CARREGAR DADOS ==========
     async function carregarDados() {
         booksContainer.innerHTML = '<div class="no-results">📖 A carregar biblioteca...</div>';
         
@@ -832,17 +915,11 @@
             return;
         }
         
-        // Limpar cache de capas ao recarregar
-        coverCache.clear();
         atualizarFiltrosOptions();
         aplicarFiltros();
     }
 
-    function recarregarCapas() {
-        coverCache.clear();
-        aplicarFiltros();
-    }
-
+    // ========== EVENTOS ==========
     function initEventos() {
         searchInput.addEventListener('input', aplicarFiltros);
         authorFilter.addEventListener('change', aplicarFiltros);
@@ -853,16 +930,26 @@
             collectionFilter.value = '';
             aplicarFiltros();
         });
-        reloadCoversBtn.addEventListener('click', recarregarCapas);
+        
         openStatsBtn.addEventListener('click', function() {
             statsModalBody.innerHTML = gerarEstatisticas();
-            modal.classList.add('active');
+            statsModal.classList.add('active');
         });
-        closeModalBtn.addEventListener('click', function() {
-            modal.classList.remove('active');
+        
+        closeDetailModal.addEventListener('click', function() {
+            detailModal.classList.remove('active');
         });
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) modal.classList.remove('active');
+        
+        closeStatsModal.addEventListener('click', function() {
+            statsModal.classList.remove('active');
+        });
+        
+        detailModal.addEventListener('click', function(e) {
+            if (e.target === detailModal) detailModal.classList.remove('active');
+        });
+        
+        statsModal.addEventListener('click', function(e) {
+            if (e.target === statsModal) statsModal.classList.remove('active');
         });
     }
 
