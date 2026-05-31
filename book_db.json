@@ -2960,6 +2960,219 @@
       "editora": "Editora",
       "tags": ["esoterismo", "tarot", "numerologia", "auto-conhecimento"],
       "isbn": null
+    },
+    {
+      "titulo": "A Ascensão da Magia",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "colecao": true,
+      "nome_colecao": "Legado do Coração de Dragão",
+      "volume_colecao": 1,
+      "tags": ["fantasia", "romance", "magia", "dragões"],
+      "isbn": null,
+      "sinopse": "Breen Kelly, uma jovem de 20 e poucos anos que trabalha num emprego que odeia, descobre que herdou uma casa na Irlanda de um pai que nunca conheceu. Ao viajar para a Irlanda para reclamar a herança, Breen entra num mundo mágico que sempre sonhou em visitar. O primeiro volume da série Legado do Coração de Dragão."
+    },
+    {
+      "titulo": "O Primeiro Ano",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "colecao": true,
+      "nome_colecao": "Crónicas do Um",
+      "volume_colecao": 1,
+      "tags": ["fantasia", "distopia", "magia", "pós-apocalíptico"],
+      "isbn": null,
+      "sinopse": "Primeiro livro da série Crónicas do Um. Quando o \"Um\" chega, transformações mágicas começam a acontecer e novos poderes emergem na humanidade, enquanto criaturas das trevas são libertadas e o mundo como se conhecia chega ao fim."
+    },
+    {
+      "titulo": "O Despertar",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "colecao": true,
+      "nome_colecao": "Crónicas do Um",
+      "volume_colecao": 2,
+      "tags": ["fantasia", "distopia", "magia", "pós-apocalíptico"],
+      "isbn": null,
+      "sinopse": "Segundo livro da série Crónicas do Um. A luta pela sobrevivência continua num mundo onde a magia é cada vez mais presente e as forças do mal se organizam para destruir os poucos que resistem."
+    },
+    {
+      "titulo": "A Revelação",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "colecao": true,
+      "nome_colecao": "Crónicas do Um",
+      "volume_colecao": 3,
+      "tags": ["fantasia", "distopia", "magia", "pós-apocalíptico"],
+      "isbn": null,
+      "sinopse": "Terceiro livro da série Crónicas do Um. As personagens descobrem verdades ocultas sobre as origens da magia e enfrentam a batalha final contra as forças das trevas."
+    },
+    {
+      "titulo": "A Profecia",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "contemporâneo"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Escolha",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "edicao": 1,
+      "ano": 2023,
+      "paginas": 432,
+      "colecao": true,
+      "nome_colecao": "Legado do Coração de Dragão",
+      "volume_colecao": 3,
+      "tags": ["fantasia", "romance", "magia", "dragões", "final de série"],
+      "isbn": "9789897106163",
+      "sinopse": "A batalha final está iminente. Depois de descobrir a sua verdadeira natureza, Breen escolheu Talamh, enfrentando uma batalha sangrenta com o seu avô, o obscuro deus Odran. O terrível confronto e as perdas dolorosas que se seguiram tiveram um custo, que a jovem sente profundamente enquanto ajuda a tratar dos feridos e a fazer regressar a casa aqueles que perderam a vida. O inimigo foi expulso e o portal foi selado, mas há pouco tempo para descansar. As bruxas aliadas de Odran aparecem a Breen durante o sono, praticando magia negra, sacrificando inocentes e planeando uma destruição brutal. Com a ajuda de Keegan, chegou o momento de Breen procurar aqueles que precisam desesperadamente de salvação e confrontar as trevas com todas as armas que tem: a sua espada, a sua magia e a sua coragem. [citation:2]"
+    },
+    {
+      "titulo": "Coração em Chamas",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "contemporâneo"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Segredos da Casa da Praia",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "mistério"],
+      "isbn": null
+    },
+    {
+      "titulo": "Ao Pôr do Sol",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Mentira",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "thriller"],
+      "isbn": null
+    },
+    {
+      "titulo": "O Colecionador",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "thriller"],
+      "isbn": null
+    },
+    {
+      "titulo": "Dias de Esperança",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"],
+      "isbn": null
+    },
+    {
+      "titulo": "Terra de Sonhos",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"],
+      "isbn": null
+    },
+    {
+      "titulo": "Caminhos do Amor",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"],
+      "isbn": null
+    },
+    {
+      "titulo": "Sinfonia Inacabada",
+      "autor": ["Nora Roberts"],
+      "editora": "HarperCollins",
+      "tags": ["romance", "contemporâneo", "música"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Homens que Odeiam as Mulheres",
+      "autor": ["Stieg Larsson"],
+      "editora": "Dom Quixote",
+      "colecao": true,
+      "nome_colecao": "Millennium",
+      "volume_colecao": 1,
+      "tags": ["thriller", "suspense", "policial", "sueco", "best-seller"],
+      "isbn": null,
+      "sinopse": "Mikael Blomkvist, jornalista econômico, é contratado pelo industrial Henrik Vanger para investigar o desaparecimento da sua sobrinha, ocorrido 40 anos antes. Com a ajuda da hacker Lisbeth Salander, mergulham num mistério que envolve assassinatos, corrupção e segredos de família. Primeiro volume da trilogia Millennium."
+    },
+    {
+      "titulo": "A Rapariga que Sonhava com uma Lata de Gasolina e um Fósforo",
+      "autor": ["Stieg Larsson"],
+      "editora": "Dom Quixote",
+      "colecao": true,
+      "nome_colecao": "Millennium",
+      "volume_colecao": 2,
+      "tags": ["thriller", "suspense", "policial", "sueco", "best-seller"],
+      "isbn": null,
+      "sinopse": "Segundo volume da trilogia Millennium. Lisbeth Salander é acusada de homicídio e perseguida por aqueles que querem vê-la atrás das grades. Mikael Blomkvist investiga o caso e descobre uma conspiração que envolve o submundo da criminalidade e a segurança nacional."
+    },
+    {
+      "titulo": "A Rainha no Palácio das Correntes de Ar",
+      "autor": ["Stieg Larsson"],
+      "editora": "Dom Quixote",
+      "colecao": true,
+      "nome_colecao": "Millennium",
+      "volume_colecao": 3,
+      "tags": ["thriller", "suspense", "policial", "sueco", "best-seller", "final da série"],
+      "isbn": null,
+      "sinopse": "Terceiro e último volume da trilogia Millennium. Lisbeth Salander luta pela sua vida num hospital, enquanto uma conspiração dentro dos serviços secretos suecos ameaça destruí-la. Mikael Blomkvist trava uma batalha final para expor a verdade e proteger a sua parceira."
+    },
+    {
+      "titulo": "A Árvore da Vida",
+      "autor": ["Christian Jacq"],
+      "editora": "Bertrand Editora",
+      "tags": ["romance histórico", "egito", "aventura", "espiritualidade"],
+      "isbn": null
+    },
+    {
+      "titulo": "Avatar de Kushiel",
+      "autor": ["Jacqueline Carey"],
+      "editora": "Saída de Emergência",
+      "colecao": true,
+      "nome_colecao": "Kushiel",
+      "volume_colecao": null,
+      "tags": ["fantasia", "épico", "aventura", "romance"],
+      "isbn": null
+    },
+    {
+      "titulo": "Justiça de Kushiel",
+      "autor": ["Jacqueline Carey"],
+      "editora": "Saída de Emergência",
+      "colecao": true,
+      "nome_colecao": "Kushiel",
+      "volume_colecao": null,
+      "tags": ["fantasia", "épico", "aventura", "romance"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Promessa de Kushiel",
+      "autor": ["Jacqueline Carey"],
+      "editora": "Saída de Emergência",
+      "colecao": true,
+      "nome_colecao": "Kushiel",
+      "volume_colecao": null,
+      "tags": ["fantasia", "épico", "aventura", "romance"],
+      "isbn": null
+    },
+    {
+      "titulo": "Os Herdeiros da Terra",
+      "autor": ["Ildefonso Falcones"],
+      "editora": "Suma de Letras",
+      "tags": ["romance histórico", "aventura", "literatura espanhola"],
+      "isbn": null
+    },
+    {
+      "titulo": "Deuses de Neon",
+      "autor": ["Katee Robert"],
+      "editora": "TopSeller",
+      "tags": ["fantasia", "romance", "mitologia grega", "retelling"],
+      "isbn": null,
+      "sinopse": "Primeiro livro da série Dark Olympus. Uma reinterpretação contemporânea picante da mitologia grega, onde os deuses do Olimpo regem uma versão moderna da cidade."
     }
   ]
 }
