@@ -2808,7 +2808,7 @@
       "autor": ["Dan Brown"],
       "editora": "Bertrand Editora",
       "tags": ["thriller", "mistério", "suspense", "ficção científica"],
-      "isbn": null,
+      "isbn": 9789895870769,
       "ano": 2025,
       "sinopse": "Lançamento mais recente de Dan Brown. Detalhes adicionais não disponíveis."
     },
@@ -2836,7 +2836,7 @@
       "autor": ["Mário Zambujal"],
       "editora": "Clube do Autor",
       "tags": ["humor", "literatura portuguesa", "ficção"],
-      "isbn": null,
+      "isbn": 9789897241765,
       "sinopse": "Obra de Mário Zambujal, conhecido pelo seu estilo humorístico e irónico."
     },
     {
@@ -2844,7 +2844,7 @@
       "autor": ["Stephenie Meyer"],
       "editora": "Editora",
       "tags": ["fantasia", "vampiros", "young adult", "spin-off", "crepúsculo"],
-      "isbn": null,
+      "isbn": 9789895577545,
       "sinopse": "Spin-off da saga Crepúsculo, narrado na perspetiva de Bree Tanner, uma vampira recém-criada que fez parte do exército de Victoria em Eclipse. A obra explora os eventos do terceiro livro da série principal sob um novo olhar."
     },
     {
@@ -3137,7 +3137,7 @@
       "nome_colecao": "Kushiel",
       "volume_colecao": null,
       "tags": ["fantasia", "épico", "aventura", "romance"],
-      "isbn": null
+      "isbn": 9789896374051
     },
     {
       "titulo": "Justiça de Kushiel",
@@ -3164,14 +3164,14 @@
       "autor": ["Ildefonso Falcones"],
       "editora": "Suma de Letras",
       "tags": ["romance histórico", "aventura", "literatura espanhola"],
-      "isbn": null
+      "isbn": 9789896653101
     },
     {
       "titulo": "Deuses de Neon",
       "autor": ["Katee Robert"],
       "editora": "TopSeller",
       "tags": ["fantasia", "romance", "mitologia grega", "retelling"],
-      "isbn": null,
+      "isbn": 9789897545801,
       "sinopse": "Primeiro livro da série Dark Olympus. Uma reinterpretação contemporânea picante da mitologia grega, onde os deuses do Olimpo regem uma versão moderna da cidade."
     }
   ]
