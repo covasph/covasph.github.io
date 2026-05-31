@@ -2708,6 +2708,258 @@
       "tags": ["teatro", "tragédia", "clássico", "literatura inglesa", "romano"],
       "isbn": null,
       "sinopse": "A obra mais violenta de William Shakespeare, Titus Andronicus é uma tragédia romana que explora os limites da vingança e da crueldade humana. O general romano Titus regressa a Roma vitorioso após uma guerra contra os godos, trazendo como prisioneira a rainha Tamora. A recusa de Titus em aceitar o título de imperador e o subsequente sacrifício do filho mais velho de Tamora desencadeiam uma espiral de violência que inclui violação, mutilação, assassinato e canibalismo. A peça oferece um retrato sombrio da desintegração moral e da natureza cíclica da vingança."
+    },
+    {
+      "titulo": "Ursito Tito - O Grande Livro das Palavras",
+      "autor": ["Benji Davies"],
+      "editora": "Planeta Júnior",
+      "colecao": true,
+      "nome_colecao": "Ursito Tito",
+      "volume_colecao": null,
+      "tags": ["infantil", "livro cartonado", "vocabulário", "bebés"],
+      "isbn": "9789897777097",
+      "sinopse": "Com abas para levantar, as crianças vão adorar aprender novas palavras com o Ursito Tito e os seus amigos. O livro perfeito para os mais pequenos descobrirem o mundo que os rodeia de forma interativa."
+    },
+    {
+      "titulo": "Anátema",
+      "autor": ["Keri Lake"],
+      "editora": "TopSeller",
+      "tags": ["dark romance", "suspense", "fantasia", "gótico"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Pousada Cinnamon Spice",
+      "autor": ["Harper Graham"],
+      "editora": "Bertrand Editora",
+      "colecao": true,
+      "nome_colecao": "Maple Falls",
+      "volume_colecao": 1,
+      "tags": ["romance", "small town", "contemporâneo", "outono"],
+      "isbn": "9789722550284",
+      "ano": 2025,
+      "paginas": 312,
+      "sinopse": "Uma rapariga da cidade, apaixonada por café e cheia de energia. Um rapaz faz-tudo, descontraído e com olhos cor de avelã irresistíveis. Será esta a receita para o desastre? Viciada em café assumida e crítica gastronómica, Madison convenceu-se de que o seu lugar era em Nova Iorque. Isto até ser chamada de volta à pequena cidade de Maple Falls para recuperar a casa da sua infância, a Pousada Cinnamon Spice. Ela NÃO está ansiosa por reencontrar Zach, o seu ex, que agora é um faz-tudo barbudo e sexy que sabe exatamente como mexer com ela. As faíscas estão prestes a saltar, mas será que Madison vai mesmo conseguir salvar a Pousada Cinnamon Spice e experimentar uma segunda oportunidade no amor?",
+      "sinopse_original": "The Cinnamon Spice Inn"
+    },
+    {
+      "titulo": "A Padaria Gingerbread",
+      "autor": ["Laurie Gilmore"],
+      "editora": "Quinta Essência",
+      "colecao": true,
+      "nome_colecao": "Dream Harbor",
+      "volume_colecao": 2,
+      "tags": ["romance", "small town", "contemporâneo", "natal", "culinária"],
+      "isbn": null,
+      "ano": 2025,
+      "sinopse": "Segundo livro da série Dream Harbor. A história continua na encantadora vila de Dream Harbor, com mais romance, confeitaria e personagens peculiares. Um romance picante e acolhedor, perfeito para os fãs de Gilmore Girls."
+    },
+    {
+      "titulo": "A Livraria Cinnamon Bun",
+      "autor": ["Laurie Gilmore"],
+      "editora": "Quinta Essência",
+      "colecao": true,
+      "nome_colecao": "Dream Harbor",
+      "volume_colecao": 3,
+      "tags": ["romance", "small town", "contemporâneo", "livrarias", "quentes"],
+      "isbn": null,
+      "ano": 2024,
+      "sinopse": "Terceiro livro da série Dream Harbor. Na pitoresca vila de Dream Harbor, os habitantes são peculiares, os cenários são acolhedores e as histórias de amor são arrebatadoras. Jeanie herdou da tia o adorável Café Pumpkin Spice e ali começa uma nova vida, encontrando Logan, um fazendeiro local que evita fofocas. Os dois sentem-se cada vez mais atraídos um pelo outro, entre reuniões de moradores, discussões de vizinhos e confusões estranhas que permeiam o seu estabelecimento."
+    },
+    {
+      "titulo": "O Café Pumpkin Spice",
+      "autor": ["Laurie Gilmore"],
+      "editora": "Quinta Essência",
+      "colecao": true,
+      "nome_colecao": "Dream Harbor",
+      "volume_colecao": 1,
+      "tags": ["romance", "small town", "contemporâneo", "outono", "café"],
+      "isbn": "9788551013236",
+      "ano": 2024,
+      "paginas": 256,
+      "sinopse": "Quando a tia de Jeanie se aposenta e lhe deixa de presente o adorável Café Pumpkin Spice, numa cidadezinha pitoresca no litoral, aquela parece a oportunidade perfeita para dar início a uma nova vida. Depois de sete anos completamente consumida pelo trabalho, ela não tem amigos próximos, não tem namorado, acaba de largar o seu emprego desgastante no mercado financeiro e precisa muito relaxar. Então, mudar-se para a encantadora Dream Harbor promete ser exatamente o recomeço que tanto queria. Poucos dias depois de chegar ali, ela conhece Logan, um fazendeiro local que evita a todo custo as fofocas da cidade. Ele já teve o coração partido na frente de todos os habitantes do lugar, então apaixonar-se com certeza não está em seus planos. O único problema é que a chegada da nova dona do café, com seu jeito sempre tão animado, dá uma baita sacudida em seu cotidiano, e ele se vê cada vez mais atraído por ela.",
+      "sinopse_original": "The Pumpkin Spice Café"
+    },
+    {
+      "titulo": "A Quinta das Árvores de Natal",
+      "autor": ["Laurie Gilmore"],
+      "editora": "Quinta Essência",
+      "colecao": true,
+      "nome_colecao": "Dream Harbor",
+      "volume_colecao": 4,
+      "tags": ["romance", "small town", "contemporâneo", "natal", "quentes"],
+      "isbn": null,
+      "ano": 2024,
+      "sinopse": "Quarto livro da série Dream Harbor. O natal chega a Dream Harbor com mais uma história de amor arrebatadora, repleta de habitantes peculiares e cenários acolhedores."
+    },
+    {
+      "titulo": "A Casa de Panquecas Strawberry Patch",
+      "autor": ["Laurie Gilmore"],
+      "editora": "Quinta Essência",
+      "colecao": true,
+      "nome_colecao": "Dream Harbor",
+      "volume_colecao": 5,
+      "tags": ["romance", "small town", "contemporâneo", "primavera", "culinária"],
+      "isbn": null,
+      "ano": 2025,
+      "sinopse": "Quinto livro da série Dream Harbor. As aventuras em Dream Harbor continuam, agora num cenário primaveril com uma casa de panquecas como pano de fundo. Um romance doce e picante que vai aquecer o coração dos leitores."
+    },
+    {
+      "titulo": "O Segredo dos Segredos",
+      "autor": ["Dan Brown"],
+      "editora": "Bertrand Editora",
+      "tags": ["thriller", "mistério", "suspense", "ficção científica"],
+      "isbn": null,
+      "ano": 2025,
+      "sinopse": "Lançamento mais recente de Dan Brown. Detalhes adicionais não disponíveis."
+    },
+    {
+      "titulo": "10 Dias que Abalaram o Mundo",
+      "autor": ["John Reed"],
+      "editora": "Edições Combate",
+      "tags": ["história", "revolução", "jornalismo", "política", "clássico"],
+      "isbn": null,
+      "sinopse": "Obra clássica do jornalismo que relata a Revolução Russa de 1917 na primeira pessoa, testemunhada pelo autor. Reed descreve com detalhe a tomada do poder pelos bolcheviques e os eventos que mudaram o curso da história do século XX."
+    },
+    {
+      "titulo": "O Restaurante no Fim do Universo",
+      "autor": ["Douglas Adams"],
+      "editora": "Saída de Emergência",
+      "colecao": true,
+      "nome_colecao": "Bang!",
+      "volume_colecao": null,
+      "tags": ["ficção científica", "humor", "série", "clássico", "comédia"],
+      "isbn": "9789896376345",
+      "sinopse": "Segundo volume da série O Guia do Mochileiro das Galáxias. Nesta aventura, Arthur Dent e os seus companheiros viajam até ao famoso restaurante no fim do universo para testemunhar o fim de todas as coisas. Uma sátira brilhante sobre a existência, o tempo e o sentido da vida."
+    },
+    {
+      "titulo": "Serpentina",
+      "autor": ["Mário Zambujal"],
+      "editora": "Clube do Autor",
+      "tags": ["humor", "literatura portuguesa", "ficção"],
+      "isbn": null,
+      "sinopse": "Obra de Mário Zambujal, conhecido pelo seu estilo humorístico e irónico."
+    },
+    {
+      "titulo": "A Breve Segunda Vida de Bree Tanner",
+      "autor": ["Stephenie Meyer"],
+      "editora": "Editora",
+      "tags": ["fantasia", "vampiros", "young adult", "spin-off", "crepúsculo"],
+      "isbn": null,
+      "sinopse": "Spin-off da saga Crepúsculo, narrado na perspetiva de Bree Tanner, uma vampira recém-criada que fez parte do exército de Victoria em Eclipse. A obra explora os eventos do terceiro livro da série principal sob um novo olhar."
+    },
+    {
+      "titulo": "O Sino Entre Mundos",
+      "autor": ["Ian Johnstone"],
+      "editora": "Editora",
+      "tags": ["fantasia", "aventura", "ficção científica"],
+      "isbn": null
+    },
+    {
+      "titulo": "O Homem que Perseguia o Mundo",
+      "autor": ["Diane Setterfield"],
+      "editora": "Marcador",
+      "tags": ["romance", "mistério", "literatura contemporânea", "gótico"],
+      "isbn": null
+    },
+    {
+      "titulo": "O Erro",
+      "autor": ["Elle Kennedy"],
+      "editora": "TopSeller",
+      "colecao": true,
+      "nome_colecao": "Off-Campus",
+      "volume_colecao": 2,
+      "tags": ["new adult", "romance", "desporto", "hockey", "contemporâneo"],
+      "isbn": null,
+      "sinopse": "Segundo livro da série Off-Campus. A história segue as aventuras românticas de um grupo de jogadores de hockey universitário, combinando humor, emoção e momentos picantes."
+    },
+    {
+      "titulo": "O Jogo",
+      "autor": ["Elle Kennedy"],
+      "editora": "TopSeller",
+      "colecao": true,
+      "nome_colecao": "Off-Campus",
+      "volume_colecao": 3,
+      "tags": ["new adult", "romance", "desporto", "hockey", "contemporâneo"],
+      "isbn": null,
+      "sinopse": "Terceiro livro da série Off-Campus. Continua a acompanhar o universo dos jogadores de hockey da Briar University, com novas relações e desafios amorosos."
+    },
+    {
+      "titulo": "O Pacto",
+      "autor": ["Elle Kennedy"],
+      "editora": "TopSeller",
+      "colecao": true,
+      "nome_colecao": "Off-Campus",
+      "volume_colecao": 4,
+      "tags": ["new adult", "romance", "desporto", "hockey", "contemporâneo"],
+      "isbn": null,
+      "sinopse": "Quarto livro da série Off-Campus. Conclusão da série que acompanha as histórias de amor e amizade do grupo de jogadores de hockey."
+    },
+    {
+      "titulo": "O Acordo da Rainha",
+      "autor": ["Anne Bishop"],
+      "editora": "Saída de Emergência",
+      "colecao": true,
+      "nome_colecao": "The Others",
+      "volume_colecao": null,
+      "tags": ["fantasia", "dark fantasy", "vampiros", "lobisomens", "sobrenatural"],
+      "isbn": null,
+      "sinopse": "Obra da série The Others de Anne Bishop, conhecida pelo seu mundo de fantasia sombria onde humanos e seres da noite coexistem numa relação tensa. Os livros anteriores incluem Marcada pela Escuridão, Morte da Escuridão e Reivindicada pela Escuridão."
+    },
+    {
+      "titulo": "A Máquina de Escrever Dourada",
+      "autor": ["Casten Henn"],
+      "editora": "Oficina",
+      "tags": ["romance", "literatura contemporânea", "ficção"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Dádiva",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "contemporâneo"],
+      "isbn": null
+    },
+    {
+      "titulo": "Tudo o que Ficou para Trás",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "contemporâneo"],
+      "isbn": null
+    },
+    {
+      "titulo": "O Café Baby Dragon",
+      "autor": ["A. T. Qureshi"],
+      "editora": "Editora",
+      "tags": ["fantasia", "romance", "café", "dragões"],
+      "isbn": null
+    },
+    {
+      "titulo": "A Livraria Mágica das Cerejeiras em Flor",
+      "autor": ["Tokuya Asakura"],
+      "editora": "HarperCollins",
+      "tags": ["fantasia", "literatura japonesa", "magia", "livrarias"],
+      "isbn": null
+    },
+    {
+      "titulo": "Portugal e o Século XIX",
+      "autor": ["Hugo Gonzalez de Oliveira", "Fernando Ribeiro Mendes"],
+      "editora": "Guerra e Paz",
+      "tags": ["história", "portugal", "século xix", "ensaio"],
+      "isbn": null
+    },
+    {
+      "titulo": "Tai Chi: A Alma do Corpo",
+      "autor": ["Bibi Perestrelo"],
+      "editora": "Editora",
+      "tags": ["saúde", "bem-estar", "tai chi", "meditação", "corpo"],
+      "isbn": null
+    },
+    {
+      "titulo": "Tarot e Numerologia",
+      "autor": ["Luís Resina"],
+      "editora": "Editora",
+      "tags": ["esoterismo", "tarot", "numerologia", "auto-conhecimento"],
+      "isbn": null
     }
   ]
 }
