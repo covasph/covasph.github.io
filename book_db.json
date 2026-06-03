@@ -3348,6 +3348,236 @@
       "tags": ["suspense", "gótico", "mistério", "terror"],
       "isbn": null,
       "sinopse": "A autora de A Dama de Negro regressa com um conto clássico de fantasmas. A investigação sobre a morte súbita de um jovem casal leva a revelações perturbadoras e à descoberta de um segredo há muito escondido."
+    },
+    {
+      "titulo": "Inocência Perdida",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "contemporâneo"],
+      "isbn": "9789896233228"
+    },
+    {
+      "titulo": "Do fundo do coração",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "A cruz de Morrigan",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense"]
+    },
+    {
+      "titulo": "O baile dos deuses",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "fantasia"]
+    },
+    {
+      "titulo": "O vale do silêncio",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense"]
+    },
+    {
+      "titulo": "Irmãos de sangue",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "thriller"]
+    },
+    {
+      "titulo": "Ritual de amor",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Pedra pagã",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Um dia perfeito",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Um mar de rosas",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "O sabor do momento",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Felizes para sempre",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Começar de novo",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Tudo o que ficou para trás",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense"]
+    },
+    {
+      "titulo": "Sem medo do destino",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Onde o desejo se esconde",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Reencontro com o passado",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense"]
+    },
+    {
+      "titulo": "Caminhos do amor",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Terra de sonhos",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Dias de esperança",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Um toque de magia",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "fantasia"]
+    },
+    {
+      "titulo": "A obsessão",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "thriller"]
+    },
+    {
+      "titulo": "Destinos de paixão",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Estrelas da fortuna",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Baía dos suspiros",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Ilha de vidro",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense"]
+    },
+    {
+      "titulo": "O colecionador",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "thriller"]
+    },
+    {
+      "titulo": "A mentira",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "thriller"]
+    },
+    {
+      "titulo": "O segredo de Black Hills",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "thriller"]
+    },
+    {
+      "titulo": "Uma sombra do passado",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense"]
+    },
+    {
+      "titulo": "Coração em chamas",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "contemporâneo"],
+      "isbn": "9789896233853"
+    },
+    {
+      "titulo": "Os segredos da casa da praia",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense", "mistério"]
+    },
+    {
+      "titulo": "Ao pôr do sol",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "O despertar",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "suspense"]
+    },
+    {
+      "titulo": "Último amor",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "O hotel das recordações",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "Uma nova promessa",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
+    },
+    {
+      "titulo": "A felicidade nunca vem só",
+      "autor": ["Nora Roberts"],
+      "editora": "Chá das Cinco",
+      "tags": ["romance", "contemporâneo"]
     }
   ]
 }
