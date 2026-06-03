@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Antioch · Biblioteca Elsa, Vasco e Hugo</title>
+    <!-- Chart.js para os gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -376,6 +378,12 @@
             gap: 1rem;
             padding: 0.6rem 0.8rem;
             border-bottom: 1px solid #e0e8f0;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .colecao-livro:hover {
+            background: #eef3f8;
         }
 
         .colecao-livro:last-child {
@@ -410,6 +418,61 @@
             border-top: 1px solid #ffe0b3;
             font-size: 0.8rem;
             color: #c97e2a;
+        }
+
+        /* Estilos para o modal de estatísticas com gráfico */
+        .chart-container {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        canvas#autoresChart {
+            max-height: 400px;
+            width: 100%;
+        }
+
+        .stats-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .stats-section h3 {
+            font-size: 1.1rem;
+            border-left: 4px solid #5f9bc2;
+            padding-left: 0.6rem;
+            margin-bottom: 0.8rem;
+            color: #1e5779;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 0.6rem;
+            background: #f6fafd;
+            padding: 0.8rem;
+            border-radius: 1rem;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.3rem 0;
+            border-bottom: 1px dashed #cde0ec;
+            font-size: 0.8rem;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag-stat {
+            background: #e6f0f7;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
         }
 
         /* Modal de detalhes do livro */
@@ -528,48 +591,6 @@
             color: #2c6482;
         }
 
-        .stats-section {
-            margin-bottom: 1.5rem;
-        }
-
-        .stats-section h3 {
-            font-size: 1.1rem;
-            border-left: 4px solid #5f9bc2;
-            padding-left: 0.6rem;
-            margin-bottom: 0.8rem;
-            color: #1e5779;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 0.6rem;
-            background: #f6fafd;
-            padding: 0.8rem;
-            border-radius: 1rem;
-        }
-
-        .stat-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.3rem 0;
-            border-bottom: 1px dashed #cde0ec;
-            font-size: 0.8rem;
-        }
-
-        .tag-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tag-stat {
-            background: #e6f0f7;
-            padding: 0.2rem 0.8rem;
-            border-radius: 30px;
-            font-size: 0.75rem;
-        }
-
         @media (max-width: 640px) {
             .detail-layout {
                 flex-direction: column;
@@ -593,6 +614,9 @@
             .colecao-header {
                 flex-direction: column;
                 align-items: flex-start;
+            }
+            .chart-container {
+                padding: 0.5rem;
             }
         }
 
@@ -662,7 +686,7 @@
 <div id="statsModal" class="modal-overlay">
     <div class="modal-container">
         <div class="modal-header">
-            <h2>📊 Estatísticas</h2>
+            <h2>📊 Estatísticas da Biblioteca</h2>
             <button class="close-modal" id="closeStatsModal">&times;</button>
         </div>
         <div class="modal-body" id="statsModalBody">Carregando...</div>
@@ -672,7 +696,8 @@
 <script>
     let bibliotecaData = { livros: [] };
     let livrosFiltrados = [];
-    let colecoesInfo = new Map(); // Mapa com info detalhada de cada coleção
+    let colecoesInfo = new Map();
+    let autoresChart = null; // Para guardar a referência do gráfico
 
     // Elementos
     const searchInput = document.getElementById('searchInput');
@@ -736,7 +761,7 @@
     // ========== CALCULAR INFORMAÇÕES DAS COLEÇÕES ==========
     function calcularInfoColecoes() {
         colecoesInfo.clear();
-        const colecaoMap = new Map(); // nome -> array de {volume, titulo, autor}
+        const colecaoMap = new Map();
         
         for (let i = 0; i < bibliotecaData.livros.length; i++) {
             const livro = bibliotecaData.livros[i];
@@ -755,7 +780,6 @@
         }
         
         for (let [colecaoNome, livros] of colecaoMap.entries()) {
-            // Ordenar por volume
             livros.sort((a, b) => (a.volume || 999) - (b.volume || 999));
             
             const volumesExistentes = [];
@@ -793,7 +817,6 @@
         
         let html = '<div class="colecoes-list">';
         
-        // Ordenar coleções por nome
         const colecoesOrdenadas = Array.from(colecoesInfo.keys()).sort();
         
         for (let i = 0; i < colecoesOrdenadas.length; i++) {
@@ -811,11 +834,10 @@
             
             html += '<div class="colecao-livros">';
             
-            // Mostrar livros existentes
             for (let j = 0; j < info.livros.length; j++) {
                 const item = info.livros[j];
                 const autorStr = getAutorString(item.autor);
-                html += '<div class="colecao-livro" data-livro-index="' + j + '">' +
+                html += '<div class="colecao-livro" data-colecao="' + escapeHtml(nome) + '" data-livro-index="' + j + '">' +
                             '<div class="colecao-livro-vol">Vol. ' + (item.volume || '?') + '</div>' +
                             '<div class="colecao-livro-titulo">' +
                                 escapeHtml(item.titulo) +
@@ -826,7 +848,6 @@
             
             html += '</div>';
             
-            // Mostrar volumes em falta
             if (info.faltantes.length > 0) {
                 html += '<div class="missing-volumes">';
                 html += '⚠️ <strong>Volumes em falta:</strong> ' + info.faltantes.join(', ');
@@ -844,7 +865,6 @@
         for (let i = 0; i < colecaoLivros.length; i++) {
             colecaoLivros[i].addEventListener('click', (function(idx) {
                 return function() {
-                    // Encontrar qual livro foi clicado
                     let count = 0;
                     for (let [nome, info] of colecoesInfo.entries()) {
                         for (let j = 0; j < info.livros.length; j++) {
@@ -858,6 +878,186 @@
                     }
                 };
             })(i));
+        }
+    }
+
+    // ========== RENDERIZAR MODAL DE ESTATÍSTICAS COM GRÁFICO ==========
+    function renderizarModalEstatisticas() {
+        const livros = bibliotecaData.livros;
+        if (!livros.length) {
+            statsModalBody.innerHTML = "<div class='no-results'>Nenhum livro carregado.</div>";
+            return;
+        }
+        
+        // Calcular autores
+        const autorCount = new Map();
+        const tagCount = new Map();
+        const colecaoCount = new Map();
+        
+        for (let i = 0; i < livros.length; i++) {
+            const livro = livros[i];
+            const autoresLivro = getAutorArray(livro.autor);
+            for (let a = 0; a < autoresLivro.length; a++) {
+                const autor = autoresLivro[a] || "Desconhecido";
+                autorCount.set(autor, (autorCount.get(autor) || 0) + 1);
+            }
+            if (livro.tags && Array.isArray(livro.tags)) {
+                for (let t = 0; t < livro.tags.length; t++) {
+                    const tag = (livro.tags[t] || "").toLowerCase();
+                    if (tag) tagCount.set(tag, (tagCount.get(tag) || 0) + 1);
+                }
+            }
+            const coll = getColecaoNome(livro);
+            if (coll) colecaoCount.set(coll, (colecaoCount.get(coll) || 0) + 1);
+        }
+        
+        // Top 10 autores para o gráfico
+        const topAutores = Array.from(autorCount.entries()).sort((a,b) => b[1] - a[1]).slice(0, 10);
+        const labels = topAutores.map(a => a[0].length > 20 ? a[0].substring(0, 18) + '…' : a[0]);
+        const data = topAutores.map(a => a[1]);
+        
+        // Cores para as barras (gradiente azul)
+        const cores = [
+            'rgba(31, 79, 110, 0.8)', 'rgba(44, 90, 122, 0.8)', 'rgba(62, 107, 140, 0.8)',
+            'rgba(79, 123, 156, 0.8)', 'rgba(95, 139, 172, 0.8)', 'rgba(112, 155, 188, 0.8)',
+            'rgba(31, 79, 110, 0.7)', 'rgba(44, 90, 122, 0.7)', 'rgba(62, 107, 140, 0.7)', 'rgba(79, 123, 156, 0.7)'
+        ];
+        
+        // Gerar HTML do modal
+        let html = `
+            <div class="stats-section">
+                <h3>📚 Resumo Geral</h3>
+                <div class="stats-grid">
+                    <div class="stat-item"><strong>Total de livros</strong> <span>${livros.length}</span></div>
+                    <div class="stat-item"><strong>Autores distintos</strong> <span>${autorCount.size}</span></div>
+                    <div class="stat-item"><strong>Coleções</strong> <span>${colecaoCount.size}</span></div>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <h3>✍️ Top 10 Autores (mais livros)</h3>
+                <div class="chart-container">
+                    <canvas id="autoresChart" width="400" height="300"></canvas>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <h3>🏷️ Tags mais usadas</h3>
+                <div class="tag-cloud" id="tagCloud"></div>
+            </div>
+            
+            <div class="stats-section">
+                <h3>📖 Coleções (total de volumes)</h3>
+                <div class="stats-grid" id="colecoesGrid"></div>
+            </div>
+        `;
+        
+        statsModalBody.innerHTML = html;
+        
+        // Criar gráfico
+        const ctx = document.getElementById('autoresChart').getContext('2d');
+        if (autoresChart) {
+            autoresChart.destroy();
+        }
+        autoresChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Número de livros',
+                    data: data,
+                    backgroundColor: cores,
+                    borderColor: 'rgba(31, 79, 110, 1)',
+                    borderWidth: 1,
+                    borderRadius: 6,
+                    barPercentage: 0.7,
+                    categoryPercentage: 0.8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            font: { size: 12 },
+                            color: '#1a2c3c'
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: '#1f405b',
+                        titleColor: '#fff',
+                        bodyColor: '#e0e8f0',
+                        callbacks: {
+                            label: function(context) {
+                                return `📚 ${context.raw} livro(s)`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1,
+                            color: '#2c5a7a'
+                        },
+                        grid: {
+                            color: '#cbdde9'
+                        },
+                        title: {
+                            display: true,
+                            text: 'Quantidade de livros',
+                            color: '#1f5779'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#2c5a7a',
+                            font: { size: 11 }
+                        },
+                        grid: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'Autores',
+                            color: '#1f5779'
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Preencher tags
+        const topTags = Array.from(tagCount.entries()).sort((a,b) => b[1] - a[1]).slice(0, 20);
+        const tagCloud = document.getElementById('tagCloud');
+        if (tagCloud) {
+            let tagHtml = '';
+            for (let i = 0; i < topTags.length; i++) {
+                tagHtml += '<span class="tag-stat">#' + escapeHtml(topTags[i][0]) + ' (' + topTags[i][1] + ')</span>';
+            }
+            tagCloud.innerHTML = tagHtml;
+        }
+        
+        // Preencher coleções
+        const topColecoes = Array.from(colecaoCount.entries()).sort((a,b) => b[1] - a[1]);
+        const colecoesGrid = document.getElementById('colecoesGrid');
+        if (colecoesGrid) {
+            let colecoesHtml = '';
+            for (let i = 0; i < topColecoes.length; i++) {
+                const nomeColecao = topColecoes[i][0];
+                const info = colecoesInfo.get(nomeColecao);
+                let statusHtml = '';
+                if (info && info.faltantes.length > 0) {
+                    statusHtml = ' <span style="color:#c97e2a;">(' + info.existentes + '/' + info.total + ')</span>';
+                } else if (info && info.faltantes.length === 0) {
+                    statusHtml = ' <span style="color:#2c7a4a;">(✅ completa)</span>';
+                }
+                colecoesHtml += '<div class="stat-item"><strong>' + escapeHtml(nomeColecao) + '</strong> <span>' + topColecoes[i][1] + ' vol.' + statusHtml + '</span></div>';
+            }
+            colecoesGrid.innerHTML = colecoesHtml;
         }
     }
 
@@ -964,7 +1164,6 @@
         detailModalBody.innerHTML = html;
         detailModal.classList.add('active');
         
-        // Carregar capa
         const coverContainer = document.getElementById('detail-cover-container');
         if (coverContainer && livro.isbn) {
             const coverUrl = getCoverUrl(livro);
@@ -1084,57 +1283,6 @@
         }
     }
 
-    // ========== ESTATÍSTICAS ==========
-    function gerarEstatisticas() {
-        const livros = bibliotecaData.livros;
-        if (!livros.length) return "<div>Nenhum livro carregado.</div>";
-        
-        const autorCount = new Map();
-        const tagCount = new Map();
-        const colecaoCount = new Map();
-        
-        for (let i = 0; i < livros.length; i++) {
-            const livro = livros[i];
-            const autoresLivro = getAutorArray(livro.autor);
-            for (let a = 0; a < autoresLivro.length; a++) {
-                const autor = autoresLivro[a] || "Desconhecido";
-                autorCount.set(autor, (autorCount.get(autor) || 0) + 1);
-            }
-            if (livro.tags && Array.isArray(livro.tags)) {
-                for (let t = 0; t < livro.tags.length; t++) {
-                    const tag = (livro.tags[t] || "").toLowerCase();
-                    if (tag) tagCount.set(tag, (tagCount.get(tag) || 0) + 1);
-                }
-            }
-            const coll = getColecaoNome(livro);
-            if (coll) colecaoCount.set(coll, (colecaoCount.get(coll) || 0) + 1);
-        }
-        
-        const topAutores = Array.from(autorCount.entries()).sort((a,b) => b[1] - a[1]).slice(0, 15);
-        const topTags = Array.from(tagCount.entries()).sort((a,b) => b[1] - a[1]).slice(0, 15);
-        const topColecoes = Array.from(colecaoCount.entries()).sort((a,b) => b[1] - a[1]);
-        
-        let html = '<div class="stats-section"><h3>📚 Resumo</h3><div class="stats-grid">' +
-                    '<div class="stat-item"><strong>Total livros</strong> <span>' + livros.length + '</span></div>' +
-                    '<div class="stat-item"><strong>Autores</strong> <span>' + autorCount.size + '</span></div>' +
-                    '<div class="stat-item"><strong>Coleções</strong> <span>' + colecaoCount.size + '</span></div>' +
-                    '</div></div>' +
-                    '<div class="stats-section"><h3>✍️ Top Autores</h3><div class="stats-grid">';
-        for (let i = 0; i < topAutores.length; i++) {
-            html += '<div class="stat-item">' + escapeHtml(topAutores[i][0]) + ' <span>' + topAutores[i][1] + '</span></div>';
-        }
-        html += '</div></div><div class="stats-section"><h3>🏷️ Tags</h3><div class="tag-cloud">';
-        for (let i = 0; i < topTags.length; i++) {
-            html += '<span class="tag-stat">#' + escapeHtml(topTags[i][0]) + ' (' + topTags[i][1] + ')</span>';
-        }
-        html += '</div></div><div class="stats-section"><h3>📖 Coleções</h3><div class="stats-grid">';
-        for (let i = 0; i < topColecoes.length; i++) {
-            html += '<div class="stat-item">' + escapeHtml(topColecoes[i][0]) + ' <span>' + topColecoes[i][1] + ' vol.</span></div>';
-        }
-        html += '</div></div>';
-        return html;
-    }
-
     // ========== CARREGAR DADOS ==========
     async function carregarDados() {
         booksContainer.innerHTML = '<div class="no-results">📖 A carregar biblioteca...</div>';
@@ -1148,11 +1296,6 @@
                     console.log("✅ Carregados " + bibliotecaData.livros.length + " livros");
                     calcularInfoColecoes();
                     console.log("📚 Coleções encontradas:", colecoesInfo.size);
-                    for (let [nome, info] of colecoesInfo.entries()) {
-                        if (info.faltantes.length > 0) {
-                            console.log("⚠️ " + nome + ": faltam volumes " + info.faltantes.join(', '));
-                        }
-                    }
                 }
             } else {
                 console.warn("Ficheiro não encontrado");
@@ -1183,7 +1326,7 @@
         });
         
         openStatsBtn.addEventListener('click', function() {
-            statsModalBody.innerHTML = gerarEstatisticas();
+            renderizarModalEstatisticas();
             statsModal.classList.add('active');
         });
         
@@ -1198,6 +1341,10 @@
         
         closeStatsModal.addEventListener('click', function() {
             statsModal.classList.remove('active');
+            if (autoresChart) {
+                autoresChart.destroy();
+                autoresChart = null;
+            }
         });
         
         closeColecoesModal.addEventListener('click', function() {
