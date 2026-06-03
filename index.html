@@ -420,7 +420,7 @@
             color: #c97e2a;
         }
 
-        /* Estilos para o modal de estatísticas com gráfico */
+        /* Estilos para o modal de estatísticas com gráfico horizontal */
         .chart-container {
             background: #ffffff;
             border-radius: 1rem;
@@ -429,7 +429,7 @@
         }
 
         canvas#autoresChart {
-            max-height: 400px;
+            max-height: 500px;
             width: 100%;
         }
 
@@ -617,6 +617,10 @@
             }
             .chart-container {
                 padding: 0.5rem;
+                overflow-x: auto;
+            }
+            canvas#autoresChart {
+                min-width: 500px;
             }
         }
 
@@ -697,7 +701,7 @@
     let bibliotecaData = { livros: [] };
     let livrosFiltrados = [];
     let colecoesInfo = new Map();
-    let autoresChart = null; // Para guardar a referência do gráfico
+    let autoresChart = null;
 
     // Elementos
     const searchInput = document.getElementById('searchInput');
@@ -881,7 +885,7 @@
         }
     }
 
-    // ========== RENDERIZAR MODAL DE ESTATÍSTICAS COM GRÁFICO ==========
+    // ========== RENDERIZAR MODAL DE ESTATÍSTICAS COM GRÁFICO HORIZONTAL ==========
     function renderizarModalEstatisticas() {
         const livros = bibliotecaData.livros;
         if (!livros.length) {
@@ -911,17 +915,18 @@
             if (coll) colecaoCount.set(coll, (colecaoCount.get(coll) || 0) + 1);
         }
         
-        // Top 10 autores para o gráfico
+        // Top 10 autores para o gráfico (ordenados para ficar do maior para o menor no gráfico horizontal)
         const topAutores = Array.from(autorCount.entries()).sort((a,b) => b[1] - a[1]).slice(0, 10);
-        const labels = topAutores.map(a => a[0].length > 20 ? a[0].substring(0, 18) + '…' : a[0]);
-        const data = topAutores.map(a => a[1]);
+        // Inverter para que o maior fique em cima no gráfico horizontal
+        const labels = topAutores.map(a => a[0].length > 25 ? a[0].substring(0, 22) + '…' : a[0]).reverse();
+        const data = topAutores.map(a => a[1]).reverse();
         
         // Cores para as barras (gradiente azul)
         const cores = [
-            'rgba(31, 79, 110, 0.8)', 'rgba(44, 90, 122, 0.8)', 'rgba(62, 107, 140, 0.8)',
-            'rgba(79, 123, 156, 0.8)', 'rgba(95, 139, 172, 0.8)', 'rgba(112, 155, 188, 0.8)',
-            'rgba(31, 79, 110, 0.7)', 'rgba(44, 90, 122, 0.7)', 'rgba(62, 107, 140, 0.7)', 'rgba(79, 123, 156, 0.7)'
-        ];
+            'rgba(31, 79, 110, 0.85)', 'rgba(44, 90, 122, 0.85)', 'rgba(62, 107, 140, 0.85)',
+            'rgba(79, 123, 156, 0.85)', 'rgba(95, 139, 172, 0.85)', 'rgba(112, 155, 188, 0.85)',
+            'rgba(31, 79, 110, 0.75)', 'rgba(44, 90, 122, 0.75)', 'rgba(62, 107, 140, 0.75)', 'rgba(79, 123, 156, 0.75)'
+        ].reverse();
         
         // Gerar HTML do modal
         let html = `
@@ -937,7 +942,7 @@
             <div class="stats-section">
                 <h3>✍️ Top 10 Autores (mais livros)</h3>
                 <div class="chart-container">
-                    <canvas id="autoresChart" width="400" height="300"></canvas>
+                    <canvas id="autoresChart" width="400" height="400"></canvas>
                 </div>
             </div>
             
@@ -954,7 +959,7 @@
         
         statsModalBody.innerHTML = html;
         
-        // Criar gráfico
+        // Criar gráfico horizontal (bar chart com indexAxis: 'y')
         const ctx = document.getElementById('autoresChart').getContext('2d');
         if (autoresChart) {
             autoresChart.destroy();
@@ -971,10 +976,11 @@
                     borderWidth: 1,
                     borderRadius: 6,
                     barPercentage: 0.7,
-                    categoryPercentage: 0.8
+                    categoryPercentage: 0.85
                 }]
             },
             options: {
+                indexAxis: 'y',  // Isto faz o gráfico ficar horizontal!
                 responsive: true,
                 maintainAspectRatio: true,
                 plugins: {
@@ -997,7 +1003,7 @@
                     }
                 },
                 scales: {
-                    y: {
+                    x: {
                         beginAtZero: true,
                         ticks: {
                             stepSize: 1,
@@ -1012,7 +1018,7 @@
                             color: '#1f5779'
                         }
                     },
-                    x: {
+                    y: {
                         ticks: {
                             color: '#2c5a7a',
                             font: { size: 11 }
