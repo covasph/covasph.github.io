@@ -919,7 +919,7 @@
         const topAutores = Array.from(autorCount.entries()).sort((a,b) => b[1] - a[1]).slice(0, 10);
         // Inverter para que o maior fique em cima no gráfico horizontal
         const labels = topAutores.map(a => a[0].length > 25 ? a[0].substring(0, 22) + '…' : a[0]).reverse();
-        const data = topAutores.map(a => a[1]).reverse();
+        const data = topAutores.map(a => a[1]);
         
         // Cores para as barras (gradiente azul)
         const cores = [
