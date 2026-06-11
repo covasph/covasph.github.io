@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livro-Jogo: A Escolha</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', serif;
+            background: #1a1a2e;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: #0f0f1a;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .imagem-container {
+            width: 100%;
+            height: 300px;
+            background: #2d2d3a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .imagem-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .conteudo {
+            padding: 30px;
+        }
+        .titulo {
+            color: #ffd700;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-left: 4px solid #ffd700;
+            padding-left: 15px;
+        }
+        .texto {
+            color: #e0e0e0;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        button {
+            background: #2d2d3a;
+            color: #ffd700;
+            border: 1px solid #ffd700;
+            padding: 14px 20px;
+            font-size: 1rem;
+            font-family: inherit;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+        }
+        button:hover {
+            background: #ffd700;
+            color: #0f0f1a;
+            transform: translateX(5px);
+        }
+        .reset {
+            margin-top: 20px;
+            background: transparent;
+            border-color: #666;
+            color: #999;
+            text-align: center;
+        }
+        .reset:hover {
+            background: #666;
+            color: white;
+            transform: none;
+        }
+        @media (max-width: 600px) {
+            .conteudo { padding: 20px; }
+            .texto { font-size: 1rem; }
+            .imagem-container { height: 200px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="imagem-container" id="imagem-container">
+            <img id="imagem-principal" src="" alt="Ilustração da cena">
+        </div>
+        <div class="conteudo">
+            <div class="titulo" id="titulo"></div>
+            <div class="texto" id="texto"></div>
+            <div class="opcoes" id="opcoes"></div>
+            <button class="reset" id="reset-btn">↺ Recomeçar</button>
+        </div>
+    </div>
+
+    <script>
+        // ========== A TUA HISTÓRIA AQUI ==========
+        const historia = {
+            "inicio": {
+                id: "inicio",
+                titulo: "🌲 O Início da Jornada",
+                texto: "Estás numa clareira iluminada pela lua. À tua frente, três caminhos se abrem na floresta sombria...",
+                imagem: "https://picsum.photos/id/104/800/400",  // paisagem floresta
+                opcoes: [
+                    { descricao: "⚔️ Lutar - enfrentar o que vier", destino: "luta" },
+                    { descricao: "🏃 Fugir - correr para salvar a pele", destino: "fuga" },
+                    { descricao: "🌿 Passar despercebido - esgueirar-se pelas sombras", destino: "despercebido" }
+                ]
+            },
+            "luta": {
+                id: "luta",
+                titulo: "⚔️ A Batalha",
+                texto: "Enfrentas um lobo gigante de olhos vermelhos. Lutaste com bravura e venceste! Mas ficaste ferido...",
+                imagem: "https://picsum.photos/id/212/800/400",  // lobo/batalha
+                opcoes: [
+                    { descricao: "🏥 Procurar ajuda na aldeia", destino: "ajuda" },
+                    { descricao: "🔄 Voltar ao início", destino: "inicio" }
+                ]
+            },
+            "fuga": {
+                id: "fuga",
+                titulo: "🏃 A Fuga",
+                texto: "Correste tão rápido que te perdeste na floresta. Ao amanhecer, encontras uma cabana abandonada.",
+                imagem: "https://picsum.photos/id/164/800/400",  // cabana
+                opcoes: [
+                    { descricao: "🚪 Explorar a cabana", destino: "cabana" },
+                    { descricao: "🔄 Voltar ao início", destino: "inicio" }
+                ]
+            },
+            "despercebido": {
+                id: "despercebido",
+                titulo: "🌙 Passar Despercebido",
+                texto: "Escondeste-te entre as árvores e ouviste segredos importantes. Descobres um mapa para um tesouro!",
+                imagem: "https://picsum.photos/id/96/800/400",  // tesouro
+                opcoes: [
+                    { descricao: "🗺️ Seguir o mapa", destino: "tesouro" },
+                    { descricao: "🔄 Voltar ao início", destino: "inicio" }
+                ]
+            },
+            "ajuda": {
+                id: "ajuda",
+                titulo: "🏥 Final Heróico",
+                texto: "Os aldeões trataram dos teus ferimentos e agora és conhecido como o Guardião da Floresta. Venceste!",
+                imagem: "https://picsum.photos/id/219/800/400",  // aldeia
+                opcoes: []
+            },
+            "cabana": {
+                id: "cabana",
+                titulo: "🏚️ Final Misterioso",
+                texto: "A cabana tinha um grimório antigo. Aprendeste magia e agora és um feiticeiro errante.",
+                imagem: "https://picsum.photos/id/377/800/400",
+                opcoes: []
+            },
+            "tesouro": {
+                id: "tesouro",
+                titulo: "💰 Final Rico",
+                texto: "Encontraste o tesouro perdido! Vives com fartura e nunca mais precisas de lutar.",
+                imagem: "https://picsum.photos/id/178/800/400",
+                opcoes: []
+            }
+        };
+        // ========== FIM DA HISTÓRIA ==========
+
+        let secaoAtual = "inicio";
+
+        function carregarSecao(secaoId) {
+            const secao = historia[secaoId];
+            if (!secao) {
+                carregarSecao("inicio");
+                return;
+            }
+            
+            secaoAtual = secaoId;
+            
+            // Atualizar DOM
+            document.getElementById("titulo").textContent = secao.titulo || "";
+            document.getElementById("texto").innerHTML = secao.texto;
+            
+            // Imagem
+            const imgEl = document.getElementById("imagem-principal");
+            if (secao.imagem) {
+                imgEl.src = secao.imagem;
+                imgEl.alt = secao.titulo || "Ilustração";
+            } else {
+                imgEl.src = "https://picsum.photos/id/20/800/400";
+            }
+            
+            // Botões de opção
+            const opcoesDiv = document.getElementById("opcoes");
+            opcoesDiv.innerHTML = "";
+            
+            if (secao.opcoes && secao.opcoes.length > 0) {
+                secao.opcoes.forEach(opcao => {
+                    const btn = document.createElement("button");
+                    btn.textContent = opcao.descricao;
+                    btn.onclick = () => carregarSecao(opcao.destino);
+                    opcoesDiv.appendChild(btn);
+                });
+            } else {
+                // Fim da história - mostra mensagem
+                const fimMsg = document.createElement("p");
+                fimMsg.style.color = "#ffd700";
+                fimMsg.style.fontStyle = "italic";
+                fimMsg.textContent = "✨ FIM DA HISTÓRIA ✨";
+                opcoesDiv.appendChild(fimMsg);
+            }
+        }
+
+        // Reset
+        document.getElementById("reset-btn").onclick = () => carregarSecao("inicio");
+
+        // Iniciar
+        carregarSecao("inicio");
+    </script>
+</body>
+</html>
