@@ -1,64 +1,187 @@
 {
   "inicio": {
     "id": "inicio",
-    "titulo": "🌲 O Início da Jornada",
-    "texto": "Estás numa clareira iluminada pela lua. À tua frente, três caminhos se abrem na floresta sombria...",
-    "imagem": "https://picsum.photos/id/104/800/400",
+    "titulo": "🚀 Missão Rotineira",
+    "texto": "És Kael, piloto do cargueiro 'Estrela Solitária'. Durante uma rota comercial entre Marte e a estação Ceres, os sensores detectam uma anomalia. Um enorme objecto metálico flutua em órbita morta de Europa, a lua de Júpiter. A carga não é urgente... e a curiosidade fala mais alto. O que fazes?",
+    "imagem": "https://picsum.photos/id/0/800/400",
     "opcoes": [
-      { "descricao": "⚔️ Lutar - enfrentar o que vier", "destino": "luta" },
-      { "descricao": "🏃 Fugir - correr para salvar a pele", "destino": "fuga" },
-      { "descricao": "🌿 Passar despercebido - esgueirar-se pelas sombras", "destino": "despercebido" }
+      { "descricao": "🛸 Investigar a nave alienígena", "destino": "investigar_nave" },
+      { "descricao": "📡 Reportar à frota e seguir viagem", "destino": "reportar_frota" },
+      { "descricao": "🔭 Observar de longe com scanners", "destino": "observar_longe" }
     ]
   },
-  "luta": {
-    "id": "luta",
-    "titulo": "⚔️ A Batalha",
-    "texto": "Enfrentas um lobo gigante de olhos vermelhos. Lutaste com bravura e venceste! Mas ficaste ferido...",
-    "imagem": "https://picsum.photos/id/212/800/400",
+  "investigar_nave": {
+    "id": "investigar_nave",
+    "titulo": "🛸 Aproximação",
+    "texto": "Manobras delicadas. A nave é imensa, com formas orgânicas e uma superfície escura que não reflecte luz. A escotilha de emergência está aberta, como se esperasse por ti. Entras na nave, gravidade artificial ainda funciona. O que te espera?",
+    "imagem": "https://picsum.photos/id/107/800/400",
     "opcoes": [
-      { "descricao": "🏥 Procurar ajuda na aldeia", "destino": "ajuda" },
-      { "descricao": "🔄 Voltar ao início", "destino": "inicio" }
+      { "descricao": "👣 Explorar o corredor principal", "destino": "corredor_principal" },
+      { "descricao": "💻 Ir à sala de comando", "destino": "sala_comando" },
+      { "descricao": "🔧 Verificar o reactor da nave", "destino": "reactor_alien" }
     ]
   },
-  "fuga": {
-    "id": "fuga",
-    "titulo": "🏃 A Fuga",
-    "texto": "Correste tão rápido que te perdeste na floresta. Ao amanhecer, encontras uma cabana abandonada.",
-    "imagem": "https://picsum.photos/id/164/800/400",
+  "corredor_principal": {
+    "id": "corredor_principal",
+    "titulo": "👣 O Corredor das Memórias",
+    "texto": "O corredor está cheio de hologramas congelados: alienígenas humanoides de pele azulada, com quatro braços. Parecem ter morrido subitamente há centenas de anos. No fim do corredor, uma cápsula de criogenia está activa. Algo se mexe lá dentro.",
+    "imagem": "https://picsum.photos/id/119/800/400",
     "opcoes": [
-      { "descricao": "🚪 Explorar a cabana", "destino": "cabana" },
-      { "descricao": "🔄 Voltar ao início", "destino": "inicio" }
+      { "descricao": "🔓 Abrir a cápsula", "destino": "abrir_capsula" },
+      { "descricao": "📹 Filmar e sair rapidamente", "destino": "fugir_assustado" },
+      { "descricao": "🛡️ Tentar comunicar", "destino": "comunicar_alien" }
     ]
   },
-  "despercebido": {
-    "id": "despercebido",
-    "titulo": "🌙 Passar Despercebido",
-    "texto": "Escondeste-te entre as árvores e ouviste segredos importantes. Descobres um mapa para um tesouro!",
-    "imagem": "https://picsum.photos/id/96/800/400",
+  "sala_comando": {
+    "id": "sala_comando",
+    "titulo": "💻 A Sala de Comando",
+    "texto": "Encontras uma cadeira que se ajusta ao teu corpo. Painéis alienígenas piscam com símbolos desconhecidos. De repente, o sistema traduz parcialmente: 'Protocolo de Transmissão - Enviar sinal para a Frota... SIM/NÃO'. Algo te diz que isto é importante.",
+    "imagem": "https://picsum.photos/id/193/800/400",
     "opcoes": [
-      { "descricao": "🗺️ Seguir o mapa", "destino": "tesouro" },
-      { "descricao": "🔄 Voltar ao início", "destino": "inicio" }
+      { "descricao": "📡 Enviar o sinal", "destino": "enviar_sinal" },
+      { "descricao": "🚫 Ignorar e procurar dados", "destino": "procurar_dados" },
+      { "descricao": "🔌 Desligar o sistema", "destino": "desligar_sistema" }
     ]
   },
-  "ajuda": {
-    "id": "ajuda",
-    "titulo": "🏥 Final Heróico",
-    "texto": "Os aldeões trataram dos teus ferimentos e agora és conhecido como o Guardião da Floresta. Venceste!",
-    "imagem": "https://picsum.photos/id/219/800/400",
+  "reactor_alien": {
+    "id": "reactor_alien",
+    "titulo": "🔧 O Coração da Nave",
+    "texto": "O reactor é um cristal pulsante do tamanho de um autocarro. Emite uma energia nunca antes vista. Ao aproximares-te, sentes um formigueiro no corpo. Uma voz na tua mente diz: 'Este cristal é o último da sua espécie. Ele escolhe o seu portador.'",
+    "imagem": "https://picsum.photos/id/28/800/400",
+    "opcoes": [
+      { "descricao": "💎 Tocar no cristal", "destino": "tocar_cristal" },
+      { "descricao": "📸 Fotografar e ir embora", "destino": "fugir_assustado" },
+      { "descricao": "⚡ Tentar extrair uma amostra", "destino": "amostra_cristal" }
+    ]
+  },
+  "abrir_capsula": {
+    "id": "abrir_capsula",
+    "titulo": "🔓 O Despertar",
+    "texto": "A cápsula abre-se. Uma alienígena de pele ciano acorda lentamente. Olha para ti com olhos grandes e negros. Em vez de medo, há gratidão. 'Finalmente... Estava à tua espera, piloto. O Império Xylos precisa de um mensageiro.' Oferece-te um colar brilhante.",
+    "imagem": "https://picsum.photos/id/98/800/400",
+    "opcoes": [
+      { "descricao": "🤝 Aceitar o colar e a missão", "destino": "aliado_xylos" },
+      { "descricao": "❓ Perguntar o que é o Império", "destino": "perguntar_imperio" },
+      { "descricao": "🏃 Recusar e fugir para o cargueiro", "destino": "fim_fuga_acovardado" }
+    ]
+  },
+  "comunicar_alien": {
+    "id": "comunicar_alien",
+    "titulo": "🛡️ Primeiro Contacto Pacífico",
+    "texto": "Usas o tradutor da tua nave para emitir sons harmónicos. A criatura na cápsula responde com luzes coloridas. É uma criança alienígena, perdida e com medo. Ela mostra-te holograficamente a localização da sua frota... e um aviso: 'Eles vêm destruir a Terra em 3 dias.'",
+    "imagem": "https://picsum.photos/id/207/800/400",
+    "opcoes": [
+      { "descricao": "🌍 Levar a criança como prova", "destino": "corrida_contra_tempo" },
+      { "descricao": "📡 Enviar aviso para a Terra", "destino": "aviso_terra" },
+      { "descricao": "🤝 Tentar negociar com a frota", "destino": "negociar_frota" }
+    ]
+  },
+  "tocar_cristal": {
+    "id": "tocar_cristal",
+    "titulo": "💎 Escolhido",
+    "texto": "Ao tocares no cristal, uma onda de energia percorre o teu corpo. Sentes que podes comandar a nave alienígena com o pensamento. Tornaste-te o novo piloto da 'Aurora Estelar', uma nave capaz de viajar entre galáxias. O universo acabou de ficar maior.",
+    "imagem": "https://picsum.photos/id/188/800/400",
     "opcoes": []
   },
-  "cabana": {
-    "id": "cabana",
-    "titulo": "🏚️ Final Misterioso",
-    "texto": "A cabana tinha um grimório antigo. Aprendeste magia e agora és um feiticeiro errante.",
-    "imagem": "https://picsum.photos/id/377/800/400",
+  "enviar_sinal": {
+    "id": "enviar_sinal",
+    "titulo": "📡 Alerta Cósmico",
+    "texto": "O sinal ecoa pelo espaço. Horas depois, uma frota humana chega. A nave alienígena é desmontada e levada para a Terra. Tornas-te herói nacional. Mas à noite, tens pesadelos com a voz do cristal: 'Traíste-nos, piloto.'",
+    "imagem": "https://picsum.photos/id/198/800/400",
     "opcoes": []
   },
-  "tesouro": {
-    "id": "tesouro",
-    "titulo": "💰 Final Rico",
-    "texto": "Encontraste o tesouro perdido! Vives com fartura e nunca mais precisas de lutar.",
-    "imagem": "https://picsum.photos/id/178/800/400",
+  "amostra_cristal": {
+    "id": "amostra_cristal",
+    "titulo": "⚡ Reacção em Cadeia",
+    "texto": "Mal tocas no cristal com a ferramenta, ele liberta uma explosão de energia. A nave começa a implodir. Corres para o teu cargueiro e escapas por segundos. Mas levas uma amostra... que começa a brilhar no teu bolso. Cientistas pagarão milhões por isto.",
+    "imagem": "https://picsum.photos/id/126/800/400",
+    "opcoes": []
+  },
+  "reportar_frota": {
+    "id": "reportar_frota",
+    "titulo": "📡 Dever de Oficial",
+    "texto": "Reportas a anomalia. O comando envia uma nave de guerra. Meses depois, descobre-se que a nave alienígena era uma arma biológica. Se tivesses entrado, estarias morto. Recebes uma medalha e uma promoção. Parabéns, herói por omissão.",
+    "imagem": "https://picsum.photos/id/156/800/400",
+    "opcoes": []
+  },
+  "observar_longe": {
+    "id": "observar_longe",
+    "titulo": "🔭 Cautela Espacial",
+    "texto": "Observas durante horas. A nave alienígena não se move. De repente, uma explosão interna parte-a ao meio. Fragmentos espalham-se. Apanhas alguns destroços e vendes a cientistas. Ficas rico, mas sempre te perguntas... o que teria acontecido se tivesses entrado?",
+    "imagem": "https://picsum.photos/id/157/800/400",
+    "opcoes": []
+  },
+  "fugir_assustado": {
+    "id": "fugir_assustado",
+    "titulo": "🏃 Covardia Salva Vidas",
+    "texto": "O medo fala mais alto. Foges para o cargueiro e aceleras a fundo. Minutos depois, a nave alienígena desintegra-se. Algo estava errado ali. Chegas a Marte com a carga atrasada, mas vivo. Nem sempre a coragem é a melhor escolha.",
+    "imagem": "https://picsum.photos/id/223/800/400",
+    "opcoes": []
+  },
+  "procurar_dados": {
+    "id": "procurar_dados",
+    "titulo": "📚 O Mapa Estelar",
+    "texto": "Em vez de enviar o sinal, descarregas os dados da nave. É um mapa estelar com a localização de 3 mundos alienígenas desconhecidos. Vendes a informação aos maiores laboratórios. Ficas bilionário e financiaste a primeira colónia fora do sistema solar.",
+    "imagem": "https://picsum.photos/id/229/800/400",
+    "opcoes": []
+  },
+  "desligar_sistema": {
+    "id": "desligar_sistema",
+    "titulo": "🔌 Silêncio Total",
+    "texto": "Desligas tudo. As luzes apagam-se. O silêncio é absoluto. Quando voltas ao cargueiro, sentes que alguém te observa. Nunca mais te sentes sozinho no espaço. É um mistério que te acompanhará para sempre.",
+    "imagem": "https://picsum.photos/id/239/800/400",
+    "opcoes": []
+  },
+  "aliado_xylos": {
+    "id": "aliado_xylos",
+    "titulo": "🤝 Aliança Interestelar",
+    "texto": "Aceitas o colar. Ele traduz tudo. A alienígena, Seraphis, revela que o Império Xylos quer paz. Com o colar, tornas-te embaixador da humanidade. Anos depois, a Terra une-se a uma federação galáctica. O teu nome fica na história.",
+    "imagem": "https://picsum.photos/id/195/800/400",
+    "opcoes": []
+  },
+  "perguntar_imperio": {
+    "id": "perguntar_imperio",
+    "titulo": "❓ A Verdade",
+    "texto": "Ela explica: o Império Xylos foi destruído por uma praga. Ela é a última princesa. O colar contém a cura. Se a levares para a Terra, podes salvar os humanos de uma futura pandemia. Aceitas a responsabilidade.",
+    "imagem": "https://picsum.photos/id/175/800/400",
+    "opcoes": [
+      { "descricao": "💊 Levar a cura para a Terra", "destino": "salvador_mundial" },
+      { "descricao": "🏃 Fugir com medo", "destino": "fim_fuga_acovardado" }
+    ]
+  },
+  "salvador_mundial": {
+    "id": "salvador_mundial",
+    "titulo": "💊 O Salvador",
+    "texto": "Levas a cura. Anos depois, uma praga alienígena chega à Terra... mas tu tens a solução. És aclamado como o maior herói da humanidade. A princesa alienígena governa ao teu lado. Uma nova era começa.",
+    "imagem": "https://picsum.photos/id/191/800/400",
+    "opcoes": []
+  },
+  "corrida_contra_tempo": {
+    "id": "corrida_contra_tempo",
+    "titulo": "🌍 Corrida Contra o Tempo",
+    "texto": "Levas a criança e avisas o comando da Terra. Com 3 dias de antecedência, preparam defesas. A frota inimiga é derrotada. És condecorado e a criança torna-se ponte entre espécies. Paz duradoura.",
+    "imagem": "https://picsum.photos/id/155/800/400",
+    "opcoes": []
+  },
+  "aviso_terra": {
+    "id": "aviso_terra",
+    "titulo": "📡 O Último Aviso",
+    "texto": "Envias o aviso, mas não acreditam em ti. A frota inimiga ataca. A guerra dura 10 anos. Sobrevives, mas o preço foi alto. Arrependes-te de não ter feito mais?",
+    "imagem": "https://picsum.photos/id/133/800/400",
+    "opcoes": []
+  },
+  "negociar_frota": {
+    "id": "negociar_frota",
+    "titulo": "🤝 Diplomacia Extrema",
+    "texto": "Vais ao encontro da frota inimiga. Mostras a criança. Eles recuam. Explicam que procuravam um príncipe raptado. A criança, na verdade, é a herdeira. A guerra é evitada. Tornas-te mediador intergaláctico.",
+    "imagem": "https://picsum.photos/id/170/800/400",
+    "opcoes": []
+  },
+  "fim_fuga_acovardado": {
+    "id": "fim_fuga_acovardado",
+    "titulo": "🏃 O Fugitivo",
+    "texto": "Foges. Mas o arrependimento corrói-te. Sabes que poderias ter mudado o destino da humanidade. Morres velho e amargurado, a olhar para as estrelas. Às vezes, o maior inimigo é o medo.",
+    "imagem": "https://picsum.photos/id/80/800/400",
     "opcoes": []
   }
 }
