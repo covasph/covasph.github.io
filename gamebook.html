@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livro-Jogo: A Escolha</title>
+    <title>Gamebook - Aventura Interativa</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -87,6 +87,17 @@
             color: white;
             transform: none;
         }
+        .loading {
+            text-align: center;
+            color: #ffd700;
+            padding: 50px;
+            font-size: 1.2rem;
+        }
+        .erro {
+            text-align: center;
+            color: #ff6666;
+            padding: 50px;
+        }
         @media (max-width: 600px) {
             .conteudo { padding: 20px; }
             .texto { font-size: 1rem; }
@@ -95,136 +106,135 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="imagem-container" id="imagem-container">
-            <img id="imagem-principal" src="" alt="Ilustração da cena">
-        </div>
-        <div class="conteudo">
-            <div class="titulo" id="titulo"></div>
-            <div class="texto" id="texto"></div>
-            <div class="opcoes" id="opcoes"></div>
-            <button class="reset" id="reset-btn">↺ Recomeçar</button>
+    <div class="container" id="app">
+        <div class="loading">
+            ⚙️ A carregar a tua aventura...
         </div>
     </div>
 
     <script>
-        // ========== A TUA HISTÓRIA AQUI ==========
-        const historia = {
-            "inicio": {
-                id: "inicio",
-                titulo: "🌲 O Início da Jornada",
-                texto: "Estás numa clareira iluminada pela lua. À tua frente, três caminhos se abrem na floresta sombria...",
-                imagem: "https://picsum.photos/id/104/800/400",  // paisagem floresta
-                opcoes: [
-                    { descricao: "⚔️ Lutar - enfrentar o que vier", destino: "luta" },
-                    { descricao: "🏃 Fugir - correr para salvar a pele", destino: "fuga" },
-                    { descricao: "🌿 Passar despercebido - esgueirar-se pelas sombras", destino: "despercebido" }
-                ]
-            },
-            "luta": {
-                id: "luta",
-                titulo: "⚔️ A Batalha",
-                texto: "Enfrentas um lobo gigante de olhos vermelhos. Lutaste com bravura e venceste! Mas ficaste ferido...",
-                imagem: "https://picsum.photos/id/212/800/400",  // lobo/batalha
-                opcoes: [
-                    { descricao: "🏥 Procurar ajuda na aldeia", destino: "ajuda" },
-                    { descricao: "🔄 Voltar ao início", destino: "inicio" }
-                ]
-            },
-            "fuga": {
-                id: "fuga",
-                titulo: "🏃 A Fuga",
-                texto: "Correste tão rápido que te perdeste na floresta. Ao amanhecer, encontras uma cabana abandonada.",
-                imagem: "https://picsum.photos/id/164/800/400",  // cabana
-                opcoes: [
-                    { descricao: "🚪 Explorar a cabana", destino: "cabana" },
-                    { descricao: "🔄 Voltar ao início", destino: "inicio" }
-                ]
-            },
-            "despercebido": {
-                id: "despercebido",
-                titulo: "🌙 Passar Despercebido",
-                texto: "Escondeste-te entre as árvores e ouviste segredos importantes. Descobres um mapa para um tesouro!",
-                imagem: "https://picsum.photos/id/96/800/400",  // tesouro
-                opcoes: [
-                    { descricao: "🗺️ Seguir o mapa", destino: "tesouro" },
-                    { descricao: "🔄 Voltar ao início", destino: "inicio" }
-                ]
-            },
-            "ajuda": {
-                id: "ajuda",
-                titulo: "🏥 Final Heróico",
-                texto: "Os aldeões trataram dos teus ferimentos e agora és conhecido como o Guardião da Floresta. Venceste!",
-                imagem: "https://picsum.photos/id/219/800/400",  // aldeia
-                opcoes: []
-            },
-            "cabana": {
-                id: "cabana",
-                titulo: "🏚️ Final Misterioso",
-                texto: "A cabana tinha um grimório antigo. Aprendeste magia e agora és um feiticeiro errante.",
-                imagem: "https://picsum.photos/id/377/800/400",
-                opcoes: []
-            },
-            "tesouro": {
-                id: "tesouro",
-                titulo: "💰 Final Rico",
-                texto: "Encontraste o tesouro perdido! Vives com fartura e nunca mais precisas de lutar.",
-                imagem: "https://picsum.photos/id/178/800/400",
-                opcoes: []
-            }
-        };
-        // ========== FIM DA HISTÓRIA ==========
+        // Variáveis globais
+        let historia = null;
+        let secaoAtual = null;
 
-        let secaoAtual = "inicio";
+        // Aguardar o DOM carregar
+        document.addEventListener('DOMContentLoaded', () => {
+            carregarHistoria();
+        });
+
+        async function carregarHistoria() {
+            try {
+                // Buscar o ficheiro JSON
+                const resposta = await fetch('dados/historia.json');
+                
+                if (!resposta.ok) {
+                    throw new Error(`HTTP ${resposta.status}: ${resposta.statusText}`);
+                }
+                
+                historia = await resposta.json();
+                
+                // Verificar se tem a secção "inicio"
+                if (!historia['inicio']) {
+                    throw new Error('O JSON deve ter uma secção chamada "inicio"');
+                }
+                
+                // Renderizar a história
+                renderizarApp();
+                carregarSecao('inicio');
+                
+            } catch (erro) {
+                console.error('Erro ao carregar história:', erro);
+                mostrarErro(`Não foi possível carregar a história: ${erro.message}`);
+            }
+        }
+
+        function renderizarApp() {
+            const app = document.getElementById('app');
+            app.innerHTML = `
+                <div class="imagem-container" id="imagem-container">
+                    <img id="imagem-principal" src="" alt="Ilustração da cena">
+                </div>
+                <div class="conteudo">
+                    <div class="titulo" id="titulo"></div>
+                    <div class="texto" id="texto"></div>
+                    <div class="opcoes" id="opcoes"></div>
+                    <button class="reset" id="reset-btn">↺ Recomeçar</button>
+                </div>
+            `;
+            
+            // Atribuir evento ao botão reset
+            document.getElementById('reset-btn').addEventListener('click', () => {
+                carregarSecao('inicio');
+            });
+        }
 
         function carregarSecao(secaoId) {
+            if (!historia) {
+                console.error('História não carregada');
+                return;
+            }
+            
             const secao = historia[secaoId];
             if (!secao) {
-                carregarSecao("inicio");
+                console.error(`Secção "${secaoId}" não encontrada`);
+                carregarSecao('inicio');
                 return;
             }
             
             secaoAtual = secaoId;
             
-            // Atualizar DOM
-            document.getElementById("titulo").textContent = secao.titulo || "";
-            document.getElementById("texto").innerHTML = secao.texto;
+            // Atualizar título
+            const tituloEl = document.getElementById('titulo');
+            if (tituloEl) tituloEl.textContent = secao.titulo || '';
             
-            // Imagem
-            const imgEl = document.getElementById("imagem-principal");
-            if (secao.imagem) {
-                imgEl.src = secao.imagem;
-                imgEl.alt = secao.titulo || "Ilustração";
-            } else {
-                imgEl.src = "https://picsum.photos/id/20/800/400";
+            // Atualizar texto
+            const textoEl = document.getElementById('texto');
+            if (textoEl) textoEl.innerHTML = secao.texto;
+            
+            // Atualizar imagem
+            const imgEl = document.getElementById('imagem-principal');
+            if (imgEl) {
+                if (secao.imagem) {
+                    imgEl.src = secao.imagem;
+                    imgEl.alt = secao.titulo || 'Ilustração';
+                } else {
+                    imgEl.src = 'https://picsum.photos/id/20/800/400';
+                }
             }
             
-            // Botões de opção
-            const opcoesDiv = document.getElementById("opcoes");
-            opcoesDiv.innerHTML = "";
-            
-            if (secao.opcoes && secao.opcoes.length > 0) {
-                secao.opcoes.forEach(opcao => {
-                    const btn = document.createElement("button");
-                    btn.textContent = opcao.descricao;
-                    btn.onclick = () => carregarSecao(opcao.destino);
-                    opcoesDiv.appendChild(btn);
-                });
-            } else {
-                // Fim da história - mostra mensagem
-                const fimMsg = document.createElement("p");
-                fimMsg.style.color = "#ffd700";
-                fimMsg.style.fontStyle = "italic";
-                fimMsg.textContent = "✨ FIM DA HISTÓRIA ✨";
-                opcoesDiv.appendChild(fimMsg);
+            // Atualizar botões de opção
+            const opcoesDiv = document.getElementById('opcoes');
+            if (opcoesDiv) {
+                opcoesDiv.innerHTML = '';
+                
+                if (secao.opcoes && secao.opcoes.length > 0) {
+                    secao.opcoes.forEach(opcao => {
+                        const btn = document.createElement('button');
+                        btn.textContent = opcao.descricao;
+                        btn.addEventListener('click', () => carregarSecao(opcao.destino));
+                        opcoesDiv.appendChild(btn);
+                    });
+                } else {
+                    const fimMsg = document.createElement('p');
+                    fimMsg.style.color = '#ffd700';
+                    fimMsg.style.fontStyle = 'italic';
+                    fimMsg.style.textAlign = 'center';
+                    fimMsg.style.marginTop = '20px';
+                    fimMsg.textContent = '✨ FIM DA HISTÓRIA ✨';
+                    opcoesDiv.appendChild(fimMsg);
+                }
             }
         }
 
-        // Reset
-        document.getElementById("reset-btn").onclick = () => carregarSecao("inicio");
-
-        // Iniciar
-        carregarSecao("inicio");
+        function mostrarErro(mensagem) {
+            const app = document.getElementById('app');
+            app.innerHTML = `
+                <div class="erro">
+                    ❌ ${mensagem}<br><br>
+                    <button onclick="location.reload()">🔁 Tentar novamente</button>
+                </div>
+            `;
+        }
     </script>
 </body>
 </html>
