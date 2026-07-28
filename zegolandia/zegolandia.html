@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Coleção LEGO</title>
+    <title>Zegolandia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>🏗️ Minha Coleção LEGO</h1>
+        <h1>🧱 Zegolandia</h1>
         
-        <!-- Botão de debug -->
-        <div style="text-align: center; margin-bottom: 20px;">
-            <button onclick="toggleDebug()" style="padding: 10px 20px; background: #333; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                🔍 Mostrar/Ocultar Debug
-            </button>
-        </div>
+        <!-- Botão de debug - escondido mas acessível -->
+        <button id="debug-toggle" style="display: none; padding: 10px 20px; background: #333; color: white; border: none; border-radius: 5px; cursor: pointer; position: fixed; bottom: 20px; right: 20px; z-index: 1000;" onclick="toggleDebug()">
+            🔍 Debug
+        </button>
         
         <!-- Área de debug -->
         <div id="debug-area" style="display: none; background: #1e1e1e; color: #00ff00; padding: 15px; border-radius: 8px; margin-bottom: 20px; max-height: 400px; overflow: auto; font-family: 'Courier New', monospace; font-size: 12px;">
