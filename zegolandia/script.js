@@ -24,6 +24,20 @@ function toggleDebug() {
     area.style.display = area.style.display === 'none' ? 'block' : 'none';
 }
 
+// Função para mostrar o botão de debug (atalho: Ctrl+Shift+D)
+function showDebugButton() {
+    const button = document.getElementById('debug-toggle');
+    button.style.display = 'block';
+}
+
+// Atalho de teclado para mostrar o botão de debug
+document.addEventListener('keydown', (event) => {
+    if (event.ctrlKey && event.shiftKey && event.key === 'D') {
+        showDebugButton();
+        console.log('🔍 Botão de debug ativado!');
+    }
+});
+
 // Função para carregar os dados do JSON
 async function loadMyLegos() {
     debugLog('📂 A carregar ficheiro JSON...');
