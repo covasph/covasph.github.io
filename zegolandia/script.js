@@ -1,5 +1,5 @@
 // Configuração
-const REBRICKABLE_API_KEY = 'TUA_API_KEY_AQUI'; // Regista-te em rebrickable.com
+const REBRICKABLE_API_KEY = '37a9586213972f0a392705238b202f2d';
 const JSON_FILE = 'meus_legos.json';
 
 // Função para carregar os dados do JSON
